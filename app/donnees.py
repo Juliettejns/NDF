@@ -29,7 +29,7 @@ class Article(db.Model):
         namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
         db.drop_all()
         db.create_all()
-        for element in document_xml.xpath("//group/text/", namespaces=namespaces):
+        for element in document_xml.xpath("//tei:group/tei:text/", namespaces=namespaces):
             numero = element.attrib['n']
             element_titre = document_xml.xpath("//tei:docTitle/tei:titlePart[@type='sub']/text()", namespaces=namespaces)
             liste_titre.append(element_titre)
