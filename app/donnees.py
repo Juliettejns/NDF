@@ -3,7 +3,8 @@ Initialisation de la base de données
 Extraction de données du fichier xml en vue de leur intégration dans la base
 """
 
-
+from app import db
+from constantes import document_xml
 
 class Article(db.Model):
     #instanciation du modèle, définition de la classe
@@ -18,6 +19,7 @@ class Article(db.Model):
         self.date = date
         self.texte = texte
 
+    @staticmethod
     def db_init():
         liste_id = []
         liste_titre = []
