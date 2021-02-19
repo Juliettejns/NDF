@@ -3,7 +3,12 @@
     <div>
         <h1>Corpus</h1>
         <div>
-            <p>Liste des notes d'une frondeuse encodés</p>
+            <h2>Liste des notes d'une frondeuse encodés</h2>
+            {% for titre in titres %}
+            <div>
+                <p>{{titre}}</p>
+            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

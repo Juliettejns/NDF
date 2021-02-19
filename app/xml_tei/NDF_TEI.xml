@@ -438,6 +438,7 @@
                     <docDate><date when-iso="1899-09-13">13 septembre 1899</date></docDate>
                 </front>
                 <body>
+                    <div>
                     <head>Noble courage</head>
                     <p>Je pense à vous, mes amis des <placeName ref="TROIS MARCHES">Trois
                             Marches</placeName>, de la bonne auberge où, tout un mois, nous vécûmes,
@@ -510,6 +511,7 @@
                         surprise après telle déclaration de principes et toute négligence serait une
                         trahison. "On attendra le départ des <rs ref="#ARMEE">troupes</rs>"... C'est
                         net!</p>
+                    </div>
                 </body>
             </text>
         </group>
