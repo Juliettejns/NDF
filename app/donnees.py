@@ -11,7 +11,7 @@ class Article(db.Model):
     article_id = db.Column(db.Integer, unique=True, nullable=False, primary_key=True, autoincrement=True)
     article_titre = db.Column(db.String(45))
     article_date = db.Column(db.Date)
-    article_texte = db.Colum(db.Text)
+    article_texte = db.Column(db.Text)
 
     def __init__(self, titre, date, texte):
         #instanciation des attributs de la classe Article
@@ -30,10 +30,15 @@ class Article(db.Model):
         db.drop_all()
         db.create_all()
         for element in document_xml.xpath("//group/text/", namespaces=namespaces):
-            liste_id.append(element.attrib['n'])
+            numero = element.attrib['n']
             element_titre = document_xml.xpath("//tei:docTitle/tei:titlePart[@type='sub']/text()", namespaces=namespaces)
             liste_titre.append(element_titre)
             element_date = document_xml.xpath("//tei:docDate/tei:date/text()", namespaces=namespaces)
             liste_date.append(element_date)
             element_texte = document_xml.xpath("//tei:body/tei:div/tei:p/text()", namespaces=namespaces)
             liste_texte.append(element_texte)
+            db.session.add(Article(numero,
+                                   liste_titre[numero-1],
+                                   liste_date[numero-1],
+                                   liste_texte[numero-1]))
+            db.session.commit()
