@@ -2,7 +2,11 @@
 {% block corps %}
     <div>
         <h1>Notes d'une frondeuse</h1>
-        <div>
-            <h2>Titre de la note</h2>
+       {% if note %}
+        <h1>{{note.article_titre}}</h1>
+        <dl>
+            <dt>Date</dt><dd>{{note.article_date}}</dd>
+        </dl>
+    {% else %}
     </div>
 {% endblock %}

@@ -3,12 +3,14 @@
     <div>
         <h1>Corpus</h1>
         <div>
-            <h2>Liste des notes d'une frondeuse encodés</h2>
-            {% for titre in titres %}
-            <div>
-                <p>{{titre}}</p>
-            </div>
+            <h2>Liste des "notes d'une frondeuse" encodées</h2>
+            {% if notes %}
+            <p>{{notes|length}} derniers articles enregistrés :</p>
+        <ul>
+            {% for note in notes %}
+                <li><a href="{{url_for('note', article_id=note.article_id)}}">{{note.article_titre}}</a></li>
             {% endfor %}
-        </div>
+        </ul>
+            {% endif %}
     </div>
 {% endblock %}
