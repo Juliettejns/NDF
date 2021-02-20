@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from constantes import titres
+from donnees import Article
 
 
 @app.route("/")
@@ -10,9 +10,10 @@ def accueil():
 
 @app.route("/corpus")
 def corpus():
-    return render_template("pages/corpus.html", titres=titres)
+    notes = Article.query.all()
+    return render_template("pages/corpus.html", notes=notes)
 
 
 @app.route("/note")
 def note():
-    return render_template("note.html")
+    return render_template("pages/note.html")
