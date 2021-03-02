@@ -14,6 +14,7 @@ def corpus():
     return render_template("pages/corpus.html", notes=notes)
 
 
-@app.route("/note")
-def note():
-    return render_template("pages/note.html")
+@app.route("/note/<int:article_id>")
+def note(article_id):
+    unique_note=Article.query.get(article_id)
+    return render_template("pages/note.html", note=unique_note)
