@@ -18,12 +18,12 @@ db.create_all()
 
 namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
 for numero in document_xml.xpath("//tei:group/tei:text/@n", namespaces=namespaces):
-    element_titre = document_xml.xpath("//tei:text[@n=" + numero + "]//tei:titlePart[@type='sub']/text()",
+    element_titre = document_xml.xpath("//tei:titlePart[@type='sub']/text()",
                                        namespaces=namespaces)
-    element_date = document_xml.xpath("//tei:text[@n=" + numero + "]//tei:docDate/tei:date/text()", namespaces=namespaces)
-    element_texte = document_xml.xpath("//tei:text[@n=" + numero + "]//tei:body/tei:div/tei:p/text()",
+    element_date = document_xml.xpath("//tei:docDate/tei:date/text()", namespaces=namespaces)
+    element_texte = document_xml.xpath("//tei:body/tei:div/tei:p/text()",
                                        namespaces=namespaces)
-    note=Article(article_titre=element_titre[0], article_date=element_date[0], article_texte=element_texte[0])
+    note=Article(article_titre=element_titre[int(numero)-1], article_date=element_date[int(numero)-1], article_texte=element_texte[int(numero)-1])
     db.session.add(note)
     db.session.commit()
 
