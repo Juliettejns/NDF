@@ -5,7 +5,7 @@ association de ces données à la bd
 
 from app import db
 from constantes import document_xml
-from donnees import Article
+from modeles.donnees import Article
 db.drop_all()
 db.create_all()
 

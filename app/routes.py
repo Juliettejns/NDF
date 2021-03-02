@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from donnees import Article
+from modeles.donnees import Article
 
 
 @app.route("/")
