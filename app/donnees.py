@@ -3,18 +3,29 @@ Instanciation du modèle de base de données
 """
 
 from app import db
+from constantes import document_xml
 
 class Article(db.Model):
+    __tablename__ = "article"
+    __table_args__ = {'extend_existing': True}
     #instanciation du modèle, définition de la classe
     article_id = db.Column(db.Integer, unique=True, nullable=False, primary_key=True, autoincrement=True)
     article_titre = db.Column(db.String(45))
-    article_date = db.Column(db.Date)
+    article_date = db.Column(db.String(45))
     article_texte = db.Column(db.Text)
+db.drop_all()
+db.create_all()
 
-    def __init__(self, id, titre, date, texte):
-        #instanciation des attributs de la classe Article
-        self.id = id
-        self.titre = titre
-        self.date = date
-        self.texte = texte
+namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
+for numero in document_xml.xpath("//tei:group/tei:text/@n", namespaces=namespaces):
+    element_titre = document_xml.xpath("//tei:text[@n=" + numero + "]//tei:titlePart[@type='sub']/text()",
+                                       namespaces=namespaces)
+    element_date = document_xml.xpath("//tei:text[@n=" + numero + "]//tei:docDate/tei:date/text()", namespaces=namespaces)
+    element_texte = document_xml.xpath("//tei:text[@n=" + numero + "]//tei:body/tei:div/tei:p/text()",
+                                       namespaces=namespaces)
+    note=Article(article_titre=element_titre[0], article_date=element_date[0], article_texte=element_texte[0])
+    db.session.add(note)
+    db.session.commit()
 
+article=Article.query.all()
+print(Article.query.filter_by(article_titre="Heures d'angoisse").first())
