@@ -105,7 +105,7 @@
             </settingDesc>
             <particDesc>
                 <listPerson>
-                    <person xml:id="DREYFUS">
+                    <person n="1" xml:id="DREYFUS">
                         <persName>
                             <forename>Alfred</forename>
                             <surname>Dreyfus</surname>
@@ -119,7 +119,7 @@
                             1899 suite à de nouvelles informations, déchire l'opinion public.
                         </note>
                     </person>
-                    <person xml:id="DEMANGE" role="dreyf">
+                    <person n="2" xml:id="DEMANGE" role="dreyf">
                         <persName>
                             <forename>Edgar</forename>
                             <surname>Demange</surname>
@@ -132,7 +132,7 @@
                                 >Dreyfus</persName> lors de son procès devant le conseil de guerre
                             en 1894 puis pendant sa révision en 1899</note>
                     </person>
-                    <person xml:id="CARRIERE">
+                    <person n="3" xml:id="CARRIERE">
                         <persName>
                             <forename>Louis Nobert</forename>
                             <surname>Carrière</surname>
@@ -141,7 +141,7 @@
                                 <persName ref="#DREYFUS">Dreyfus</persName> en qualité de
                             commissaire du gouvernement.</note>
                     </person>
-                    <person xml:id="PICQUART" role="dreyf">
+                    <person n="4" xml:id="PICQUART" role="dreyf">
                         <persName>
                             <forename>Georges</forename>
                             <surname>Picquart</surname>
@@ -157,7 +157,7 @@
                             procès en révision où il est inculpé. Il est gracié en 1906 et devient
                             par la suite Ministre de la Guerre du gouvernement Clémenceau.</note>
                     </person>
-                    <person xml:id="ESTERHAZY" role="antidreyf">
+                    <person n="5" xml:id="ESTERHAZY" role="antidreyf">
                         <persName>
                             <forename>Ferdinand</forename>
                             <surname>Walsin-Esterhazy</surname>
@@ -165,7 +165,7 @@
                         <note>Officier français et espion pour le compte de l'Allemagne,, il est
                             l'auteur du bordereau à l'origine de l'affaire Dreyfus.</note>
                     </person>
-                    <person xml:id="BASCH" role="dreyf">
+                    <person n="6" xml:id="BASCH" role="dreyf">
                         <persName>
                             <forename>Victor</forename>
                             <surname>Basch</surname>
@@ -174,14 +174,14 @@
                             faculté de lettres de Rennes de 1889 à 1906 et militant
                             dreyfusard.</note>
                     </person>
-                    <person xml:id="RECLUS" role="dreyf">
+                    <person n="7" xml:id="RECLUS" role="dreyf">
                         <persName>
                             <forename>Paul</forename>
                             <surname>Reclus</surname>
                         </persName>
                         <note>Chirurgien et intellectuel engagé dans l'Affaire Dreyfus</note>
                     </person>
-                    <person xml:id="GAST" role="dreyf">
+                    <person n="8" xml:id="GAST" role="dreyf">
                         <persName>
                             <forename>Edmond</forename>
                             <surname>Gast</surname>
@@ -189,14 +189,14 @@
                         <note>Homme politique, maire de Ville-d'Avray et cousin de <persName
                                 ref="#PICQUART">Picquart</persName>.</note>
                     </person>
-                    <person xml:id="JAURES" role="dreyf">
+                    <person n="9" xml:id="JAURES" role="dreyf">
                         <persName>
                             <forename>Jean</forename>
                             <surname>Jaurès</surname>
                         </persName>
                         <note>Homme politique français, dreyfusard</note>
                     </person>
-                    <person xml:id="VIVIANI" role="dreyf">
+                    <person n="10" xml:id="VIVIANI" role="dreyf">
                         <persName>
                             <forename>René</forename>
                             <surname>Viviani</surname>
@@ -205,7 +205,7 @@
                             de l'Humanité avec <persName ref="#JAURES">Jaurès</persName>. Par la
                             suite, il est ministre du Travail et président du Conseil.</note>
                     </person>
-                    <person xml:id="MERCIER" role="antidreyf">
+                    <person n="11" xml:id="MERCIER" role="antidreyf">
                         <persName>
                             <forename>Auguste</forename>
                             <surname>Mercier</surname>
@@ -214,7 +214,7 @@
                                 <persName ref="#DREYFUS">Dreyfus</persName> et coordinateur des
                             anti-dreyfusards au procès de Rennes.</note>
                     </person>
-                    <person xml:id="AUBRY" role="dreyf">
+                    <person n="12" xml:id="AUBRY" role="dreyf">
                         <persName>
                             <forename>Jules</forename>
                             <surname>Aubry</surname>
@@ -223,7 +223,7 @@
                                 >Rennes</placeName> et premier président de la section rennaise de
                             la ligue des Droits de l'Homme à partir de 1899.</note>
                     </person>
-                    <person xml:id="SEE" role="dreyf">
+                    <person n="13" xml:id="SEE" role="dreyf">
                         <persName>
                             <forename>Henri</forename>
                             <surname>Sée</surname>
@@ -236,7 +236,7 @@
                             fondateurs de la section rennaise de la Ligue des Droits de l'Homme en
                             1899, il en est par la suite président de 1900 à 1914. </note>
                     </person>
-                    <person xml:id="DOTTIN" role="dreyf">
+                    <person n="14" xml:id="DOTTIN" role="dreyf">
                         <persName>
                             <forename>Georges</forename>
                             <surname>Dottin</surname>
@@ -248,14 +248,14 @@
                                 ref="#DREYFUS">Dreyfus</persName>. Il participe à la fondation de la
                             Ligue des Droits de l'Homme rennoise.</note>
                     </person>
-                    <person xml:id="CAVALIER" role="dreyf">
+                    <person n="15" xml:id="CAVALIER" role="dreyf">
                         <persName>
                             <forename>Jacques</forename>
                             <surname>Cavalier</surname>
                         </persName>
                         <note> Professeur de chimie à l'Université de Rennes. </note>
                     </person>
-                    <person xml:id="LABORI" role="dreyf">
+                    <person n="16" xml:id="LABORI" role="dreyf">
                         <persName>
                             <forename>Fernand</forename>
                             <surname>Labori</surname>
@@ -263,7 +263,7 @@
                         <note>Avocat et homme politique français. Il défend <persName ref="#DREYFUS"
                                 >Dreyfus</persName> lors du Second procès de Rennes</note>
                     </person>
-                    <person xml:id="CASIMIR">
+                    <person n="17" xml:id="CASIMIR">
                         <persName>
                             <forename>Jean</forename>
                             <surname>Casimir-Perier</surname>
