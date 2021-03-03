@@ -282,7 +282,7 @@
     </teiHeader>
     <text>
         <group>
-            <text n="1" facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703760h">
+            <text n="641" facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703760h">
                 <front>
                     <docTitle>
                         <titlePart type="main">Notes d'une Frondeuse</titlePart>
@@ -366,13 +366,13 @@
                     </div>
                 </body>
             </text>
-            <text n="2" facs="https://gallica.bnf.fr/ark:/12148/bpt6k67037341">
+            <text n="615" facs="https://gallica.bnf.fr/ark:/12148/bpt6k67037341">
                 <front>
                     <docTitle>
                         <titlePart type="main">Notes d'une frondeuse</titlePart>
                         <titlePart type="sub">Par délégation</titlePart>
                     </docTitle>
-                    <docDate><date when="1899-08-15">15 août 1899</date></docDate>
+                    <docDate><date when-iso="1899-08-15">15 août 1899</date></docDate>
                 </front>
                 <body>
                     <div>
@@ -430,7 +430,7 @@
                     </div>
                 </body>
             </text>
-            <text n="3" facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703763r/">
+            <text n="644" facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703763r/">
                 <front>
                     <docTitle>
                         <titlePart type="main">Notes d'une frondeuse</titlePart>
