@@ -24,14 +24,28 @@ for element in document_xml.xpath("//tei:group/tei:text", namespaces=namespaces)
     db.session.add(note)
     db.session.commit()
 
-element_nom = document_xml.xpath("//tei:persName/tei:surname/text()", namespaces=namespaces)
+element_nom_personne = document_xml.xpath("//tei:persName/tei:surname/text()", namespaces=namespaces)
 element_prenom = document_xml.xpath("//tei:persName/tei:forename/text()", namespaces=namespaces)
 element_note = document_xml.xpath("//tei:person/tei:note/text()", namespaces=namespaces)
 n=0
 for element in document_xml.xpath("//tei:listPerson/tei:person", namespaces=namespaces):
     n+=1
-    personne = Personne(personne_nom = element_nom[int(n)-1],
+    personne = Personne(personne_nom = element_nom_personne[int(n)-1],
                         personne_prenom = element_prenom[int(n)-1],
-                        personne_notes = element_prenom[int(n)-1])
+                        personne_notes = element_prenom[int(n)-1]
+                        )
     db.session.add(personne)
     db.session.commit()
+
+element_nom_lieu = document_xml.xpath("//tei:place/tei:placeName/text()", namespaces=namespaces)
+n=0
+print(element_nom_lieu)
+for element in document_xml.xpath("//tei:listPlace/tei:place", namespaces= namespaces):
+    n+=1
+    lieu = Lieu(lieu_nom = element_nom_lieu[int(n)-1]
+                )
+    db.session.add(lieu)
+    db.session.commit()
+
+
+
