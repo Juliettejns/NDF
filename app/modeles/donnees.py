@@ -11,4 +11,4 @@ class Article(db.Model):
     article_id = db.Column(db.Integer, unique=True, nullable=False, primary_key=True, autoincrement=True)
     article_titre = db.Column(db.String(45))
     article_date = db.Column(db.String(45))
-    article_texte = db.Column(db.Text)
+
