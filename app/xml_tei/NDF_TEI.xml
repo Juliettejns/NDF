@@ -223,7 +223,7 @@
                                 >Rennes</placeName> et premier président de la section rennaise de
                             la ligue des Droits de l'Homme à partir de 1899.</note>
                     </person>
-                    <person xml:id="SEE">
+                    <person xml:id="SEE" role="dreyf">
                         <persName>
                             <forename>Henri</forename>
                             <surname>Sée</surname>
@@ -236,7 +236,7 @@
                             fondateurs de la section rennaise de la Ligue des Droits de l'Homme en
                             1899, il en est par la suite président de 1900 à 1914. </note>
                     </person>
-                    <person xml:id="DOTTIN">
+                    <person xml:id="DOTTIN" role="dreyf">
                         <persName>
                             <forename>Georges</forename>
                             <surname>Dottin</surname>
@@ -248,14 +248,14 @@
                                 ref="#DREYFUS">Dreyfus</persName>. Il participe à la fondation de la
                             Ligue des Droits de l'Homme rennoise.</note>
                     </person>
-                    <person xml:id="CAVALIER">
+                    <person xml:id="CAVALIER" role="dreyf">
                         <persName>
                             <forename>Jacques</forename>
                             <surname>Cavalier</surname>
                         </persName>
                         <note> Professeur de chimie à l'Université de Rennes. </note>
                     </person>
-                    <person xml:id="LABORI">
+                    <person xml:id="LABORI" role="dreyf">
                         <persName>
                             <forename>Fernand</forename>
                             <surname>Labori</surname>
@@ -270,7 +270,6 @@
                         </persName>
                         <note>Président de la République Française en 1894.</note>
                     </person>
-                    <person xml:id="IBSEN"/>
 
 
                     <personGrp xml:id="CHRETIENS"/>
