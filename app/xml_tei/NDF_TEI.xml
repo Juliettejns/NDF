@@ -281,7 +281,7 @@
     </teiHeader>
     <text>
         <group>
-            <text n="641" facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703760h">
+            <text n="1" xml:id="n641" facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703760h">
                 <front>
                     <docTitle>
                         <titlePart type="main">Notes d'une Frondeuse</titlePart>
@@ -292,7 +292,7 @@
                     </docDate>
                 </front>
                 <body>
-                    <div>
+                    <div >
                         <dateline><placeName ref="#RENNES">Rennes</placeName>, <date
                                 when-iso="1899-09-08">8 septembre 1899</date>.</dateline>
                         <p>5 heures matin: Dès l'aube, une fièvre, par les rues endormies, le soleil
@@ -365,7 +365,7 @@
                     </div>
                 </body>
             </text>
-            <text n="615" facs="https://gallica.bnf.fr/ark:/12148/bpt6k67037341">
+            <text n="2" xml:id="n615" facs="https://gallica.bnf.fr/ark:/12148/bpt6k67037341">
                 <front>
                     <docTitle>
                         <titlePart type="main">Notes d'une frondeuse</titlePart>
@@ -429,7 +429,7 @@
                     </div>
                 </body>
             </text>
-            <text n="644" facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703763r/">
+            <text n="3" xml:id="n644" facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703763r/">
                 <front>
                     <docTitle>
                         <titlePart type="main">Notes d'une frondeuse</titlePart>
