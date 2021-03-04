@@ -61,7 +61,7 @@
             </langUsage>
             <settingDesc>
                 <listPlace>
-                    <place xml:id="RENNES">
+                    <place n="1" xml:id="RENNES">
                         <placeName>Rennes</placeName>
                         <location>
                             <address>
@@ -76,7 +76,7 @@
                                 trahison</desc>
                         </event>
                     </place>
-                    <place xml:id="TROISMARCHES">
+                    <place n="2" xml:id="TROISMARCHES">
                         <placeName>Auberge des Trois Marches</placeName>
                         <location>
                             <address>
@@ -87,7 +87,7 @@
                         <desc>Repaire des Dreyfusards au cours du second procès de Dreyfus en
                             1899</desc>
                     </place>
-                    <place xml:id="LYCEE">
+                    <place n="3" xml:id="LYCEE">
                         <placeName>Lycée de Rennes</placeName>
                         <location>
                             <address>
@@ -97,7 +97,7 @@
                         </location>
                         <desc>Lieu du second procès de Dreyfus en 1899.</desc>
                     </place>
-                    <place xml:id="PARIS">
+                    <place n="4" xml:id="PARIS">
                         <placeName>Paris</placeName>
                         <location><region>Ile de France</region></location>
                     </place>
