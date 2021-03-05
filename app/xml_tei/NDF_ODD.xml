@@ -260,6 +260,7 @@
                      </valList>
                   </attDef>
                   <attDef ident="xml:id" mode="change" usage="req"/>
+                  <attDef ident="n" mode="change" usage="req"/>
                   <attDef ident="sex" mode="delete"/>
                   <attDef ident="age" mode="delete"/>
                   <attDef ident="facs" mode="delete"/>
@@ -288,6 +289,7 @@
                </content>
                <attList>
                   <attDef ident="xml:id" mode="change" usage="req"/>
+                  <attDef ident="n" mode="change" usage="req"/>
                   <attDef ident="facs" mode="delete"/>
                   <attDef ident="resp" mode="delete"/>
                   <attDef ident="type" mode="delete"/>
