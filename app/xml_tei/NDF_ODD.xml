@@ -942,8 +942,7 @@
                <constraintSpec scheme="schematron" ident="textfacs">
                   <constraint>
                      <s:rule context="tei:group/tei:text">
-                        <s:assert role="warning" test="@facs">Il est obligatoire d'ajouter un
-                           attribut facs ici</s:assert>
+                        <s:assert test="@facs and @n and @xml:id">Les attributs facs, n et xml:id sont obligatoires dans cette balise.</s:assert>
                      </s:rule>
                   </constraint>
                </constraintSpec>
