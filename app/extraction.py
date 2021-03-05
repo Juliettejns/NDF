@@ -6,6 +6,7 @@ association de ces données à la bd
 from app import db
 from constantes import document_xml
 from modeles.donnees import *
+from sqlalchemy.exc import IntegrityError
 db.drop_all()
 db.create_all()
 
@@ -69,11 +70,14 @@ for element in document_xml.xpath("//tei:div", namespaces=namespaces):
     refPersName = [e.replace('#', '') for e in refPersName]
     for pointeur in refPersName:
         if pointeur in idPerson:
-            pointeur_numerique = dictionnaire_nid_personne[pointeur]
-            relation_articlePersonne=articleHasPersonne.insert().values(artid=n,
+            try:
+                pointeur_numerique = dictionnaire_nid_personne[pointeur]
+                relation_articlePersonne=articleHasPersonne.insert().values(artid=n,
                                                         persid=pointeur_numerique)
-            db.session.execute(relation_articlePersonne)
-            db.session.commit()
+                db.session.execute(relation_articlePersonne)
+                db.session.commit()
+            except IntegrityError:
+                pass
 
 #extraction des éléments de la table d'association articleHasLieu
 idPlace=document_xml.xpath("//tei:place/@xml:id", namespaces=namespaces)
@@ -87,8 +91,11 @@ for element in document_xml.xpath("//tei:div", namespaces=namespaces):
     for pointeur in refPlaceName:
         if pointeur in idPlace:
             pointeur_numerique = dictionnaire_nid_place[pointeur]
-            relation_articlePlace=articleHasLieu.insert().values(artid=n,
+            try:
+                relation_articlePlace=articleHasLieu.insert().values(artid=n,
                                                         lid=pointeur_numerique)
-            db.session.execute(relation_articlePlace)
-            db.session.commit()
+                db.session.execute(relation_articlePlace)
+                db.session.commit()
+            except IntegrityError:
+                pass
 
