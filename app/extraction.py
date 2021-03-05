@@ -63,10 +63,14 @@ for element in document_xml.xpath("//tei:listPerson/tei:person", namespaces=name
 
 #extraction des éléments lieux
 element_nom_lieu = document_xml.xpath("//tei:place/tei:placeName/text()", namespaces=namespaces)
+element_desc_lieu = document_xml.xpath("//tei:place/tei:desc/text()", namespaces=namespaces)
 n=0
 for element in document_xml.xpath("//tei:listPlace/tei:place", namespaces= namespaces):
     n+=1
-    lieu = Lieu(lieu_nom = element_nom_lieu[int(n)-1]
+    element_localisation = " ".join(document_xml.xpath("//tei:place[@n=" + str(n) + "]//tei:address/descendant-or-self::*/text()", namespaces=namespaces))
+    lieu = Lieu(lieu_nom = element_nom_lieu[int(n)-1],
+                lieu_notes = element_desc_lieu[int(n)-1],
+                lieu_emplacement = element_localisation
                 )
     db.session.add(lieu)
     db.session.commit()
