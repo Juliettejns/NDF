@@ -68,6 +68,7 @@
                                 <region>Bretagne</region>
                             </address>
                         </location>
+                        <desc>Capitale de Bretagne et lieu du procès en révision du capitaine Dreyfus en août 1899, qui confirme sa condamnation pour haute trahison</desc>
                         <event xml:id="procdreyf" from="1899-08-07" to="1899-09-09">
                             <label>Second Procès de Dreyfus</label>
                             <desc>Procès en révision du <persName ref="#DREYFUS">capitaine
@@ -99,7 +100,12 @@
                     </place>
                     <place n="4" xml:id="PARIS">
                         <placeName>Paris</placeName>
-                        <location><region>Ile de France</region></location>
+                        <location>
+                            <address>
+                                <region>Ile de France</region>
+                            </address>
+                        </location>
+                        <desc>Capitale de la France</desc>
                     </place>
                 </listPlace>
             </settingDesc>
@@ -292,7 +298,7 @@
                     </docDate>
                 </front>
                 <body>
-                    <div >
+                    <div>
                         <dateline><placeName ref="#RENNES">Rennes</placeName>, <date
                                 when-iso="1899-09-08">8 septembre 1899</date>.</dateline>
                         <p>5 heures matin: Dès l'aube, une fièvre, par les rues endormies, le soleil
@@ -371,7 +377,9 @@
                         <titlePart type="main">Notes d'une frondeuse</titlePart>
                         <titlePart type="sub">Par délégation</titlePart>
                     </docTitle>
-                    <docDate><date when-iso="1899-08-15">15 août 1899</date></docDate>
+                    <docDate>
+                        <date when-iso="1899-08-15">15 août 1899</date>
+                    </docDate>
                 </front>
                 <body>
                     <div>
@@ -435,81 +443,87 @@
                         <titlePart type="main">Notes d'une frondeuse</titlePart>
                         <titlePart type="sub">Noble courage</titlePart>
                     </docTitle>
-                    <docDate><date when-iso="1899-09-13">13 septembre 1899</date></docDate>
+                    <docDate>
+                        <date when-iso="1899-09-13">13 septembre 1899</date>
+                    </docDate>
                 </front>
                 <body>
                     <div>
-                    <p>Je pense à vous, mes amis des <placeName ref="TROIS MARCHES">Trois
-                            Marches</placeName>, de la bonne auberge où, tout un mois, nous vécûmes,
-                        Bleus parmi les Chouans, parias de l'Idée, suspects sinon proscrits, dans la
-                        plus fraternelle des communions. </p>
-                    <p>Je revois en pensée la salle claire, toujours trop petite; la table toujours
-                        trop étroite; les quatre lithographies d'après Protrais; la cheminée où
-                        s'allégeait l'arsenal des poches, entre des éventails et des voilettes
-                        fleurant bon. J'entends encore l'accent vibrant de <persName ref="#JAURES"
-                            >Jaurès</persName>; les calmes dialogues entre <persName ref="#PICQUART"
-                            >Picquart</persName> et quelqu'un des savants illustres devenus des
-                        commensaux de la maison; la voix harmonieuse de <persName ref="#RECLUS"
-                            >Reclus</persName>; les prestes répliques allant et venant de <persName
-                            ref="#GAST">Gast</persName> à <persName ref="#VIVIANI"
-                            >Viviani</persName> - et le rire gazouillant de la petite <persName>Mme
-                            Parsoons</persName>, si brune et si jolie!</p>
-                    <p>Mais, il faut l'avouer, je songe bien moins à ceux qui s'en furent, se
-                        dispersèrent! - libérés de <placeName ref="#RENNES">Rennes</placeName> par
-                        l'atroce verdict - qu'à ceux qui durent demeurer là-bas, à l'attache, sous
-                        le joug de la fonction. Le meilleur de mon souvenir est resté près d'eux; de
-                        ce petit groupe héroïque qui, pour s'assembler, se prononcer, n'attendit pas
-                        notre venue, et qui se retrouve seul comme devant, au crépuscule, dans la
-                        salle devenue si grande, autour de la table devenue si large! À travers la
-                        chaussée, comme un oiseau de nuit se heurtant aux volets, le ricanement de
-                            <persName ref="#MERCIER">Mercier</persName> et de ses complices leur put
-                        parvenir; tandis que le vent d'outre Manche nous apportait les échos de
-                        l'allégresse d'<persName ref="#ESTERHAZY">Esterhazy</persName>, ayant enfin
-                        réalisé complètement sa parole de ne point quitter notre armée et notre pays
-                        "sans jouer à ces canailles une plaisanterie de sa façon". Ils restent là,
-                        comme des otages, nos amis, isolés et menacés. Nous autres, la bataille nous
-                        a repris. <placeName ref="#PARIS">Paris</placeName> nous garde sous son
-                        aile, et son champ d'action est sassez vaste pour que le geste, le verbe,
-                        s'en déploient à l'aise. Mais eux, dans la ville fermée, maussade, dans ce
-                        foyer de réaction!</p>
-                    <p>Je ne les plains pas: ils sont au-dessus de la plainte, ayant voulu leur
-                        sort; ayant préféré l'orgueil d'avoir raison aux accommodements de la
-                        prudence.Je me contete de les admirer -et de les aimer. Car ces gens
-                        d'esprit et de savoir supérieur, les <persName ref="#BASCH"
-                        >Basch</persName>, les <persName ref="#AUBRY">Aubry</persName>, les
-                            <persName ref="#SEE">Sée</persName>, les <persName ref="#DOTTIN"
-                            >Dottin</persName>, les <persName ref="#CAVALIER">Cavalier</persName>,
-                        les <persName>Blondel</persName>, etc, tous ces professeurs de lettre, de
-                        droits, de sciences, ont accepté vaillamment de vivre dans une ambiance
-                        d'animosité perpétuelle; en quarantaine, comme l'Ennemi du Peuple,
-                            d'<persName ref="#IBSEN">Ibsen</persName>, parce qu'ils ont voulu plus
-                        de justice et toute la vérité. </p>
-                    <p>Mais si rien ne saurait atteindre leur sérénité, quelque alarme nous est
-                        permise à leur endroit en lisant, par exemple, dans l'Évènement du 11
-                        septembre, les lignes suivantes, sous la signature de <persName>M. Henri
-                            Chabrier</persName>. </p>
-                    <quote type="journal">Diverses personnes de la ville remplissant des fonctions
-                        publiques ou commerçants, avec qui j'ai pu causer dans la journée, m'ont
-                        laissé entendre que des représailles seraient exercées contre les personnes
-                        qui ont pris ouvertement parti pour <persName ref="#DREYFUS"
-                            >Dreyfus</persName>, seulement on laissea passer quelques jours et on
-                        attendra le départ des <rs ref="#ARMEE">troupes</rs>. </quote>
-                    <p>J'ai souligné exprès ces derniers mots pour accentuer toute la serveur de
-                        l'aveu. Ainsi, on attendra, pour aller casser les vitres, assaillir les
-                        maisons, blesser les femmes, les enfants, tuer s'il se peut quelque homme,
-                        qu'aucune défense ne se puisse entremettre, que ces hauts faits sans nul
-                        risque, se puissent accomplir? Voyez la mentalité que cela dénote et quelle
-                        qualité spéciale de courage! On les a déjà vus opérer, ces chevaliers, de
-                        nuit, autour de la demeure de <persName ref="#BASCH">Basch</persName>, ces
-                        prêtres, paraît-il, marchant en avant... </p>
-                    <p>En tout cas, voici tout le monde avisé; la préméditation nettement établie.
-                        Le Procureur de la République, à <placeName ref="#RENNES"
-                        >Rennes</placeName>, le Préfet, toutes autorités judiciaires ou
-                        gouvernementales, donc responsables, doivent prendre, d'ores et déjà, telles
-                        menaces que comporte la sécurité de nos amis. Car on ne saurait arguer de
-                        surprise après telle déclaration de principes et toute négligence serait une
-                        trahison. "On attendra le départ des <rs ref="#ARMEE">troupes</rs>"... C'est
-                        net!</p>
+                        <p>Je pense à vous, mes amis des <placeName ref="TROIS MARCHES">Trois
+                                Marches</placeName>, de la bonne auberge où, tout un mois, nous
+                            vécûmes, Bleus parmi les Chouans, parias de l'Idée, suspects sinon
+                            proscrits, dans la plus fraternelle des communions. </p>
+                        <p>Je revois en pensée la salle claire, toujours trop petite; la table
+                            toujours trop étroite; les quatre lithographies d'après Protrais; la
+                            cheminée où s'allégeait l'arsenal des poches, entre des éventails et des
+                            voilettes fleurant bon. J'entends encore l'accent vibrant de <persName
+                                ref="#JAURES">Jaurès</persName>; les calmes dialogues entre
+                                <persName ref="#PICQUART">Picquart</persName> et quelqu'un des
+                            savants illustres devenus des commensaux de la maison; la voix
+                            harmonieuse de <persName ref="#RECLUS">Reclus</persName>; les prestes
+                            répliques allant et venant de <persName ref="#GAST">Gast</persName> à
+                                <persName ref="#VIVIANI">Viviani</persName> - et le rire gazouillant
+                            de la petite <persName>Mme Parsoons</persName>, si brune et si
+                            jolie!</p>
+                        <p>Mais, il faut l'avouer, je songe bien moins à ceux qui s'en furent, se
+                            dispersèrent! - libérés de <placeName ref="#RENNES">Rennes</placeName>
+                            par l'atroce verdict - qu'à ceux qui durent demeurer là-bas, à
+                            l'attache, sous le joug de la fonction. Le meilleur de mon souvenir est
+                            resté près d'eux; de ce petit groupe héroïque qui, pour s'assembler, se
+                            prononcer, n'attendit pas notre venue, et qui se retrouve seul comme
+                            devant, au crépuscule, dans la salle devenue si grande, autour de la
+                            table devenue si large! À travers la chaussée, comme un oiseau de nuit
+                            se heurtant aux volets, le ricanement de <persName ref="#MERCIER"
+                                >Mercier</persName> et de ses complices leur put parvenir; tandis
+                            que le vent d'outre Manche nous apportait les échos de l'allégresse
+                                d'<persName ref="#ESTERHAZY">Esterhazy</persName>, ayant enfin
+                            réalisé complètement sa parole de ne point quitter notre armée et notre
+                            pays "sans jouer à ces canailles une plaisanterie de sa façon". Ils
+                            restent là, comme des otages, nos amis, isolés et menacés. Nous autres,
+                            la bataille nous a repris. <placeName ref="#PARIS">Paris</placeName>
+                            nous garde sous son aile, et son champ d'action est sassez vaste pour
+                            que le geste, le verbe, s'en déploient à l'aise. Mais eux, dans la ville
+                            fermée, maussade, dans ce foyer de réaction!</p>
+                        <p>Je ne les plains pas: ils sont au-dessus de la plainte, ayant voulu leur
+                            sort; ayant préféré l'orgueil d'avoir raison aux accommodements de la
+                            prudence.Je me contete de les admirer -et de les aimer. Car ces gens
+                            d'esprit et de savoir supérieur, les <persName ref="#BASCH"
+                                >Basch</persName>, les <persName ref="#AUBRY">Aubry</persName>, les
+                                <persName ref="#SEE">Sée</persName>, les <persName ref="#DOTTIN"
+                                >Dottin</persName>, les <persName ref="#CAVALIER"
+                                >Cavalier</persName>, les <persName>Blondel</persName>, etc, tous
+                            ces professeurs de lettre, de droits, de sciences, ont accepté
+                            vaillamment de vivre dans une ambiance d'animosité perpétuelle; en
+                            quarantaine, comme l'Ennemi du Peuple, d'<persName ref="#IBSEN"
+                                >Ibsen</persName>, parce qu'ils ont voulu plus de justice et toute
+                            la vérité. </p>
+                        <p>Mais si rien ne saurait atteindre leur sérénité, quelque alarme nous est
+                            permise à leur endroit en lisant, par exemple, dans l'Évènement du 11
+                            septembre, les lignes suivantes, sous la signature de <persName>M. Henri
+                                Chabrier</persName>. </p>
+                        <quote type="journal">Diverses personnes de la ville remplissant des
+                            fonctions publiques ou commerçants, avec qui j'ai pu causer dans la
+                            journée, m'ont laissé entendre que des représailles seraient exercées
+                            contre les personnes qui ont pris ouvertement parti pour <persName
+                                ref="#DREYFUS">Dreyfus</persName>, seulement on laissea passer
+                            quelques jours et on attendra le départ des <rs ref="#ARMEE"
+                                >troupes</rs>. </quote>
+                        <p>J'ai souligné exprès ces derniers mots pour accentuer toute la serveur de
+                            l'aveu. Ainsi, on attendra, pour aller casser les vitres, assaillir les
+                            maisons, blesser les femmes, les enfants, tuer s'il se peut quelque
+                            homme, qu'aucune défense ne se puisse entremettre, que ces hauts faits
+                            sans nul risque, se puissent accomplir? Voyez la mentalité que cela
+                            dénote et quelle qualité spéciale de courage! On les a déjà vus opérer,
+                            ces chevaliers, de nuit, autour de la demeure de <persName ref="#BASCH"
+                                >Basch</persName>, ces prêtres, paraît-il, marchant en avant... </p>
+                        <p>En tout cas, voici tout le monde avisé; la préméditation nettement
+                            établie. Le Procureur de la République, à <placeName ref="#RENNES"
+                                >Rennes</placeName>, le Préfet, toutes autorités judiciaires ou
+                            gouvernementales, donc responsables, doivent prendre, d'ores et déjà,
+                            telles menaces que comporte la sécurité de nos amis. Car on ne saurait
+                            arguer de surprise après telle déclaration de principes et toute
+                            négligence serait une trahison. "On attendra le départ des <rs
+                                ref="#ARMEE">troupes</rs>"... C'est net!</p>
                     </div>
                 </body>
             </text>

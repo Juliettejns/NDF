@@ -260,6 +260,7 @@
                      </valList>
                   </attDef>
                   <attDef ident="xml:id" mode="change" usage="req"/>
+                  <attDef ident="n" mode="change" usage="req"/>
                   <attDef ident="sex" mode="delete"/>
                   <attDef ident="age" mode="delete"/>
                   <attDef ident="facs" mode="delete"/>
@@ -288,6 +289,7 @@
                </content>
                <attList>
                   <attDef ident="xml:id" mode="change" usage="req"/>
+                  <attDef ident="n" mode="change" usage="req"/>
                   <attDef ident="facs" mode="delete"/>
                   <attDef ident="resp" mode="delete"/>
                   <attDef ident="type" mode="delete"/>
@@ -942,8 +944,7 @@
                <constraintSpec scheme="schematron" ident="textfacs">
                   <constraint>
                      <s:rule context="tei:group/tei:text">
-                        <s:assert role="warning" test="@facs">Il est obligatoire d'ajouter un
-                           attribut facs ici</s:assert>
+                        <s:assert test="@facs and @n and @xml:id">Les attributs facs, n et xml:id sont obligatoires dans cette balise.</s:assert>
                      </s:rule>
                   </constraint>
                </constraintSpec>
