@@ -48,6 +48,18 @@ for element in document_xml.xpath("//tei:listPerson/tei:person", namespaces=name
                         )
     db.session.add(personne)
     db.session.commit()
+    '''try:
+        personne_bdate = document_xml.xpath("//tei:person[@n=" + str(n) + "]/tei:birth/@when",
+                                            namespaces=namespaces)
+        personne_ddate = document_xml.xpath("//tei:person[@n=" + str(n) + "]/tei:death/@when",
+                                            namespaces=namespaces)
+        dates = Personne(personne_date_naissance= personne_bdate,
+                         personne_date_mort= personne_ddate)
+        db.session.add(dates)
+        db.session.commit()
+    except Exception:
+        db.session.add(personne)
+        db.session.commit()'''
 
 #extraction des éléments lieux
 element_nom_lieu = document_xml.xpath("//tei:place/tei:placeName/text()", namespaces=namespaces)
