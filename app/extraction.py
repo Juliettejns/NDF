@@ -79,6 +79,11 @@ for element in document_xml.xpath("//tei:listPlace/tei:place", namespaces= names
 idPerson=document_xml.xpath("//tei:person/@xml:id", namespaces=namespaces)
 nPerson= document_xml.xpath("//tei:person/@n", namespaces=namespaces)
 dictionnaire_nid_personne =dict(zip(idPerson,nPerson))
+
+idPlace=document_xml.xpath("//tei:place/@xml:id", namespaces=namespaces)
+nPlace= document_xml.xpath("//tei:place/@n", namespaces=namespaces)
+dictionnaire_nid_place =dict(zip(idPlace,nPlace))
+
 n=0
 for element in document_xml.xpath("//tei:div", namespaces=namespaces):
     n+=1
@@ -94,15 +99,7 @@ for element in document_xml.xpath("//tei:div", namespaces=namespaces):
                 db.session.commit()
             except IntegrityError:
                 pass
-
-#extraction des éléments de la table d'association articleHasLieu
-idPlace=document_xml.xpath("//tei:place/@xml:id", namespaces=namespaces)
-nPlace= document_xml.xpath("//tei:place/@n", namespaces=namespaces)
-dictionnaire_nid_place =dict(zip(idPlace,nPlace))
-n=0
-for element in document_xml.xpath("//tei:div", namespaces=namespaces):
-    n+=1
-    refPlaceName = document_xml.xpath("//tei:text[@n="+str(n)+"]//tei:placeName/@ref", namespaces=namespaces)
+    refPlaceName = document_xml.xpath("//tei:text[@n=" + str(n) + "]//tei:placeName/@ref", namespaces=namespaces)
     refPlaceName = [e.replace('#', '') for e in refPlaceName]
     for pointeur in refPlaceName:
         if pointeur in idPlace:
@@ -114,4 +111,3 @@ for element in document_xml.xpath("//tei:div", namespaces=namespaces):
                 db.session.commit()
             except IntegrityError:
                 pass
-
