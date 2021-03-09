@@ -11,8 +11,13 @@
     <xsl:variable name="note" select="descendant::text[@n=$num]"/>
     
     <xsl:template match="/">
-        <h2><xsl:value-of select="$note//titlePart[@sub]/text()"/></h2>
-        <xsl:apply-templates select="div"/>
+        <xsl:element name="a">
+            <xsl:attribute name="href">
+                <xsl:value-of select="$note/@facs"/>
+            </xsl:attribute>
+            <xsl:text>Lien vers le journal numérisé sur Gallica</xsl:text>
+        </xsl:element>
+        <xsl:apply-templates select="$note//div"/>
     </xsl:template>
     
     <xsl:template match="div">
