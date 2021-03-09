@@ -4,22 +4,185 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="short">oddbyexample</title>
-            <title>ODD by Example customization</title>
+            <title>Notes d'une frondeuse</title>
+            <author>Caroline Rémy, dite Séverine</author>
          </titleStmt>
          <publicationStmt>
-            <p>Unpublished first draft </p>
+            <p>Encodage, en XML-TEI par Juliette Janes dans le cadre de l'application Flask NDF
+               développé dans le cadre de l'évaluation du module d'application web du Master 2
+               Technologies numériques appliquées à l'Histoire de l'École nationale des Chartes
+               (promotion 2021), d'articles de Séverine provenant du journal féministe<hi>La
+                  Fronde</hi></p>
          </publicationStmt>
          <sourceDesc>
-            <p>Derived from <ref
-                  target="https://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">base
-                  odd</ref> after an analysis of 2 files in
-               file:/home/juliette/Documents/dev/python/Notes_dune_frondeuse_Severine/xml_tei/</p>
+            <p>Morceaux choisis parmi les chroniques <hi>Notes d'une frondeuse</hi>rédigées par
+               Caroline Rémy, dite Séverine, journaliste, et publiées dans La Fronde, journal
+               féministe, entre 1898 et 1914.</p>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
    <text>
       <body>
+         <div1>
+            <head>Guide d'encodage</head>
+            <p> Ce petit guide présente le corpus Notes d'une frondeuse formé dans le cadre de la
+               construction de l'application Flask NDF et le schéma d'encodage relatif, donnant les
+               différents éléments TEI utilisés.</p>
+            <div2>
+               <head>Présentation du corpus</head>
+               <p>Le texte encodé est un groupe d'articles écrits par Séverine et parus dans <hi>La
+                  Fronde</hi>, journal féministe français de la Belle Époque, comme une
+                  chronique, <hi>Notes d'une frondeuse</hi>. Ils ont été choisis, rassemblés et
+                  édités par les soins de Juliette Janes depuis les versions numérisées et océsirées
+                  des journaux, disponibles et libres de droits sur Gallica.</p>
+               <p>Marguerite Durand, journaliste au <hi>Figaro</hi>, fonde <hi>La Fronde</hi> en
+                  1897, suite au Congrès international des droits de la Femme de Paris de 1896.
+                  Véritable tribune pour la défense des droits de la femme, il s'agit du premier
+                  quotidien entièrement conçu et réalisé par celles-ci. Le journal parait
+                  quotidiennement de 1897 à 1903, avec un pic de 50 000 ventes par jour, puis
+                  mensuellement de 1903 à 1905, comme supplément du journal <hi>L'Action</hi>. Par
+                  la suite le journal cesse d'être publié, à cause d'ennuis financiers dûs à des
+                  problèmes de ventes. Relancé en 1914, il est arrêté avec le début de la Guerre et
+                  n'est repris qu'en 1926, sans grand succès.</p>
+               <p>Caroline Rémy est née en 1855, d'un père inspecteur à la préfecture de police de
+                  Paris et meurt en 1929. Amie de Jules Vallès à partir 1879, elle se lance dans le
+                  journalisme grâce à lui, lui apportant notamment le soutien financier de son
+                  compagnon, Adrien Guebhard, professeur de médecine, pour son quotidien <hi>Le Cri
+                     du Peuple</hi>. Elle reprend la direction du journal à la mort de son ami, en
+                  1885, qu'elle quitte en 1888 suite à un différend. Caroline Rémy, sous le nom de
+                  plume de Séverine, écrit alors, en indépendante dans de nombreux journaux. Elle
+                  publie quotidiennement, de 1897 à 1903, <hi>Notes d'une frondeuse</hi> dans le
+                  journal de son amie Marguerite Durand. Ces articles militants peuvent être vus
+                  comme des éditoriaux et lui permettent de décrire ses opinions. Elle s'y montre
+                  ainsi engagée pour l'émancipation de la femme, dénonçant les injustices sociales
+                  et soutenant les causes anarchistes. Pendant cette période, Séverine couvre
+                  notamment l'affaire Dreyfus, ainsi que le second procès Dreyfus de Rennes en 1899,
+                  auxquel elle assiste et, se faisant fervente défenseuse de celui-ci, s'intègre
+                  dans le groupe des dreyfusards.</p>
+            </div2>
+            <div2>
+               <head>Balisage et structuration TEI du corpus</head>
+               <p>Il a été décidé d'encoder dans un même document les différents articles, notamment
+                  dans un soucis de pouvoir réaliser un index de personnes et lieux communs. Pour ce
+                  faire, une association des balises <gi>group</gi>; <gi>text</gi> et <gi>front</gi>
+                  a été mobilisé. Ainsi, tout les documents sont imbriqués dans une seule balise
+                  <gi>group</gi>, et chaque document est symbolisé par un <gi>text</gi>. Cette
+                  balise <gi>text</gi> a pour attributs, obligatoires, <att>n</att>, qui numérote
+                  les articles encodés, <att>xml:id</att>, qui donne le numéro du journal dans
+                  lequel l'article a été publié et <att>facs</att> qui renvoie à la page gallica de
+                  ce numéro. Chaque document a une balise <gi>front</gi> dans laquelles est encodé
+                  le nom de l'article, dans un <gi>docTitle</gi> et la date de parution dans un
+                  <gi>docDate</gi>. Enfin, l'article lui même est encodé dans un <gi>body</gi>.
+                  Ainsi, la structuration est présentée de cette façon:</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <text>
+                     <group>
+                        <text n="1" xml:id="n641"
+                           facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703760h">
+                           <front>
+                              <docTitle>
+                                 <titlePart type="main">Notes d'une Frondeuse</titlePart>
+                                 <titlePart type="sub">Heures d'angoisse</titlePart>
+                              </docTitle>
+                              <docDate>
+                                 <date when-iso="1898-09-10">9 septembre 1898</date>
+                              </docDate>
+                           </front>
+                           <body> </body>
+                        </text>
+                     </group>
+                  </text>
+               </egXML>
+               <p>Chaque article est structuré par en paragraphes par des balises <gi>p</gi>.
+                  Lorsqu'une phrase indique la date et le lieu d'écriture de l'article, elle est
+                  encodé dans une balise <gi>dateline</gi>. Les éléments cités sont contenus dans
+                  des balises <gi>quote</gi>.</p>
+               <div3>
+                  <head>Encodage des personnes, lieux et dates dans le corps du message</head>
+                  <p>Les personnages, lieux et dates ont été encodées avec les balises suivantes: <specList>
+                     <specDesc key="persName"/>
+                     <specDesc key="placeName"/>
+                     <specDesc key="date"/>
+                  </specList>
+                  </p>
+                  <p> La balise <gi>persName</gi> encadre les noms de personnages mentionnés dans le
+                     texte. Lorsqu'il s'agit d'une référence à une personne sans la nommer, on
+                     utilise l'élément <gi>rs</gi>. La balise <gi>placeName</gi> encadre les noms de
+                     lieux. L'ODD rend obligatoire l'utilisation de l'attribut <att>ref</att>, qui
+                     permet de lier un persName, un rs ou un placeName à l'index de lieux ou de
+                     noms, dans le texte à encoder. La balise <gi>date</gi> encadre les mentions de
+                     date, qu'il faut normaliser avec l'attribut <att>when-iso</att> sous la forme
+                     annee-mois-jour.</p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <persName ref="DEMANGE"/>
+                     <placeName ref="#RENNES"/>
+                     <date when-iso="1899-09-08"/>
+                  </egXML>
+               </div3>
+               <div3>
+                  <head>Index de lieux</head>
+                  <p>Le <gi>TEIheader</gi> se compose d'un <gi>fileDesc</gi> présentant une
+                     description bibliographique complète du fichier électronique et d'un
+                     <gi>profileDesc</gi> fournissant une description détaillée des éléments
+                     non-bibliographiques du document.L'élément <gi>sourceDesc</gi> du
+                     <gi>fileDesc</gi> donne une version détaillée de la description
+                     bibliographique de l'édition sur lequel se base le fichier électronique tandis
+                     que le <gi>profileDesc</gi> contient les index de lieux et de personnages dans
+                     les balises suivantes: <specList>
+                        <specDesc key="settingDesc"/>
+                        <specDesc key="particDesc"/>
+                     </specList>
+                  </p>
+                  <p>Le <gi>settingDesc</gi> présente dans une <gi>listPlace</gi> les différents
+                     lieux mentionnés dans le texte sous la forme suivante: <egXML
+                        xmlns="http://www.tei-c.org/ns/Examples">
+                        <place n="1" xml:id="RENNES">
+                           <placeName>Rennes</placeName>
+                        </place>
+                     </egXML> La balise <gi>place</gi> permet de créer un élément dont
+                     l'identifiant, nommé par l'attribut <att>xml:id</att> peut être rappelé dans
+                     l'attribut <att>ref</att> de la balise <gi>placeName</gi> dans le
+                     <gi>body</gi>. Chaque <gi>place</gi> est également numéroté. </p>
+                  <p> Certains lieux sont développés par des éléments <gi>desc</gi> présentant
+                     quelques informations importantes et dans des balises <gi>location</gi>, qui
+                     les situent plus précisemment.</p>
+               </div3>
+               <div3>
+                  <head>Index de personnes</head>
+                  <p>Le <gi>particDesc</gi> se compose d'une <gi>listPerson</gi> qui est une liste
+                     des différents personnages mentionnés dans le texte sur le même principe que le
+                     <gi>listPlace</gi>, avec un développement plus important pour certains
+                     personnages, notamment en y ajoutant quelques informations afin de mieux
+                     comprendre le texte. </p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <person n="6" xml:id="BASCH" role="dreyf">
+                        <persName>
+                           <forename>Victor</forename>
+                           <surname>Basch</surname>
+                        </persName>
+                        <note>Intellectuel Hongrois de confession juive, il est professeur à la
+                           faculté de lettres de Rennes de 1889 à 1906 et militant
+                           dreyfusard.</note>
+                     </person>
+                  </egXML>
+                  
+                  <p><gi>person</gi>contient de nombreuses balises, comme le <gi>persName</gi>, qui
+                     donne des informations sur le nom de la personne<gi>forename</gi> pour le
+                     prénom, <gi>surname</gi> pour le nom de famille, une balise <gi>note</gi>
+                     détaillant la personne ou, parfois des balises <gi>death</gi> et <gi>birth</gi>
+                     pour les dates de vie. Il est obligatoire, comme pour <gi>place</gi>, d'ajouter
+                     les attributs <att>n</att>, qui numérote les personnages et <gi>xml:id</gi>,
+                     pour créer le pointeur référant à ce personnage. Un dernier attribut
+                     <gi>role</gi>, non obligatoire, permet de signaler si le personnage est
+                     dreyfusard, <val>dreyf</val> ou anti-dreyfusard, <val>antidreyf</val>. </p>
+                  <p> L'élément <gi>personGrp</gi> permettant d'encadrer les mentions de groupes de
+                     personnes, à l'exemple de l'armée française ou les dreyfusards, et fonctionne
+                     de la même façon que l'élément <gi>person</gi></p>
+               </div3>
+            </div2>
+         </div1>
+         <div1>
+            <head>Tableau des attributs</head>
          <schemaSpec ident="oddbyexample" start="TEI ">
             <moduleRef key="tei"/>
             <!--Checking module textcrit-->
@@ -1070,6 +1233,7 @@
                </attList>
             </elementSpec>
          </schemaSpec>
+         </div1>
       </body>
    </text>
 </TEI>
