@@ -165,7 +165,6 @@
                            dreyfusard.</note>
                      </person>
                   </egXML>
-
                   <p><gi>person</gi>contient de nombreuses balises, comme le <gi>persName</gi>, qui
                      donne des informations sur le nom de la personne<gi>forename</gi> pour le
                      prénom, <gi>surname</gi> pour le nom de famille, une balise <gi>note</gi>

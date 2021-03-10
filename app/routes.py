@@ -1,6 +1,7 @@
 from flask import render_template
 from app import app
 from modeles.donnees import Article
+from constantes import document_xml, xslt_transformation
 
 
 @app.route("/")
@@ -17,4 +18,5 @@ def corpus():
 @app.route("/note/<int:article_id>")
 def note(article_id):
     unique_note=Article.query.get(article_id)
-    return render_template("pages/note.html", note=unique_note)
+    affichage_texte = xslt_transformation(document_xml, num=str(article_id))
+    return render_template("pages/note.html", note=unique_note, texte=str(affichage_texte))
