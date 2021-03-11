@@ -1,0 +1,9 @@
+Requêtes sur la base SQL réalisées dans db Browser for SQLite lors de la création des index de lieux et de personnes dans le but de recréer ces requêtes en python.
+
+SELECT Lieu.lieu_nom, articleHasLieu.artid, Article.article_titre
+FROM Lieu, Article, articleHasLieu
+WHERE Lieu.lieu_id = articleHasLieu.lid and articleHasLieu.artid = Article.article_id;
+
+SELECT Personne.personne_nom, articleHasPersonne.artid, Article.article_titre
+FROM Personne, Article, articleHasPersonne
+WHERE Personne.personne_id = articleHasPersonne.persid and articleHasPersonne.artid = Article.article_id;
