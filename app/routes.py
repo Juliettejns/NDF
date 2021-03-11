@@ -31,10 +31,11 @@ def lieux():
     return render_template("pages/index_lieu.html", index=index_lieu_article)
 
 
-@app.route("/personne")
-def personne():
+@app.route("/personnes")
+def personnes():
     association_Article_Personne = db.session.query(articleHasPersonne, Article, Personne).join(Article).join(
         Personne).all()
     index_personne_article = {key: [v[2] for v in val] for key, val in
                               groupby(sorted(association_Article_Personne, key=lambda ele: ele[1]),
                                       key=lambda ele: ele[3])}
+    return render_template("pages/index_pers.html", index=index_personne_article)
