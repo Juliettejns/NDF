@@ -1,0 +1,12 @@
+{% extends "conteneur.html" %}
+{% block corps %}
+<div>
+    <h1>Liste des personnes mentionnés dans le corpus</h1>
+     <ul>
+            {% for key, value in index.items() %}
+                <li>{{key.personne_nom}} {{key.personne_prenom}} : <ul>{%for el in value %}<li><a href="{{url_for('note', article_id=el.article_id)}}">{{el.article_date}}</a></li>{% endfor %}</ul></li>
+                <span>{{key.personne_notes}}</span>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
