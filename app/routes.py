@@ -1,7 +1,8 @@
 from flask import render_template
-from app import app
-from modeles.donnees import Article
+from app import app,db
+from modeles.donnees import *
 from constantes import document_xml, xslt_transformation
+from itertools import groupby
 
 
 @app.route("/")
@@ -20,3 +21,11 @@ def note(article_id):
     unique_note=Article.query.get(article_id)
     affichage_texte = xslt_transformation(document_xml, num=str(article_id))
     return render_template("pages/note.html", note=unique_note, texte=str(affichage_texte))
+
+@app.route("/lieux")
+def lieux():
+    association_Article_Lieu = db.session.query(articleHasLieu).all()
+    index_article_lieu = {key: [v[0] for v in val] for key, val in
+           groupby(sorted(association_Article_Lieu, key=lambda ele: ele[1]), key=lambda ele: ele[1])}
+    print(index_article_lieu)
+    return render_template("pages/index_lieu.html", index=index_article_lieu)
