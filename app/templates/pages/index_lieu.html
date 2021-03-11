@@ -2,13 +2,10 @@
 {% block corps %}
 <div>
     <h1>Liste des lieux mentionnés dans le corpus</h1>
-    {% if places %}
-    <p>Il y a {{places|length}} enregistrés dans la base de données:</p>
      <ul>
-            {% for place in places %}
-                <li>{{place.lieu_nom}} : <a href="{{url_for('note', article_id=note.article_id)}}">{{note.article_nom}}</a></li>
+            {% for key, value in index.items() %}
+                <li>{{key}} : {{value}}</li>
             {% endfor %}
         </ul>
-            {% endif %}
     </div>
 {% endblock %}
