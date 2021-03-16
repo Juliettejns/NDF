@@ -27,6 +27,7 @@ class Article(db.Model):
     personnes = db.relationship("Personne", secondary=articleHasPersonne)
     lieux = db.relationship("Lieu", secondary=articleHasLieu)
 
+
 class Personne(db.Model):
     __tablename__="personne"
     __table_args__ = {'extend_existing': True}
@@ -46,6 +47,5 @@ class Lieu(db.Model):
     lieu_nom = db.Column(db.String(45), nullable=False)
     lieu_emplacement = db.Column(db.String(63))
     lieu_notes = db.Column(db.Text)
-
-
+    articles = db.relationship("Article", secondary=articleHasLieu)
 

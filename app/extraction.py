@@ -12,7 +12,7 @@ from sqlalchemy.exc import IntegrityError
 def extraction_donnees():
     n = 0
     element_titre = document_xml.xpath("//tei:titlePart[@type='sub']/text()", namespaces=namespaces)
-    element_date = document_xml.xpath("//tei:docDate/tei:date/@when-iso", namespaces=namespaces)
+    element_date = document_xml.xpath("//tei:docDate/tei:date/text()", namespaces=namespaces)
     element_numeroJournal = document_xml.xpath("//tei:text/@xml:id", namespaces=namespaces)
     for element in document_xml.xpath("//tei:group/tei:text", namespaces=namespaces):
         n += 1
