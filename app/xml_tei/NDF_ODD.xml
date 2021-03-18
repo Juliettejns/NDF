@@ -202,7 +202,7 @@
                <classRef key="att.datable.iso"/>
                <classRef key="model.persNamePart"/>
                <moduleRef key="namesdates"
-                  include="persName surname forename roleName placeName region settlement birth death event listPerson listPlace location person personGrp place"/>
+                  include="persName surname forename roleName placeName region settlement birth death event listPerson listPlace location person personGrp place country"/>
                <elementSpec ident="persName" mode="change">
                   <content>
                      <alternate>
