@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+
     <xsl:output method="html" indent="yes" encoding="UTF-8"/>
-
-    <xsl:strip-space elements="*"/>
-    <!-- pour éviter les espaces non voulus -->
-
+        
+    <xsl:strip-space elements="*"/> <!-- pour éviter les espaces non voulus -->
+       
     <xsl:param name="num"/>
-    <xsl:variable name="note" select="descendant::text[@n = $num]"/>
-
-    <xsl:template match="/">
+    <xsl:variable name="note" select="descendant::text[@n=$num]"/>
+     
+    <xsl:template match="TEI">
         <xsl:element name="span">
             <xsl:element name="a">
                 <xsl:attribute name="href">
@@ -21,51 +21,59 @@
         <br/>
         <xsl:apply-templates select="$note//div"/>
     </xsl:template>
-
-    <xsl:template match="div">
-        <xsl:choose>
-            <xsl:when test="opener">
-                <xsl:apply-templates select="opener/dateline"/>
-            </xsl:when>
-        </xsl:choose>
+    
+    <xsl:template match="opener">
         <xsl:element name="div">
-            <xsl:apply-templates select="p | quote | said"/>
+            <xsl:attribute name="align">
+                <xsl:text>left</xsl:text>
+            </xsl:attribute>
+            <xsl:value-of select="dateline|quote"/>
+        </xsl:element>
+    </xsl:template>    
+    <xsl:template match="closer">
+        <xsl:element name="div">
+            <xsl:attribute name="align">
+                <xsl:text>right</xsl:text>
+            </xsl:attribute>
+            <xsl:value-of select="."/>
         </xsl:element>
     </xsl:template>
-
-    <xsl:template match="div/dateline">
+    <xsl:template match="postscript">
+        <xsl:element name="div">
+            <xsl:attribute name="align">
+                <xsl:text>left</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates select="p"/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="cit">
+        <xsl:element name="div">
+            <xsl:attribute name="align">
+                <xsl:text>left</xsl:text>
+            </xsl:attribute>
+        <xsl:apply-templates select="quote"/>
+        <xsl:element name="cite">
+            <xsl:attribute name="align">
+                <xsl:text>right</xsl:text>
+            </xsl:attribute>
+             <xsl:value-of select="ref"/>
+        </xsl:element>
+        </xsl:element>
+    </xsl:template>
+     <xsl:template match="div//p">
+         <xsl:element name="p">
+            <xsl:value-of select="."/>
+         </xsl:element>
+     </xsl:template>
+    <xsl:template match="div//dateline">
         <xsl:element name="span">
             <xsl:value-of select="."/>
         </xsl:element>
     </xsl:template>
-
-
-    <xsl:template match="quote">        
+    <xsl:template match="quote">
         <xsl:element name="blockquote">
-            <xsl:value-of select="."/>
             <xsl:apply-templates select="p"/>
-        </xsl:element>        
-        <xsl:choose>
-            <xsl:when test="parent::cit"> 
-                <xsl:element name="cite">
-                    <xsl:value-of select="parent::cit/ref//text()"/>
-                </xsl:element>
-                </xsl:when>
-        </xsl:choose>
-
-    </xsl:template>
-
-    <xsl:template match="said">
-        <xsl:element name="p">
-            <xsl:value-of select="."/>
-        </xsl:element>
-        <xsl:apply-templates select="p"/>
-    </xsl:template>
-
-    <xsl:template match="div/p">
-        <xsl:element name="p">
-            <xsl:value-of select="."/>
         </xsl:element>
     </xsl:template>
-
+ 
 </xsl:stylesheet>
