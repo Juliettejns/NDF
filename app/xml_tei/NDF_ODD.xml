@@ -202,7 +202,7 @@
                <classRef key="att.datable.iso"/>
                <classRef key="model.persNamePart"/>
                <moduleRef key="namesdates"
-                  include="persName surname forename roleName placeName region settlement birth death event listPerson listPlace location person personGrp place"/>
+                  include="persName surname forename roleName placeName region settlement birth death event listPerson listPlace location person personGrp place country"/>
                <elementSpec ident="persName" mode="change">
                   <content>
                      <alternate>
@@ -731,7 +731,7 @@
                </classSpec>
                <!--Checking module core-->
                <moduleRef key="core"
-                  include="p hi quote desc name rs address street num date ref label head note pb author respStmt resp title publisher pubPlace bibl"/>
+                  include="p hi quote desc name rs address street num date ref label head note pb author respStmt resp title publisher pubPlace bibl cit said"/>
                <elementSpec ident="p" mode="change">
                   <attList>
                      <attDef ident="facs" mode="delete"/>
@@ -947,7 +947,7 @@
                <!--Checking module figures-->
                <!--Checking module header-->
                <moduleRef key="header"
-                  include="teiHeader fileDesc titleStmt publicationStmt distributor availability licence sourceDesc encodingDesc projectDesc samplingDecl profileDesc langUsage language"/>
+                  include="teiHeader fileDesc titleStmt publicationStmt distributor availability licence sourceDesc encodingDesc projectDesc samplingDecl profileDesc langUsage language idno"/>
                <elementSpec ident="teiHeader" mode="change">
                   <attList>
                      <attDef ident="facs" mode="delete"/>
@@ -1082,7 +1082,7 @@
                </classSpec>
                <!--Checking module textstructure-->
                <moduleRef key="textstructure"
-                  include="TEI text body group div dateline docTitle titlePart docDate front"/>
+                  include="TEI text body group div dateline docTitle titlePart docDate front opener closer signed  postscript"/>
                <elementSpec ident="TEI" mode="change">
                   <attList>
                      <attDef ident="version" mode="delete"/>

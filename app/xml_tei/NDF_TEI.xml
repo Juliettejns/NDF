@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI>
+<?xml-model href="out/NDF_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/NDF_ODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -64,7 +66,9 @@
                                 <region>Bretagne</region>
                             </address>
                         </location>
-                        <desc>Capitale de Bretagne et lieu du procès en révision du capitaine Dreyfus en août 1899, qui confirme sa condamnation pour haute trahison</desc>
+                        <desc>Capitale de Bretagne et lieu du procès en révision du capitaine
+                            Dreyfus en août 1899, qui confirme sa condamnation pour haute
+                            trahison</desc>
                         <event xml:id="procdreyf" from="1899-08-07" to="1899-09-09">
                             <label>Second Procès de Dreyfus</label>
                             <desc>Procès en révision du <persName ref="#DREYFUS">capitaine
@@ -102,6 +106,24 @@
                             </address>
                         </location>
                         <desc>Capitale de la France</desc>
+                    </place>
+                    <place n="5" xml:id="REIMS">
+                        <placeName>Reims</placeName>
+                        <location>
+                            <address>
+                                <region>Champagne</region>
+                            </address>
+                        </location>
+                        <desc>Ville du nord-est de la France</desc>
+                    </place>
+                    <place n="6" xml:id="ROME">
+                        <placeName>Rome</placeName>
+                        <location>
+                            <address>
+                                <country>Italie</country>
+                            </address>
+                        </location>
+                        <desc>Capitale de l'Italie</desc>
                     </place>
                 </listPlace>
             </settingDesc>
@@ -272,11 +294,290 @@
                         </persName>
                         <note>Président de la République Française en 1894.</note>
                     </person>
-
-
-                    <personGrp xml:id="CHRETIENS"/>
-                    <personGrp xml:id="JUIFS"/>
-                    <personGrp xml:id="OTTOMANS"/>
+                    <person n="18" xml:id="ZOLA" role="dreyf">
+                        <persName>
+                            <forename>Émile</forename>
+                            <surname>Zola</surname>
+                        </persName>
+                        <note>Écrivain et journaliste français, chef de file du naturalisme. Il est
+                            principalement connu pour <hi>Les Rougons-Macquart</hi>, fresque
+                            romanesque dépeignant la vie d'une famille sous le Second Empire.</note>
+                    </person>
+                    <person n="19" xml:id="DELEGORGUE">
+                        <persName>
+                            <forename>Albert</forename>
+                            <surname>Delegorgue</surname>
+                        </persName>
+                        <note>Magistrat, président de la Cour d'assises pendant le second procès de
+                            Dreyfus</note>
+                    </person>
+                    <person n="20" xml:id="FREYSTAETTER" role="dreyf">
+                        <persName>
+                            <forename>Martin</forename>
+                            <surname>Freystaetter</surname>
+                        </persName>
+                        <note>Capitaine, ancien juge et juré du premier conseil de Guerre qui
+                            condamna Dreyfus en 1897. Doutant, au fur et à mesure, de la culpabilité
+                            de celui-ci, il témoigne au deuxième procès de Rennes que le dossier
+                            secret a bien été transmis au conseil de guerre pendant les
+                            délibérations.</note>
+                    </person>
+                    <person n="21" xml:id="CAVAIGNAC" role="antidreyf">
+                        <persName>
+                            <forename>Godefroy</forename>
+                            <surname>Cavaignac</surname>
+                        </persName>
+                        <note>Homme politique français, plusieurs fois ministre sous la IIIème
+                            République. Nommé ministre de la Guerre pendant l'affaire Dreyfus, il
+                            est opposé à la révision du procès et se positionne comme fervent
+                            anti-dreyfusard. Important figure de la droite nationaliste, de la fin
+                            du XIXème siècle, il est proche d'Action Française et membre de la ligue
+                            de la patrie française et président du groupe parlementaire des
+                            Républicains nationalistes.</note>
+                    </person>
+                    <person n="22" xml:id="AUFFRAY" role="antidreyf">
+                        <persName>
+                            <forename>Jules</forename>
+                            <surname>Auffray</surname>
+                        </persName>
+                        <note>Docteur en droit, Jules Auffray est avocat au barreau de Paris.
+                            Boulangiste et anti-dreyfusard convaincu, il est également conseiller
+                            municipal de Paris, à partir de 1900, puis député de la Seine, faisant
+                            parti du groupe parlementaire des Républicains nationalistes.</note>
+                    </person>
+                    <person n="23" xml:id="HARTMANN" role="dreyf">
+                        <persName>
+                            <forename>Gaston-Louis</forename>
+                            <surname>Hartmann</surname>
+                        </persName>
+                        <note>Licencié ès sciences et polytechnicien, il est affecté en temps que
+                            commandant à la Section technique de l'artillerie, où il conduit des
+                            études de métallurgie. Officier dreyfusard, il témoigne au second procès
+                            de Rennes.</note>
+                    </person>
+                    <person n="24" xml:id="BERTINMOUROT" role="antidreyf">
+                        <persName>
+                            <forename>Albert</forename>
+                            <surname>Bertin-Mourot</surname>
+                        </persName>
+                        <note>Officier topographe, il est chef de bataillon de l'État Major affecté
+                            au 4ème bureau. En cette qualité, il est tuteur de Dreyfus lors de son
+                            stage de 1893 et, antidreyfusard convaincu, devient un de principaux
+                            témoins à charge contre celui-ci à son procès de 1894. </note>
+                    </person>
+                    <person n="25" xml:id="BILLOT" role="antidreyf">
+                        <persName>
+                            <forename>Jean-Baptiste</forename>
+                            <surname>Billot</surname>
+                        </persName>
+                        <note>Militaire, général et homme politique français. Il est ministre de la
+                            Guerre de 1896 à 1898 et, dans le cadre de l'affaire Dreyfus, prend le
+                            parti à cette période de couvrir Esterhazy en attaquant Dreyfus et
+                            Picquart.</note>
+                    </person>
+                    <person n="26" xml:id="SCHEURER" role="dreyf">
+                        <persName>
+                            <forename>Auguste</forename>
+                            <surname>Scheurer-Kester</surname>
+                        </persName>
+                        <note>Industriel alsacien, propriétaire de la première usine chimique
+                            française et homme politique. Républicain et opposant à Napoléon III, il
+                            est député du Haut-Rhin, premier président du Sénat puis sénateur à vie
+                            à partir de 1875. Il est convaincu de l'innocence dès 1897 par
+                            l'intermédiaire de l'avocat de Picquart et décide le défendre. Il
+                            récupère les preuves contre Esterhazy par le biais de son ancienne
+                            maitresse, expose l'affaire à Zola, interpelle le Sénat et Félix Faure à
+                            de maintes reprises afin d'obtenir une révision du procès. Il meurt le
+                            16 septembre 1899, quelques jours après la fin du procès de Rennes, d'un
+                            cancer. </note>
+                    </person>
+                    <person n="27" xml:id="GRIBELIN" role="antidreyf">
+                        <persName>
+                            <forename>Félix</forename>
+                            <surname>Gribelin</surname>
+                        </persName>
+                        <note>Archiviste au Deuxième Bureau de la section Statistique de l'État
+                            Major, il fait parti des premiers à voir le contenu du bordereau qui
+                            conduit à l'affaire Dreyfus en 1894. Il témoigne à ce titre lors du
+                            second procès de Rennes où il avoue avoir nourri le dossier de preuves
+                            contre Dreyfus lors de sa première condamnation.</note>
+                    </person>
+                    <person n="28" xml:id="HENRY" role="antidreyf">
+                        <persName>
+                            <forename>Hubert-Joseph</forename>
+                            <surname>Henry</surname>
+                        </persName>
+                        <note>Officier français à la section statistique, il est nommé adjoint au
+                            chef de bureau en 1893 où il s'occupe de surveiller les activités des
+                            autorités allemandes. À ce titre, c'est à lui que Mme Bastian, femme de
+                            ménage à l'ambassade d'Allemagne et agent français, transmet le
+                            bordereau, qu'il remet immédiatement à ses supérieurs. Ami d'Esterhazy,
+                            il est accusé de création de faux accablant Dreyfus afin de grossir son
+                            dossier. Démasqué en 1898, il est enfermé à Saint Valérien où il se
+                            suicide.</note>
+                    </person>
+                    <person n="29" xml:id="DUPATY" role="antidreyf">
+                        <persName>
+                            <forename>Armand</forename>
+                            <surname>Du Paty de Clam</surname>
+                        </persName>
+                        <note>Officier supérieur de l'armée française passionné de graphologie, il
+                            est chargé, en 1893, de comparer l'écriture du bordereau avec celle de
+                            Dreyfus, qu'il interroge à de maintes reprises sans réussir à lui
+                            arracher des aveux. Principal accusateur au procès de 1894, c'est lui
+                            qui transmet les preuves secrètes au jury. Il est également un des
+                            auteurs des faux télégrammes, avec le commandant Henry, à l'encontre de
+                            Picquart. Démasqué en 1898, il est contraint d'interrompre sa carrière
+                            militaire.</note>
+                    </person>
+                    <person n="30" xml:id="LORIMIER">
+                        <persName>
+                            <forename>Etienne</forename>
+                            <surname>Lorimier</surname>
+                        </persName>
+                        <note>Sergent et ordonnance du commandant Henry. Il est retrouvé mort pendu
+                            dans des circonstances obscures à Saint Quentin, quelques mois après le
+                            suicide de son chef.</note>
+                    </person>
+                    <person n="31" xml:id="LAJOUX">
+                        <persName>
+                            <forename>Edmond</forename>
+                            <surname>Lajoux</surname>
+                        </persName>
+                        <note>Agent du contre-espionnage français remercié en 1895. Il témoigne
+                            avoir vu des liens entre le commandant Henry et Esterhazy au cours du
+                            procès de Rennes.</note>
+                    </person>
+                    <person n="32" xml:id="GONSE" role="antidreyf">
+                        <persName><forename>Charles-Arthur</forename><surname>Gonse</surname></persName>
+                        <note>Général de division et sous-chef de l'État Major, sous la direction du
+                            général du Boisdeffre, il refuse de reconnaître l'innocence de Dreyfus
+                            et la culpabilité d'Esterhazy et semble être parmi ceux qui conduisent à
+                            l'acharnement médiatique de Dreyfus.</note>
+                    </person>
+                    <person n="33" xml:id="BOISDEFFRE" role="antidreyf">
+                        <persName>
+                            <forename>Raoul</forename>
+                            <surname>Le Mouton de Boisdeffre</surname></persName>
+                        <note>Chef d'Etat Major de l'Armée de 1893 à 1898, il est donc impliqué dans
+                            l'Affaire Dreyfus, aux côtés de son sous-chef le général Gonse, et
+                            obligé de démissionner en 1898.</note>
+                    </person>
+                    <person n="34" xml:id="ROGET" role="antidreyf">
+                        <persName>
+                            <forename>Gauderique</forename>
+                            <surname>Roget</surname>
+                        </persName>
+                        <note>Général de l'armée française et chef du 4ème régiment de ligne au
+                            moment du second procès, il est persuadé de la culpabilité de Dreyfus et
+                            oeuvre en coulisse pour les antidreyfusards.</note>
+                    </person>
+                    <person n="35" xml:id="LAUTH" role="antidreyf">
+                        <persName>
+                            <forename>Jules</forename>
+                            <surname>Lauth</surname>
+                        </persName>
+                        <note>Saint-cyrien alsacien, il sert à la section statistique de l'État
+                            Major des Armées de 1893 à 1897, où il est chargé de traduire les
+                            documents allemands. Il fait parti des premiers à avoir vu le bordereau,
+                            avec Gribelin, et est accusé d'avoir falsifié des documents, avec
+                            celui-ci et le commandant Henry. À ce titre, il arrête sa carrière et
+                            part à la retraite prématurément en 1906. </note>
+                    </person>
+                    <person n="36" xml:id="CUIGNET" role="antidreyf">
+                        <persName><forename>Louis</forename><surname>Cuignet</surname></persName>
+                        <note>Militaire français et militant d'extrême droite, il est chargé de
+                            travailler sur le dossier secret en 1898 et découvre les falsifications
+                            de celui-ci. Bien qu'étant anti-dreyfusard convaincu, il est donc à
+                            l'origine de la résolution de l'affaire Dreyfus.</note>
+                    </person>
+                    <person n="37" xml:id="PAINLEVE" role="dreyf">
+                        <persName>
+                            <forename>Paul</forename><surname>Painlevé</surname></persName>
+                        <note>Professeur de mécanique à l'X, il lit l'avis de Poincaré devant le
+                            conseil de Guerre du second procès. Ce mathématicien entre en politique
+                            à la suite de l'Affaire Dreyfus, lors de laquelle il est convaincu de
+                            son innocence. Socialiste et membre de la ligue des droits de l'homme,
+                            il est plusieurs fois ministre de l'Air et de la Guerre au cours des
+                            années 1910, 1920 et 1930.</note>
+                    </person>
+                    <person n="38" xml:id="HADAMARD" role="dreyf">
+                        <persName>
+                            <forename>Jacques</forename><surname>Hadamard</surname></persName>
+                        <note>Mathématicien et oncle de Lucie Hadamard, femme de Dreyfus. Il
+                            s'engage en politique pour la reconnaissance des juifs après
+                            l'affaire.</note>
+                    </person>
+                    <person n="39" xml:id="HENNION">
+                        <persName><forename>Célestin</forename><surname>Hennion</surname></persName>
+                        <note>Préfet de police français ayant modernisé la police française au début
+                            du XXème siècle, en temps que directeur de la Sécurité Général et avec
+                            l'aval de Clémenceau. Créateur des "Brigades du Tigre", il a enquêté sur
+                            l'affaire Dreyfus et étudié les preuves de son innocence fournies par le
+                            capitaine Picquart</note>
+                    </person>
+                    <person n="40" xml:id="FLEUR">
+                        <persName><forename>Moïse</forename><surname>Blum</surname></persName>
+                        <note>dit Colonel Fleur, témoin au second procès de Rennes.</note>
+                    </person>
+                    <person n="41" xml:id="FREYCINET" role="antidreyf">
+                        <persName><forename>Charles</forename><surname>de
+                            Freycinet</surname></persName>
+                        <note>Homme d'état et ingénieur français, il est plusieurs fois président du
+                            conseil et ministre de la IIIème République. Accusé d'avoir étouffé le
+                            scandale de Panama, il quitte la politique un moment et la retrouve au
+                            ministère de la Guerre dans le cabinet Dupuy, en pleine affaire Dreyfus.
+                            Ardent ati-dreyfusard, il est soucieux de défendre l'honneur de
+                            l'armée.</note>
+                    </person>
+                    <person n="42" xml:id="CHAMOIN">
+                        <persName><forename>Eugène-Victor-Auguste</forename><surname>Chamoin</surname></persName>
+                        <note>Officier en charge du dossier secret, témoigne au procès de
+                            Rennes.</note>
+                    </person>
+                    <person n="43" xml:id="JEANNET">
+                        <persName><forename>Maurice</forename><surname>Jeannet</surname></persName>
+                        <note>Lieutenant-colonel, témoin au procès de Rennes</note>
+                    </person>
+                    <person n="44" xml:id="LEMONNIER">
+                        <persName><forename>Victor-Auguste</forename><surname>Lemonnier</surname></persName>
+                        <note>Militaire, capitaine, témoin au procès de Rennes</note>
+                    </person>
+                    <person n="45" xml:id="CORDIER" role="dreyf">
+                        <persName><forename>Albert</forename><surname>Cordier</surname></persName>
+                        <note>Colonel et antidreyfusard convaincu, il se range au côté des
+                            dreyfusards à la suite de la révélation des faux en 1898.</note>
+                    </person>
+                    <person n="46" xml:id="BERNHEIM">
+                        <persName><forename>E.</forename><surname>Bernheim</surname></persName>
+                        <note>Lieutenant d'artillerie et témoin au procès de Rennes concernant les
+                            agissements de Estherazy.</note>
+                    </person>
+                    <person n="47" xml:id="CARVALHO" role="dreyf">
+                        <persName><forename>Julien</forename><surname>Carvalho</surname></persName>
+                        <note>Capitaine et dreyfusard convaincu, il témoigne au procès de Rennes où
+                            il présente l'absence d'attention accordée à certains éléments du
+                            dossier lors du premier procès.</note>
+                    </person>
+                    <person n="48" xml:id="FORZINETTI">
+                        <persName><forename>Ferdinand</forename><surname>Forzinetti</surname></persName>
+                        <note>Commandant aux prisons de Paris, il reçoit Dreyfus à la prison du
+                            Cherche Midi en 1894. Il témoigne en sa faveur au procès de
+                            Rennes.</note>
+                    </person>
+                    <person n="49" xml:id="DUCROS" role="dreyf">
+                        <persName><forename>Joseph-Jules</forename><surname>Ducros</surname></persName>
+                        <note>Commandant d'artillerie et dreyfusard convaincu, il témoigne au second
+                            procès de Rennes. Il dépose également en sa faveur devant la Chambre
+                            Criminelle.</note>
+                    </person>
+                    <person n="50" xml:id="SEBERT">
+                        <persName><forename>Hippolyte</forename><surname>Sébert</surname></persName>
+                        <note>Scientifique, général de l'armée française et espérantiste. Il
+                            témoigne au procès de Rennes et est l'un des acteurs de la
+                            réhabilitation de Dreyfus, en étudiant le bordereau et concluant par son
+                            innocence dans l'écriture de celui-ci.</note>
+                    </person>
                 </listPerson>
             </particDesc>
         </profileDesc>
@@ -295,8 +596,10 @@
                 </front>
                 <body>
                     <div>
-                        <dateline><placeName ref="#RENNES">Rennes</placeName>, <date
-                                when-iso="1899-09-08">8 septembre 1899</date>.</dateline>
+                        <opener>
+                            <dateline><placeName ref="#RENNES">Rennes</placeName>, <date
+                                    when-iso="1899-09-08">8 septembre 1899</date>.</dateline>
+                        </opener>
                         <p>5 heures matin: Dès l'aube, une fièvre, par les rues endormies, le soleil
                             se lève sur un déploiement de forces qui, pour <placeName ref="#PARIS"
                                 >Paris</placeName>, serait minime, mais qui, ici, dans le cadre
@@ -364,6 +667,9 @@
                         <p>4h50.Le tribunal militaire rentre. Dix ans de détention, des
                             circonstances atténuantes à cet innocent. Soit! nous acceptons. La
                             séance continue.</p>
+                        <closer>
+                            <signed>Séverine</signed>
+                        </closer>
                     </div>
                 </body>
             </text>
@@ -379,8 +685,10 @@
                 </front>
                 <body>
                     <div>
-                        <dateline><placeName ref="#RENNES">Rennes</placeName>, <date
-                                when-iso="1899-08-14">14 août 1899</date>.</dateline>
+                        <opener>
+                            <dateline><placeName ref="#RENNES">Rennes</placeName>, <date
+                                    when-iso="1899-08-14">14 août 1899</date>.</dateline>
+                        </opener>
                         <p>Rien ne tient plus, tout s'efface - la confrontation entre <persName
                                 ref="CASIMIR">M.Casimir-Perier</persName> et le <persName
                                 ref="#MERCIER">général Mercier</persName>, la confusion de celui-ci
@@ -428,8 +736,10 @@
                             à <placeName ref="#PARIS">Paris</placeName> devait avoir une
                             répercussion, en même temps, à <placeName ref="#RENNES"
                                 >Rennes</placeName>: ce coup de pistolet est comme la fusée qui
-                            éclate après que le feu d'artifice a raté. Elle était même le bouquet!
-                        </p>
+                            éclate après que le feu d'artifice a raté. Elle était même le bouquet! </p>
+                        <closer>
+                            <signed>Séverine</signed>
+                        </closer>
                     </div>
                 </body>
             </text>
@@ -445,7 +755,7 @@
                 </front>
                 <body>
                     <div>
-                        <p>Je pense à vous, mes amis des <placeName ref="TROIS MARCHES">Trois
+                        <p>Je pense à vous, mes amis des <placeName ref="#TROIS MARCHES">Trois
                                 Marches</placeName>, de la bonne auberge où, tout un mois, nous
                             vécûmes, Bleus parmi les Chouans, parias de l'Idée, suspects sinon
                             proscrits, dans la plus fraternelle des communions. </p>
@@ -520,6 +830,588 @@
                             arguer de surprise après telle déclaration de principes et toute
                             négligence serait une trahison. "On attendra le départ des <rs
                                 ref="#ARMEE">troupes</rs>"... C'est net!</p>
+                        <closer>
+                            <signed>Séverine</signed>
+                        </closer>
+                    </div>
+                </body>
+            </text>
+            <text n="4" xml:id="n614" facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703733m/">
+                <front>
+                    <docTitle>
+                        <titlePart type="main">Notes d'une frondeuse</titlePart>
+                        <titlePart type="sub">Le Byzantinisme du général Mercier</titlePart>
+                    </docTitle>
+                    <docDate>
+                        <date when-iso="1899-08-14">14 août 1899</date>
+                    </docDate>
+                </front>
+                <body>
+                    <div>
+
+                        <cit>
+                            <quote>"J'accuse, enfin, le premier Conseil de guerre d'avoir violé le
+                                droit en condamnant un accusé sur une pièce restée secrète"</quote>
+                            <ref>Aurore, 13 janvier 1898. <persName ref="#ZOLA"> Emile
+                                    Zola</persName></ref>
+                        </cit>
+
+                        <p>Je voudrais que tous ceux que l'on a abusés, trompés, que l'on trompe et
+                            que l'on abuse encore, assistassent, par eux-même, aux débats du Conseil
+                            de Guerre: qu'ils puissent voir et toucher, comme saint Thomas, les
+                            vérités qu'on leur a dissimulées ou travesties. Mais ainsi que toute une
+                            bibliographie existe, de notre côté, sur l'affaire <persName
+                                ref="#DREYFUS">Dreyfus</persName>, témoignant de notre souci, de
+                            notre scrupule, de notre désir à découvrir la solution du problème,
+                            tandis qu'il n'est, de l'autre part, qu'un seul livre là dessus -le
+                            Procès <persName ref="#ZOLA">Zola</persName>, de M.Georges Bonnamour,
+                            bien suggestif à consulter aujourd'hui- ainsi ce ne sont point des
+                            adversaires, qui se sont montrés le plus empressés à venir ici, aux
+                            sources mêmes, chercher la précision et l'exactitude du fait. Je le
+                            regrette. Car il n'est pas un être de bonne foi qui, ayant vu, ayant
+                            entendu, se trouvant donc en situation de contrôler les récits, les
+                            soi-disant comptes-rendus de la plupart des feuilles nationalistes ne
+                            demeurerait stupéfait, et quelque peu honteux, d'avoir accordé créance à
+                            de semblables...imaginations!</p>
+                        <p>Heureusement, le document est là, qui peut parer à l'absence, permettre à
+                            qui le voudra, en toute loyauté, de certaines épreuves. Tenez, prenenez
+                            non pas des textes plus ou moins falsifiés par la passion pour ou
+                            contre, mais des sténographies: celle du Procès <persName ref="#ZOLA"
+                                >Zola</persName>, celle de l'Enquête de la Cour de Cassation, tome
+                            1. Dans celui-là, page 176, à la date du 9 février 1898, voyez la
+                            déposition de <persName ref="#MERCIER">M.le général Mercier</persName>,
+                            lrosque pressé de questions par <persName ref="#LABORI"
+                                >Labori</persName>, malgré les efforts du <persName
+                                ref="#DELEGORGUE">président Delegorgue</persName>, sur la
+                            communication de pièce secrète aux juges hors l'accusé et la défense, il
+                            s'en tira par des réponses dilatoires et hautaines. Six feuillets, là,
+                            sont à relire. Il faut voir avec quelle morgue le militaire rappelle
+                            l'avocat à l'ordre: "Je crois que l'affaire <persName ref="#DREYFUS"
+                                >Dreyfus</persName> n'est pas en question et qu'il est intervenu un
+                            arrêt de la Cour qui interdit de la mettre en question". </p>
+                        <p>Puis, après le dépôt des conclusions, tenant à la possibilité d'établir
+                            l'illégalité commise, et la déclaration retentissante de <persName
+                                ref="#MERCIER">M.le général Mercier</persName>: "Si j'avais à
+                            revenir sur le procès <persName ref="#DREYFUS">Dreyfus</persName>,
+                            puisqu'on me demande ma parole de soldat, ce serait pour dire que
+                                <persName ref="#DREYFUS">Dreyfus</persName> était un traite qui a
+                            été justement et légalement condamné" c'est la riposte ambiguë,
+                            byzantine, le démenti: "Ce n'est pas vrai!" s'appliquant exclusivement à
+                            l'allégation que le témoin aurait parlé de la communication de pièce
+                            secrète et non au fond même du débat, au fait contesté. Prenez,
+                            maintenant, le volume de l'Enquête, page 9. Ce n'est plus un simple
+                            avocat que l'ex-ministre de la Guerre morigène, mais un Président de la
+                            Chambre et ses conseillers. La question est posée, nette, précise. Voici
+                            les réponses. </p>
+                        <p>Je ne crois pas avoir à m'expliquer sur ce point...la demande de révision
+                            est limitée... c'est sciemment que M.le garde des sceaux n'a point
+                            relevé la communication qui aurait été faite de pièces secrètes... Je
+                            persiste dans ma déclaration: je ne crois pas que la cour de cassation
+                            ait à s'occuper de la question. Ceci à la date du 4 novembre 1898, donc
+                            neuf mois plus tard. Les deux fois, <persName ref="#MERCIER">M.Le
+                                général Mercier</persName> a levé la main devant le Christ, juré de
+                            parler sans haine et sans crainte, de dire la vérité, toute la vérité,
+                            rien que la vérité. Samedi, troisième serment. Mais cette fois, il
+                            avoue. <persName ref="#DREYFUS">Dreyfus</persName> n'a pas été
+                            légalement condamné puisqu'i'l n'y eut communication de pièce secrète
+                            sur son ordre à lui - "ordre moral". Mais cela on en avait une telle
+                            certitude, ses silences mêmes (parjures par omission) avaient été si
+                            pribants que la confession ne pouvait plus causer aucune surprise. Ce
+                            qu'il y a eu de stupéfiant et d'un peu répugnant dans le témoignage,
+                            c'est son manque de crânerie, c'est cette affirmation de <persName
+                                ref="#MERCIER">M. le général Mercier</persName>, qu'il n'a sur, lui,
+                            de quelle manière son "ordre moral" avait été interprété, comment il
+                            avait été suivi, qu'en juin dernier, en juin 1899! A qui <persName
+                                ref="#MERCIER">M.Mercier</persName> espère-t-il faire croire cela? A
+                            qui fera-t-il admettre qu'en ces deux années de tourmente où, tant de
+                            fois, son nom fut prononcé, conspué, maudit, qu'après les débats du
+                            procès <persName ref="#ZOLA">Zola</persName>, qu'après l'enquête,
+                            qu'après ces épreuves successives et de plus en plus troublantes, il ne
+                            fut pris que cet été du besoin d'être édifié! Cela n'est pas vrai! Et
+                            c'est une vilaine manoeuvre que d'essayer de repasser à des subordonnés
+                            la responsabilité d'un acte accompli en tant uqe chef - et de vouloir
+                            qu'ils soient à la peine n'ayant point participé au déshonneur!</p>
+                        <p>Le parjure suffirait sans cette aggravation.</p>
+                        <closer>
+                            <signed>Severine</signed>
+                        </closer>
+                        <postscript>
+                            <p>J'espère que nos lecteurs auront compris, en fin de mon article
+                                d'avant-hier, que le qualificatif du mot angoisse était
+                                "universelle" et non "criminelle".</p>
+                        </postscript>
+                    </div>
+                </body>
+            </text>
+            <text n="5" xml:id="n627" facs="https://gallica.bnf.fr/ark:/12148/bpt6k67037467">
+                <front>
+                    <docTitle>
+                        <titlePart type="main">Notes d'une frondeuse</titlePart>
+                        <titlePart type="sub">L'école de Picquart</titlePart>
+                    </docTitle>
+                    <docDate>
+                        <date when-iso="1899-08-27">27 août 1899</date>
+                    </docDate>
+                </front>
+                <body>
+                    <div>
+                        <opener>
+                            <dateline><placeName ref="#RENNES">Rennes</placeName>, <date
+                                    when-iso="1899-08-26">26 août 1899</date></dateline>
+                        </opener>
+                        <p>-Qui va-t-on bien tenter d'assassiner? </p>
+                        <p>Ainsi l'on s'interrogeait, ce matin, au sortir de la séance où le
+                                <persName ref="#FREYSTAETTER">capitaine Freystaetter</persName>
+                            avait convaincu <persName ref="#MERCIER">l'ex-général Mercier</persName>
+                            d'illégalité et d'usage de faux. Car voici les coupables acculés, pris
+                            dans les rêts de leurs mensonges, dans le tissus de leurs infamies!
+                            Comment, par quelle diversion échapper à la Loi qui attend, au gendarme
+                            qui guette, à l'opinion qui s'émeut? Ou, simplement, par quels gestes
+                            sanguinaires, tenter de se défendre, essayer de se venger? La fureur met
+                            de la folie dans des yeux d'ordinaire impassibles; des poings se
+                            crispent - le rêve rouge d'<persName ref="#ESTERHAZY"
+                                >Esterhazy</persName>, croyez-le bien, hante des cervelles...</p>
+                        <p>Loin d'ici on ne peut savoir tout ce qui se trame dans l'ombre: les
+                            conciliabules de chaque après-midi pour préparer les témoignages du
+                            lendemain (chacun devant donner sa note, jouer son rôle, corroborer,
+                            appuyer, démentir, en raison de l'audience du matin); <persName
+                                ref="#CAVAIGNAC">M.Caivaignac</persName>, embusqué place de la
+                            Comédie, foyer de la résistance, centre de l'agitation; <persName
+                                ref="#AUFFRAY">M.Auffray</persName> "l'un des jeunes conseils les
+                            plus écoutés du comte de Paris" jadis veillant à la sécurité juridique
+                            de l'entreprise, fréquentant à toute heure chez l'<persName
+                                ref="#MERCIER
+                                ">ex-général Mercier</persName>...
+                            et le va-et-vient éperdu entre tous ces nids de réaction! Comme
+                            intermède, le coup de révolver sur <persName ref="#LABORI"
+                                >Labori</persName>, le coup de couteau ou la bombe que nous
+                            attendons pour demain!</p>
+                        <p> Est-ce à dire que tels actes proviennent directement d'ici? Aucunement.
+                            Ils ne sont qu'une résultante, un ricochet, le fait d'alliés remplis de
+                            zèle. L'esprit prétorien procède autrement: par masse - le
+                            pronunciamiento, Brumaire ou Décembre, les "coupes sombres" dans le bois
+                            sacré de la Pensée! Cela, beaucoup y songent: on le lit, comme en un
+                            livre, dans les regards haineux... Surtout, quand une conscience
+                            s'affirme sous l'uniforme, quand un <persName ref="#PICQUART"
+                                >Picquart</persName> hier, un <persName ref="#FREYSTAETTER"
+                                >Freystaetter</persName> aujourd"hui, un <persName ref="#HARTMANN"
+                                >Hartmann</persName> demain, viennent parce qu'ils sont soldats et
+                            suivant la conception qu'ils se sont faite du devoir professionnel,
+                            proclamer la vérité.</p>
+                        <p>Car la beauté de l'exemple, c'est d'être suivi; c'est d'entraîner, dans
+                            la voie noble de l'abnégation et du désintéressement, des âmes peut-être
+                            hésitantes. <persName ref="#PICQUART">Georges Picquart</persName> aura
+                            connu, ce matin, en entendant le <persName ref="#FREYSTAETTER">capitaine
+                                Freystaetter</persName> témoigne, la plus pure joie qui lui puisse
+                            être récompense. Il n'est plus seul, dans ce grand combat: un compagnon
+                            de sa race a pris place à ses cotés, et <persName ref="#HARTMANN"
+                                >Hartmann</persName> va bientôt les rejoindre. Avenir, avancement,
+                            faveurs, ils auront tout sacrifié à l'obligation d'une vérité
+                            supérieure, à l'accomplissement d'une tâche, qui semblait incompatible
+                            avec leur fonction.</p>
+                        <p>Et je songe, avec une fierté attendrie, qu'une femme, une jeune fille,
+                            présida aussi à la détermination du <persName ref="#FREYSTAETTER"
+                                >capitaine Freystaetter</persName>; que sa fiancée répondit à qui
+                            lui faisait observer les risques de telle attitude:</p>
+                        <p>-Mieux vaut plus d'honneur et moins de galons!</p>
+                        <p>Ainsi pensent les soldats du Droit, les jeunes chefs, qui entendent que
+                            le glaive, dans la balance, ne fausse pas l'arrêt de Justice!</p>
+                        <closer>
+                            <signed>Severine.</signed>
+                        </closer>
+                    </div>
+                </body>
+            </text>
+            <text n="6" xml:id="n624" facs="https://gallica.bnf.fr/ark:/12148/bpt6k67037430">
+                <front>
+                    <docTitle>
+                        <titlePart type="main">Notes d'une frondeuse</titlePart>
+                        <titlePart type="sub">L'omelette</titlePart>
+                    </docTitle>
+                    <docDate>
+                        <date when-iso="1899-08-24">24 août 1899</date>
+                    </docDate>
+                </front>
+                <body>
+                    <div>
+                        <opener>
+                            <dateline><placeName ref="#RENNES">Rennes</placeName>, <date
+                                    when-iso="1899-08-23">23 août 1899</date>.</dateline>
+                        </opener>
+                        <p>On ne la fait pas sans casser d'oeufs: c'est bien évident! Et il était de
+                            grande prévoyance, l'assassin qui s'employa à éviter que le panier vint
+                            aux mains de <persName ref="#LABORI">Labori</persName>. Le panier -et la
+                            poêle! Hier, il nous venait comme un sourire, quand le <persName
+                                ref="#BERTINMOUROT">colonel Bertin-Mourot</persName>, d'une voix de
+                            commandement tout à fait comique en la circonstance, racontait que son
+                            entrevu avec <persName ref="#BILLOT">M.Billot</persName>, Ministre de la
+                            Guerre, pour lui communiquer les doutes de <persName ref="#SCHEURER"
+                                >M.Scheurer-Kestner</persName>, était coupé de l'appel affamé des
+                            officiers d'ordonnance: "Mon général, l'omelette est prête!" Pour sûre,
+                            elle l'était!</p>
+                        <p>Nos confrères masculins ont le mépris de ces petits détails; mais tout
+                            drame comporte son emblème, lequele est souvent un objet familier, voire
+                            vulgaire, soudainement promu au rang d'arme parlante. Une lampe, c'est
+                                <persName ref="#GRIBELIN">Gribelin</persName>; un rasoir, c'est
+                                <persName ref="#HENRY">Henry</persName>; des éperons sous une jupe,
+                            c'est du <persName ref="#DUPATY">Paty</persName>; un grattoir symbolise
+                            le 2ème bureau; un lacet -le cordon que le Grand-Turc envoie à ses
+                            disgraciés!- c'est, dénoué, le point d'interrogation qui ondule sur les
+                            fins touches: la tombe de Lemercier-Picquart, la tombe de <persName
+                                ref="#LORIMIER">Lorimier</persName> et même le cabanon de <persName
+                                ref="#LAJOUX">Lajoux</persName>. L'omelette, c'est tout l'imbriglio.
+                            On la voie à l'origine, dans l'auberge de campagne où le <persName
+                                ref="#BILLOT">général Billot</persName> fait halte; où, pour la
+                            première fois, le scrupule civil se heurte à la sérénité militaire.</p>
+                        <p>-L'omelette est prête!</p>
+                        <p>C'est le Mané, Thécel, Pharès, aux murs blanchis de chaux de
+                            l'hôtellerie. Aujourd'hui, dans la paume de <persName ref="#LABORI"
+                                >Labori</persName>, on entend craquer les oeufs. Quelques-uns n'ont
+                            déjà plus que leurs coquilles: des crânes angoissés qui feraient peine à
+                            voir s'il n'y avait une victime, et trop de machinations, trop de
+                            mensonges, trop de supplices agglomérés! Cependant notre ancienne
+                            connaissance <persName ref="#AUFFRAY">Auffray</persName> s'agit. Vous
+                            savez bien? Le chef de claque du procès <persName ref="#ZOLA"
+                                >Zola</persName>; celui à qui du <persName ref="#DUPATY"
+                                >Paty</persName> écrivait pour "faire" la salle, quand, sous
+                            l'argumentation de la défense, l'État-major fléchissait! Il s'agissait
+                            d'obstruer le débat par les hurlements de l'auditoire, appuyant
+                            l'éternel refus de <persName ref="#DELEGORGUE">M.Delegorgue</persName>:
+                            "La question ne sera pas posée"; d'empêcher le sacrilège de
+                            l'interrogation civile à l'omnipotence guerrière. Ce fut fait en
+                            conscience. <persName ref="#ZOLA">Zola</persName>, reprenant le mot de
+                            Voltaire, put en toute exactitude traiter de cannibales ceux qui
+                            criaient à mort, assommaient les républicains et menaçaient les femmes.
+                            Le sang coula; <persName ref="#ESTERHAZY">M.Esterhazy</persName> fut
+                            acclamé; les officiers de réserve et de territoriale arborèrent
+                            l'uniforme: ce fut une bien jolie fête!</p>
+                        <p>Ici, c'est moins facile. La circulaire du chef suprême de l'armée
+                            enjoignant à ses subordonnées de rester chez eux semble avoir assuré la
+                            tranquilité des débats. La tactique parait devoir être dignité:
+                            l'abstention en masse et signicative. Quand on fut sur le point de lire
+                            la lettre-témoignagne d'<persName ref="#ESTERHAZY">Esterhazy</persName>
+                            qui figure à l'Enquête de la Cour de cassation - <persName
+                                ref="#ESTERHAZY">Esterhazy</persName>?... Fi! Pouah! Oh! Les amours
+                            passées! - noblement en masse l'élément militaire déserta le prétoire.
+                            L'effet, tout d'abord, fut perdu. Comme la température n'est pas très
+                            saine et que le changement d'habitudes indispose ici beaucoup de gens,
+                            on crut d'abord à un malaise général.</p>
+                        <p>On les plaignit. Ce ne fut que lorsque <persName ref="#AUFFRAY"
+                                >M.Auffray</persName>, "berger de ce troupeau" et quelques
+                            directeurs de journaux nationalistes leur emboîtèrent le pas que l'on
+                            comprit. Alors, cela parut simplement ridicule, et fit sourire. Le bruit
+                            court que l'exode se renouvellera, encore plus imposant, lorsque
+                            commenceront les plaidoiries, lorsque se lèvera le premier défenseur...
+                            Tant mieux! Toute manifestation de parti-pris nous sert; démontrera qui
+                            s'obstine dans l'aveuglement, la surdité, l'erreur! Cependant que
+                            d'oeufs brisés d'ici-là, d'où -quelques uns ayant été couvés - de
+                            bizarres poulets s'échappent et se mettent à courir.</p>
+                        <p>Faudra-t-il donc, après l'omelette, s'occuper de la fricassée?</p>
+                        <closer>
+                            <signed>Séverine</signed>
+                        </closer>
+                        <postscript>
+                            <p>Rose-Blanche -On y a pensé. Elle ne viendra qu'après. Merci.</p>
+                        </postscript>
+                    </div>
+                </body>
+            </text>
+            <text n="7" xml:id="n617" facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703736v/">
+                <front>
+                    <docTitle>
+                        <titlePart type="main">Notes d'une frondeuse</titlePart>
+                        <titlePart type="sub">L'oeuvre</titlePart>
+                    </docTitle>
+                    <docDate>
+                        <date when-iso="1899-08-17">17 août 1899</date>
+                    </docDate>
+                </front>
+                <body>
+                    <div>
+                        <opener>
+                            <dateline><placeName ref="#RENNES">Rennes</placeName>, <date
+                                    when-iso="1899-08-16">16 août 1899</date>.</dateline>
+                        </opener>
+                        <p>Hier, elle était curieuse, la lecture des journaux "bien pensants".
+                            C'était à qui, de tous ces crocodiles, verserait le plus de pleurs; à
+                            qui témoignerait davantage d'indignation; à qui dirait le mieux: "C'est
+                            l'acte d'un fou...Tous les partis réprouveront" - et autres boniments!
+                            On le connaît, le désaveu de paternité vis-à-vis du phénomène faisant
+                            honte à qui l'enfenta; le déclinatoire envers les responsabilités trop
+                            lourdes ou périlleuses. "Odieux attentat, crime d'un fou" dit la
+                                <hi>Patrie</hi>, "Odieux attentat" répète <hi>le Soir</hi> "Crise
+                            aussi absurde qu'odieux", délcare <hi>le Gaulois</hi>: "Attentat
+                            imbécile, acte d'un fou", proclame <hi>l'Echo de Paris</hi>; "Violence
+                            imbécile d'un fou", prononce <hi>l'Intransigeant</hi>. "Crime odieux"
+                            formule <hi>la Libre Parole</hi> -qui "fait des voeux de prompt
+                            rétablissement". Et <hi>le Petit Journal</hi> est de même farine. </p>
+                        <p>Alors moi, songeant à mes collections de <placeName ref="#PARIS"
+                                >Paris</placeName>, aux articles de journaux depuis deux ans
+                            receuillis et classés alphabétiquement, aux monceaux d'injures
+                            quotidiennes déversées sur <persName ref="#LABORI">Labori</persName>, je
+                            me demande quelle est la puissance de raisonnement, la force de logique
+                            des gens qui, goutte à goutte versant la haine, s'étonnent, s'effraient
+                            du résultt. L'homme qui a tiré a cru bien faire; a pensé abattre le
+                            monstre que vous lui aviez dépeint. Son geste n'est que le signe de sa
+                            crédulité; le gage farouche de sa foi en votre sincérité. Ceci mène à
+                            Cela: c'est inéluctable!</p>
+                        <p>J'étais là, hier, tandis qu'on plaçait sa civière dans la petite voiture
+                            d'ambulance qui devait l'emmener vers un logis plus aéré, plus rustique.
+                            Sur la blancheur des draps, son visage de bonté et de force se
+                            détachait, dominant l'expression de la douleur pour sourire à tous. Sa
+                            voix, encore, nous encourageait. "Bonjour <persName>Séverine</persName>!
+                            Ils ne m'ont pas tué, vous voyez! On vivra, pour combattre... et pour
+                            vaincre!" Des larmes d'émotion et d'enthousiasme, devant cette belle
+                            vaillance, nous montaient aux yeux. Celui-là est vraiment un "professeur
+                            d'énergie". </p>
+                        <p>Et maintenant, que tous se défendent d'avoir versé -inconsciemment,
+                            involontairement, c'est entendu, pour les uns, je le crois, pour les
+                            autres, je veux le croire -l'enivrement du meurtre dans le verre de
+                            l'assassin, je me rappelle, le seul jour où je vis ce même front, tout
+                            pâle, se dresser au banc de la défense pour un incident d'ordre privé.
+                            C'était dans la période où <hi>le Soir</hi> publiaient les lettres de sa
+                            cuisinière, trop patriote pour s'abstenir de révéler les noirs complots
+                            qu'en servant à table, elle avait surpris et qu'elle dénonçait, en même
+                            temps que son ex-maître, à l'indignation des citoyens! C'était le temps
+                            où les nationalistes, tous les jours, traitaient <persName ref="#LABORI"
+                                >Labori</persName> de "vendu, d'employé du Syndicat, de traître à la
+                            patrie, de danger public" (j'ai vu les textes).</p>
+                        <p>Ouvrez donc la sténographie du procès <persName ref="#ZOLA"
+                                >Zola</persName>, tome I, page 445, au début de la septième
+                            audience, 13 février 1898.</p>
+                        <quote>
+                            <said><persName ref="#LABORI">M.Labori</persName> -Pardon, monsieur le
+                                Président, voulez-vous me donner un instant la parole pour donner à
+                                MM.les jurés une explication personnelle que je crois nécessaire?
+                                Certains journaux ne se contentent pas d'attaquer <persName
+                                    ref="#ZOLA">M.Emile Zola</persName>, d'attaquer la défense
+                                elle-même par des appréciations qu'on peut toujours laisser passer,
+                                quelques injurieuses qu'elles soient, parce qu'elles peuvent
+                                s'expliquer, soit par l'erreur, soit par la prévention, soit même
+                                par des passions malheureuses, mais honorables et légitimes; ces
+                                journaux ont recours, en outre, à la publication de faits
+                                calomnieux. Ces faits sont de nature à impressionner MM.les jurés et
+                                je demande, sur ce point, à donner trois minutes d'explication d'un
+                                ordre purement matériel. </said>
+                            <p>(M.le Président fait un signe d'assentiment).</p>
+                            <said>
+                                <p>Messieurs les jurés, la <hi>Libre Parole</hi> publie ce matin
+                                    l'entrefilet suivant: "Un de nos lecteurs nous demande si nous
+                                    connaissons le barreau de <placeName ref="#PARIS"
+                                        >Paris</placeName>..." Et le filet est sous la rubrique:"Le
+                                    défenseur de <persName ref="#ZOLA">Zola</persName>", il est donc
+                                    impossibile de se mépendre sur la portée de l'article: "...Un
+                                    avocat d'origine germanique, naturalisé Français, qui a épousé
+                                    une jeune Anglais et dont le père, resté Allemand, est
+                                    présentement inspecteur dans une Compagnie de chemins de fer
+                                    d'outre Rhin". Et la <hi>Libre Parole</hi> continue: "Cette
+                                    question vise-t-elle <persName ref="#LABORI"
+                                    >M.Labori</persName>, le théâtral défenseur de <persName
+                                        ref="#ZOLA">Zola</persName>? Ce qui est certain, c'est que,
+                                    comme tous ceux qui, de près ou de loin, ont trempé dans le
+                                    complot anti-français, <persName ref="#LABORI"
+                                        >M.Labori</persName> a des attaches étrangères. Il a en
+                                    effet épousé une demoiselle Ockey, protestante anglaise, après
+                                    son divorce d'avec M.Pachmann, un Allemand, si je ne me trompe,
+                                    dont elle a deux enfants que leur père vient visiter dans leur
+                                    nouvelle famille. Je ne donne ce renseignement qu'afin d'établir
+                                    que M.Labori a pu subir des influences qui ne sont pas
+                                    précisemment nationalistes, nous gardant bien de l'imiter en
+                                    faisant intervenir des femmes qui n'ont rien à faire dans le
+                                    débat." Je ne me livrerai, messieurs les jurés, à aucun
+                                    commentaire. Je répondrai par des gaits. D'autre part, comme je
+                                    suis décidé à ne me laisser arrêter par rien dans la tâche que
+                                    j'ai entreprise, et je m'attends à d'autres attques, je déclare
+                                    que je réponds pour l'unique et dernière fois. </p>
+                                <p>Voici ma réponse: Je ne suis pas naturalisé Français; je suis né
+                                    à <placeName ref="#REIMS">Reims</placeName>, d'un père français.
+                                    Ma femme n'est pas israélite. M.de Pachmann vient si peu faire
+                                    de visites chez moi que je n'ai pas l'honneur de le connaitre
+                                    personnellement. Il n'est pas Allemand, il est Russe; il est né
+                                    à Odessa; son père était professeur à l'Université d'Odessa; son
+                                    frère est actuellement conseiller privé et sénateur russe à
+                                    Saint-Pétersbourg. Mon père est Alsacien; il est depuis
+                                    quarante-cinq ans au service de la Compagnie des Chemins de fer
+                                    de l'Est; il a fait comme tel la campagne de 1870, pendant
+                                    laquelle il a été chargé, au camp de Châlons, de l'embarquement
+                                    de toutes les troupes françaises. En 1871, il a été délégué pour
+                                    reprendre à la gare de <placeName ref="#REIMS"
+                                    >Reims</placeName>, des mains des Prussiens, le service des
+                                    chemins de fer français, et c'est peutêtre la période de sa vie
+                                    où il a dû donner la plus grande preuve de patriotisme. Depuis,
+                                    en sa qualité d'inspecteur principal, il est chargé, d'accord
+                                    avec les commissions militaires, d'organiser, pour le cas de
+                                    guerre, la défense nationale sur sa section en ce qui concerne
+                                    le service des chemins de fer. Enfin, il y a sept ans, au mois
+                                    de janvier 1801, mon père a été décoré de la Légion d'honneur,
+                                    sur la demande et par l'intermédiaire du 4ème bureau de
+                                    l'Etat-Major de la Guerre et c'est <persName ref="#BOISDEFFRE"
+                                        >M.le Général de Boisdeffre</persName> qui lui a annoncé sa
+                                    décoration avec les félicitations qu'il a cru devoir y joindre. </p>
+                                <p>Voilà, messieurs les jurés, ma réponse! Je n'ai rien à ajouter:
+                                    je vous demande seulement d'apprécier, par cet indicent, ce que
+                                    valent certaines attaques et certaines affirmations. </p>
+                            </said>
+                        </quote>
+                        <p>Je n'ajouterai pas de commentaires. Mais l'on peut, sans trop
+                            d'invraisemblance, supposer que le scrupule était mince, pour un
+                            sectaire, de "tuer <persName ref="#DREYFUS">Dreyfus</persName>", à
+                            travers le "Prussien <persName ref="#LABORI">Labori</persName>". </p>
+                        <closer>
+                            <signed>Séverine.</signed>
+                        </closer>
+                    </div>
+                </body>
+            </text>
+            <text n="8" xml:id="n636" facs="https://gallica.bnf.fr/ark:/12148/bpt6k67037556/">
+                <front>
+                    <docTitle>
+                        <titlePart type="main">Notes d'une frondeuse</titlePart>
+                        <titlePart type="sub">Incorrigibles!</titlePart>
+                    </docTitle>
+                    <docDate>
+                        <date when-iso="1899-09-05">5 septembre 1899</date>
+                    </docDate>
+                </front>
+                <body>
+                    <div>
+                        <opener>
+                            <dateline><placeName ref="#RENNES">Rennes</placeName>, <date
+                                    when-iso="1899-09-04">4 septembre 1899</date>.</dateline>
+                        </opener>
+                        <p>Tandis que <persName ref="#GONSE">M.le général Gonse</persName> bafouille
+                            et que <persName ref="#ROGET">M.le général Roget</persName> blémit; que
+                            les sous-Roget (<persName ref="#LAUTH">Lauth</persName>, <persName
+                                ref="#CUIGNET">Cuignet</persName>, etc...) jappent aux trousses de
+                            la défense, pour retarder sa marche en avant dans ce labyrinthe de
+                            mensonges souvent puérils, toujours odieux; que des chefs militaires
+                            -"Face à l'ennemi!"- font l'autruche ou font le zèbre pour échapper à la
+                            vérité; celle-ci tantôt lentement, tantôt par à coups, surgit, se
+                            délivre des obstacles, se dégage des ténèbres, apparait distincte et
+                            quelque peu brutale. Elle ne fait pas honneur à ces Messieurs! En fait
+                            de bleus, il n'en est pas que des petits, dans l'affaire: au fond de son
+                            puits, et pour l'empêcher d'en sortir, la pauvre déesse a reçu de
+                            sérieuses raclées. Elle en porte les marques; et déjà, sur ce qu'on voit
+                            d'elle, l'empreinte de quelques oignes apparait. Demi-étranglée,
+                            demi-étouffée, c'est bataille encore pour la tirer à peu près sauve de
+                            leurs mains. </p>
+                        <p>La séance d'aujourd'hui a été, sous ce rapport, particulièrement
+                            instructive. Erreur (je tiens à demeurer courtoise) de <persName
+                                ref="#GONSE">M.le général Gonse</persName>, attribuant à <persName
+                                ref="#PAINLEVE">M.Painlevé</persName> des propos que celui-ci
+                            déclare n'avoir jamais tenus, et contre lesquels, dès qu'il en eut
+                            connaissance, il s'inscrivit véhémentement. Erreur de<persName
+                                ref="#ROGET"> M. le général Roget</persName>, attribuant à <persName
+                                ref="#HADAMARD">M.Hadamard</persName>, dans une déposition signée,
+                            un degré de parenté avec Dreyfus autre que le réel, et aggravant de ce
+                            fait, très sérieusement, des charges contre l'accusé. Déposition d'un
+                            rapport de <persName ref="#HENNION">M.Hennion</persName> sur l'agent
+                            Pommier... ce qui permit de déclarer celui-ci introuvable et d'éviter la
+                            discussion de son témoignage. Production innatendue et sensationnelle
+                            d'aun témoin extraordinaire, fourni par le <persName ref="#FLEUR"
+                                >colonel Moïse Blum, dit Fleur</persName>, et du même crû: du crû
+                            Quesnat - le premier témoin étranger entendu aux débats et sur
+                            assignation du Président- ce qui, supprimant les scrupules ingénus et
+                            patriotiques de la défense, va lui permettre quelques ripostes variées
+                            et bien senties. </p>
+                        <p>J'allais dire oubli de verser au dossier une dépêche importante de notre
+                            ambassadeur à <placeName ref="#ROME">Rome</placeName>, et escamotage
+                            d'une pièce non moins importante remise par <persName ref="#FREYCINET"
+                                >M.de Freycinet</persName> à <persName ref="#CAVAIGNAT"
+                                >M.Cavaignat</persName>, mais ce serait inexact, étant donnée la
+                            révélation stupéfiante que l'Etat-Major, ni à la Cour de Cassation, ni
+                            au Conseil de guerre, ne s'était résigné à tout donner, à tout livrer...
+                            avait gardé des munitions de réserve, une provision de hasard!
+                            Personnellement, je le savais, depuis quelque temps; une allusion légère
+                            de <persName ref="#CUIGNET">M.Cuignet</persName> l'avait aussi fait
+                            pressentir assez pour que <persName ref="#CHAMOIN">M.le général
+                                Chamoin</persName>, représentant du Ministre de la Guerre, se soit
+                            mis en mesure de présenter ledit dossier à première requeête des membres
+                            du Conseil - au cas où le pétard éclaterait.</p>
+                        <p>Il a éclaté: c'est <persName ref="#LABORI">Labori</persName> qui y a mis
+                            le feu en questionnant le <persName>général Gonse</persName>... et ce
+                            pétard-là me fit tout l'effet d'une dernière cartouche! Si l'effet en
+                            rate, c'est fini: il ne restera plus que la honte de la manoeuvre, de
+                            cette série de manoeuvres diverses d'aspect mais aux mêmes fins si
+                            pareilles, si peu conformes à ce qu'on s'imagine de la franchise
+                            militaire, à ce qui est le génie français!</p>
+                        <closer>
+                            <signed>Séverine.</signed>
+                        </closer>
+                    </div>
+                </body>
+            </text>
+            <text n="9" xml:id="n633" facs="https://gallica.bnf.fr/ark:/12148/bpt6k6703752z/">
+                <front>
+                    <docTitle>
+                        <titlePart type="main">Notes d'une frondeuse</titlePart>
+                        <titlePart type="sub">Les leurs!... Les nôtres!</titlePart>
+                    </docTitle>
+                    <docDate>
+                        <date when-iso="1899-09-02">2 septembre 1899</date>
+                    </docDate>
+                </front>
+                <body>
+                    <div>
+                        <opener>
+                            <dateline><placeName ref="#RENNES">Rennes</placeName>, <date
+                                    when-iso="1899-09-01">1er septembre 1899</date>.</dateline>
+                        </opener>
+                        <p>Comme je voudrais que le théâtre et l'auditoire de ce débat fussent moins
+                            restreints; que les indifférents, les incrédules, les adversaires,
+                            puissent ouïr de leurs oreilles et voir de leurs yeux! La sténographie
+                            donne bien le mot à mot des phrases, mais elle n'en rend pas l'accent,
+                            elle ne traduit ni l'expression des physionomies, ni l'atmosphère de la
+                            salle -et ces grands courants qui tantôt font onduler les têtes, comme
+                            un champ d'épis, sous un souffle de compassion ou de colère, qui tantôt
+                            tracent autour de la parole inattendu, les cercles houleux que détermine
+                            la chute d'une pierre en l'eau dormante des étangs!</p>
+                        <p>Qu'ils sont à plaindre les gens de bonne foi que l'on abuse, que l'on
+                            trompe, à qui l'erreur est versée, chaque jour, par petites doses, comme
+                            un poison subtil! Si, à l'abri du mensonge, livrés à leur seul instinct,
+                            ils pouvaient observer, écouter, ce qui se passe ici, comme tôt le
+                            malentendu serait dissipé, comme la probité native de beaucoup aurait
+                            fait d'écarter l'obstacle, de déchirer le voile, d'accéder à la
+                            vérité!</p>
+                        <p>Je voudrais seulement qu'hors les accusés - car ils sont plusieurs:
+                            celui-là qui semble revivre, s'échapper lentement de l'enfer, et ceux-là
+                            qui chaque jour ploie, blémit et creuse et peu plus -je voudrais,
+                            dis-je, que l'on puisse seulement mettre en parallèle les deux groupes
+                            de soldats témoins.</p>
+                        <p>De même que le contraste entre <persName ref="#LABORI">Labori</persName>,
+                            qui incarne la défense, et le <persName ref="#ROGET">général
+                                Roget</persName>, qui personnifie l'accusation, ressort
+                            qu'esthétiquement, en beauté morale, et pour la netteté du geste, une
+                            fois de plus l'arme le cède à la toge, de même du rapprochement entre
+                            les nôtres et les leurs, il appert que nous devons ressentir quelque
+                            fierté. Sauf les responsables et les intéressés, sauf quelques chfs hors
+                            d'état de se dégager et dont plusieurs, évidemment, furent sincères, à
+                            grade égal, où est la routine, où est le progrès? Où sont les
+                            ronds-de-cuir, même intelligents en matière de bureaucratie; où sont les
+                            penseurs? Où sont les implaçables, à l'esprit étroit, au coeur racorni;
+                            où sont les braves gens que le doute émeut - et qui ne doutent plus? Les
+                            masques trahissent, se font révélateurs.</p>
+                        <p>Ils ont <persName ref="#CUIGNET">Cuignet</persName>, <persName
+                                ref="#JEANNET">Jeannet</persName>, <persName ref="#FLEUR"
+                                >Fleur</persName>, <persName ref="#LEMONNIER">Lemonnier</persName>,
+                                <persName ref="#LABORI">Lauth</persName>, <persName ref="#GRIBELIN"
+                                >Gribelin</persName> qui, à bout d'ongles, se ronge les phalanges,
+                            un tas d'épouvantails phrénologiques devant qui s'effarent les
+                            dessinateurs! Nous avons <persName ref="#PICQUART">Picquart</persName>,
+                                <persName ref="#FREYSTAETTER">Freystaetter</persName>, <persName
+                                ref="#CORDIER">Cordier</persName>, <persName ref="#BERNHEIM"
+                                >Berheim</persName>, <persName ref="#CARVALHO">Carvalho</persName>,
+                                <persName>Forzinetti</persName>, <persName ref="#HARTMANN"
+                                >Hartmann</persName>, <persName ref="#DUCROS">Ducros</persName>, et
+                            cet admirable <persName ref="#SEBERT">général Sébert</persName> qui ce
+                            matin, proclamant sa conviction face à l'innocence de l'accusé, a
+                            provoqué un beau mouvement d'émotion.</p>
+                        <p>Ils ne sont pas tous jolis, jolis. Mais ils parlent franc, regardent
+                            droit, vont sans biaiser. Ce sont des hommes: ils font honneur à
+                            l'humanité!</p>
+                        <closer>
+                            <signed>Séverine.</signed>
+                        </closer>
                     </div>
                 </body>
             </text>
