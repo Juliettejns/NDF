@@ -5,7 +5,10 @@
         <title>Notes d'une frondeuse de Séverine</title>
     </head>
     <body>
-            <a href="{{url_for('corpus')}}">Corpus</a> <a href="{{url_for('lieux')}}">Index de lieux</a> <a href="{{url_for('personnes')}}">Index de personnes</a>
+            <a href="{{url_for('corpus')}}">Corpus</a> <a href="{{url_for('lieux')}}">Index de lieux</a> <a href="{{url_for('personnes')}}">Index de personnes</a>         <form class="form-inline" action="{{url_for("recherche")}}" method="GET">
+          <input class="form-control" name="keyword" type="search" placeholder="Recherche rapide" aria-label="Recherche">
+          <button class="btn btn-outline-info" type="submit">Rechercher</button>
+        </form>
         {% block corps %}{% endblock %}
     </body>
 </html>
