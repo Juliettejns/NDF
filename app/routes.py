@@ -1,8 +1,9 @@
-from flask import render_template
+from flask import render_template, request
 from app import app,db
 from modeles.donnees import *
 from constantes import document_xml, xslt_transformation
 from itertools import groupby
+
 
 
 @app.route("/")
@@ -39,3 +40,11 @@ def personnes():
                               groupby(sorted(association_Article_Personne, key=lambda ele: ele[1]),
                                       key=lambda ele: ele[3])}
     return render_template("pages/index_pers.html", index=index_personne_article)
+
+@app.route("/recherche")
+def recherche():
+    motclef = request.args.get("keyword", None)
+    resultats=[]
+    if motclef:
+        resultats= Article.query.filter(Article.article_texte.like("%{}%".format(motclef))).all()
+    return render_template("pages/recherche.html", resultats=resultats)

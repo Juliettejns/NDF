@@ -16,9 +16,13 @@ def extraction_donnees():
     element_numeroJournal = document_xml.xpath("//tei:text/@xml:id", namespaces=namespaces)
     for element in document_xml.xpath("//tei:group/tei:text", namespaces=namespaces):
         n += 1
+        element_texte = " ".join(
+            document_xml.xpath("//tei:text[@n=" + str(n) + "]//tei:div/descendant-or-self::*/text()",
+                               namespaces=namespaces))
         note = Article(article_titre=element_titre[int(n) - 1],
                        article_date=element_date[int(n) - 1],
-                       article_numJournal=element_numeroJournal[int(n) - 1]
+                       article_numJournal=element_numeroJournal[int(n) - 1],
+                       article_texte=element_texte
                        )
         db.session.add(note)
         db.session.commit()

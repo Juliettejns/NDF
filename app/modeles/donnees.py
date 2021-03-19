@@ -24,6 +24,7 @@ class Article(db.Model):
     article_titre = db.Column(db.String(45), nullable=False)
     article_date = db.Column(db.String(45), nullable=False)
     article_numJournal = db.Column(db.Integer, nullable=False)
+    article_texte = db.Column(db.Text, nullable=False)
     personnes = db.relationship("Personne", secondary=articleHasPersonne)
     lieux = db.relationship("Lieu", secondary=articleHasLieu)
 

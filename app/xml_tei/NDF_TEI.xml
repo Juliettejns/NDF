@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="out/NDF_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="out/NDF_ODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI>
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -850,8 +848,8 @@
                     <div>
 
                         <cit>
-                            <quote>"J'accuse, enfin, le premier Conseil de guerre d'avoir violé le
-                                droit en condamnant un accusé sur une pièce restée secrète"</quote>
+                            <quote><p>"J'accuse, enfin, le premier Conseil de guerre d'avoir violé le
+                                droit en condamnant un accusé sur une pièce restée secrète"</p></quote>
                             <ref>Aurore, 13 janvier 1898. <persName ref="#ZOLA"> Emile
                                     Zola</persName></ref>
                         </cit>
@@ -1180,7 +1178,7 @@
                                 >Zola</persName>, tome I, page 445, au début de la septième
                             audience, 13 février 1898.</p>
                         <quote>
-                            <said><persName ref="#LABORI">M.Labori</persName> -Pardon, monsieur le
+                            <p><persName ref="#LABORI">M.Labori</persName> -Pardon, monsieur le
                                 Président, voulez-vous me donner un instant la parole pour donner à
                                 MM.les jurés une explication personnelle que je crois nécessaire?
                                 Certains journaux ne se contentent pas d'attaquer <persName
@@ -1192,9 +1190,8 @@
                                 journaux ont recours, en outre, à la publication de faits
                                 calomnieux. Ces faits sont de nature à impressionner MM.les jurés et
                                 je demande, sur ce point, à donner trois minutes d'explication d'un
-                                ordre purement matériel. </said>
+                                ordre purement matériel. </p>
                             <p>(M.le Président fait un signe d'assentiment).</p>
-                            <said>
                                 <p>Messieurs les jurés, la <hi>Libre Parole</hi> publie ce matin
                                     l'entrefilet suivant: "Un de nos lecteurs nous demande si nous
                                     connaissons le barreau de <placeName ref="#PARIS"
@@ -1251,7 +1248,7 @@
                                 <p>Voilà, messieurs les jurés, ma réponse! Je n'ai rien à ajouter:
                                     je vous demande seulement d'apprécier, par cet indicent, ce que
                                     valent certaines attaques et certaines affirmations. </p>
-                            </said>
+                            
                         </quote>
                         <p>Je n'ajouterai pas de commentaires. Mais l'on peut, sans trop
                             d'invraisemblance, supposer que le scrupule était mince, pour un

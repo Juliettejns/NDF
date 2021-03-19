@@ -1,0 +1,24 @@
+{% extends "conteneur.html" %}
+{% block corps %}
+{% if resultats  %}
+
+        <p>Il y a {{resultats | length}} article(s) qui correspond(ent) à votre requête :</p>
+        
+        <ul>
+           
+            {% endif %}
+            
+            {% for note in resultats %}
+            
+            <li><a href="{{ url_for('note', article_id=note.article_id) }}">{{note.article_titre}}</a></li>
+            
+            {% else %}
+            
+            <br>
+            <br>
+            <h5>Désolé, votre recherche n'a pas abouti</h5>
+            
+            {% endfor %}
+            
+        </ul>
+{% endblock %}
