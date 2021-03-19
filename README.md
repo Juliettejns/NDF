@@ -1,5 +1,5 @@
 # Notes d'une frondeuse de Séverine
-Notes d'une frondeuse est une application Flask présentant des textes écrits par la journaliste Séverine et publiés dans le journal féministe "La Fronde". Cette application est développée dans le cadre des enseignements de Master 2 Technologies numériques appliquées à l'Histoire de l'École nationale des Chartes (XML-TEI, XSLT, HTML, CSS, Python, SQL).
+Notes d'une frondeuse est une application Flask présentant des textes écrits par la journaliste Séverine et publiés dans le journal féministe "La Fronde". Cette application est développée par Juliette Janes dans le cadre des enseignements de Master 2 Technologies numériques appliquées à l'Histoire de l'École nationale des Chartes (XML-TEI, XSLT, HTML, CSS, Python, SQL).
 
 ## Fonctionnalités
   - Une édition numérique d'un échantillon d'articles choisis, publiés entre 1897 et 1899 par Caroline Rémy dite Séverine dans La Fronde sous le nom "Notes d'une frondeuse". Les notes sont exploitées sous la forme d'un encodage XML-TEI, disponible dans le dépôt. Son guide d'encodage est également accessible dans le fichier ODD.
