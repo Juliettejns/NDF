@@ -13,7 +13,7 @@ courant = os.path.join(os.path.abspath(__file__))
 templates = os.path.join(courant, "templates")
 
 # création de l'application Flask
-app = Flask("Application", template_folder=templates)
+app = Flask("Application")
 
 # configuration de la base de donnée
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./db.sqlite'
