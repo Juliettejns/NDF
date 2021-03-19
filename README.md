@@ -12,4 +12,10 @@ Notes d'une frondeuse est une application Flask présentant des textes écrits p
   - Créer l'environnement: ```virtualenv -p python3 env```
   - Lancer l'environnement: ```source env/bin/activate```
   - Installer les librairies nécessaires: ```pip install -r requirements.txt```
+
+## Lancement
+  - Lancer l'environnement: ```source env/bin/activate```
   - Lancer l'application: ```python3 app/app.py```
+  - Aller sur ```http://127.0.0.1:5000/``` dans le navigateur
+  - Arrêter l'application: ```CRTL + C```
+  - Arrêter l'environnement: ```source env/bin/deactivate```
