@@ -64,20 +64,6 @@ def extraction_donnees(document):
         db.session.add(personne)
         # commit pour enregistrement de la modification
         db.session.commit()
-        # possibilité de récupérer les dates de naissance et de mort d'une personne (élément à supprimer de la base)
-        '''try:
-            personne_bdate = document.xpath("//person[@n=" + str(n) + "]/birth/@when",
-                                                )
-            personne_ddate = document.xpath("//person[@n=" + str(n) + "]/death/@when",
-                                                )
-            dates = Personne(personne_date_naissance= personne_bdate,
-                             personne_date_mort= personne_ddate)
-            db.session.add(dates)
-            db.session.commit()
-        except Exception:
-            db.session.add(personne)
-            db.session.commit()'''
-
     # extraction et insertion des éléments concernant la table Lieu
     # récupération des éléments nom et descriptions sous la forme de listes pour tout les lieux
     element_nom_lieu = document.xpath("//place/placeName/text()")
