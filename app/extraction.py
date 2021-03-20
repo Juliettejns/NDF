@@ -3,9 +3,9 @@ extraction des données présentes dans le fichier xml
 association de ces données à la bd
 """
 
-from constantes import document_xml
-from app import db
-from modeles.donnees import *
+from .constantes import document_xml
+from .app import db
+from .modeles.donnees import *
 from sqlalchemy.exc import IntegrityError
 
 
