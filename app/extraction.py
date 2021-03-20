@@ -45,11 +45,12 @@ def extraction_donnees(document):
         db.session.commit()
 
     # extraction et insertion des éléments concernants la table personne
-    # récupération sous forme de liste des éléments nom et prenom pour chaque personne présente dans le listPerson
+    # récupération sous forme de liste des éléments nom, prenom et role pour chaque personne présente dans le listPerson
     element_nom_personne = document.xpath("//persName/surname/text()")
     element_prenom = document.xpath("//persName/forename/text()")
+    element_role = document.xpath("//person/@role")
     n = 0
-    for element in document.xpath("//listPerson/person"):
+    for element in document.xpath("//particDesc//person"):
         # pour chaque person dans le listPerson, répétition des actions suivantes:
         n += 1
         # récupération d'une chaîne de caractères contenant les notes bibliographiques d'un personnage précis
@@ -58,6 +59,7 @@ def extraction_donnees(document):
         # insertion dans Personne de tout les éléments correspondants à une personne précise n
         personne = Personne(personne_nom=element_nom_personne[int(n) - 1],
                             personne_prenom=element_prenom[int(n) - 1],
+                            personne_role=element_role[int(n)-1],
                             personne_notes=element_notes_personne
                             )
         # ajout de Personne dans la base de données
