@@ -4,6 +4,8 @@ Author:Juliette Janes
 Date: 03/03/2021
 """
 # import de la classe db issue du module app situé dans le dossier parent
+# lorsque je veux écrire from ..app import db ou from app.app import db on me signale que ce n'est pas possible,
+# mais comme ça, ça fonctionne, à revoir donc.
 from app import db
 
 # création de la table d'association articleHasPersonne qui lie article et personne
@@ -48,9 +50,8 @@ class Personne(db.Model):
     personne_id = db.Column(db.Integer, unique=True, nullable=False, primary_key=True, autoincrement=True)
     personne_nom = db.Column(db.String(45), nullable=False)
     personne_prenom = db.Column(db.String(45), nullable=False)
-    personne_date_naissance = db.Column(db.String(45))
-    personne_date_mort = db.Column(db.String(45))
-    personne_role_dreyf = db.Column(db.String(45))
+    personne_dreyf = db.Column(db.String(45))
+    personne_role = db.Column(db.String(45))
     personne_notes = db.Column(db.Text)
 
 

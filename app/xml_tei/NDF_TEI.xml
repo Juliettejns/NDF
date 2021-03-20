@@ -126,8 +126,9 @@
                 </listPlace>
             </settingDesc>
             <particDesc>
-                <listPerson>
-                    <person n="1" xml:id="DREYFUS">
+
+<listPerson type="dreyfusard">
+                    <person n="1" xml:id="DREYFUS" role="militaire">
                         <persName>
                             <forename>Alfred</forename>
                             <surname>Dreyfus</surname>
@@ -141,7 +142,7 @@
                             1899 suite à de nouvelles informations, déchire l'opinion public.
                         </note>
                     </person>
-                    <person n="2" xml:id="DEMANGE" role="dreyf">
+                    <person n="2" xml:id="DEMANGE" role="juridique">
                         <persName>
                             <forename>Edgar</forename>
                             <surname>Demange</surname>
@@ -151,43 +152,26 @@
                         <death when="1925-02-11">11 février 1925
                             <settlement>Paris</settlement></death>
                         <note>Juriste français. Avocat de <persName ref="#DREYFUS"
-                                >Dreyfus</persName> lors de son procès devant le conseil de guerre
+                            >Dreyfus</persName> lors de son procès devant le conseil de guerre
                             en 1894 puis pendant sa révision en 1899</note>
                     </person>
-                    <person n="3" xml:id="CARRIERE">
-                        <persName>
-                            <forename>Louis Nobert</forename>
-                            <surname>Carrière</surname>
-                        </persName>
-                        <note>Officier de justice militaire, il participe au procès en révision de
-                                <persName ref="#DREYFUS">Dreyfus</persName> en qualité de
-                            commissaire du gouvernement.</note>
-                    </person>
-                    <person n="4" xml:id="PICQUART" role="dreyf">
+                    <person n="3" xml:id="PICQUART" role="militaire">
                         <persName>
                             <forename>Georges</forename>
                             <surname>Picquart</surname>
                         </persName>
                         <birth when="1854-09-06">6 septembre 1854
-                                <settlement>Strasbourg</settlement></birth>
+                            <settlement>Strasbourg</settlement></birth>
                         <death when="1914-01-19">19 janvier 1914
                             <settlement>Amiens</settlement></death>
                         <note>Officier au service du renseignement militaire et acteur majeur de
                             l'affaire Dreyfus. Convaincu de l'innocence de <persName ref="#DREYFUS"
                                 >Dreyfus</persName>, il découvre l'indice concernant la culpabilité
-                                d'<persName ref="#ESTERHAZY">Esterhazy</persName> et participe au
+                            d'<persName ref="#ESTERHAZY">Esterhazy</persName> et participe au
                             procès en révision où il est inculpé. Il est gracié en 1906 et devient
                             par la suite Ministre de la Guerre du gouvernement Clémenceau.</note>
                     </person>
-                    <person n="5" xml:id="ESTERHAZY" role="antidreyf">
-                        <persName>
-                            <forename>Ferdinand</forename>
-                            <surname>Walsin-Esterhazy</surname>
-                        </persName>
-                        <note>Officier français et espion pour le compte de l'Allemagne,, il est
-                            l'auteur du bordereau à l'origine de l'affaire Dreyfus.</note>
-                    </person>
-                    <person n="6" xml:id="BASCH" role="dreyf">
+                    <person n="4" xml:id="BASCH" role="intellectuel">
                         <persName>
                             <forename>Victor</forename>
                             <surname>Basch</surname>
@@ -196,29 +180,29 @@
                             faculté de lettres de Rennes de 1889 à 1906 et militant
                             dreyfusard.</note>
                     </person>
-                    <person n="7" xml:id="RECLUS" role="dreyf">
+                    <person n="5" xml:id="RECLUS" role="intellectuel">
                         <persName>
                             <forename>Paul</forename>
                             <surname>Reclus</surname>
                         </persName>
                         <note>Chirurgien et intellectuel engagé dans l'Affaire Dreyfus</note>
                     </person>
-                    <person n="8" xml:id="GAST" role="dreyf">
+                    <person n="6" xml:id="GAST" role="politique">
                         <persName>
                             <forename>Edmond</forename>
                             <surname>Gast</surname>
                         </persName>
                         <note>Homme politique, maire de Ville-d'Avray et cousin de <persName
-                                ref="#PICQUART">Picquart</persName>.</note>
+                            ref="#PICQUART">Picquart</persName>.</note>
                     </person>
-                    <person n="9" xml:id="JAURES" role="dreyf">
+                    <person n="7" xml:id="JAURES" role="politique">
                         <persName>
                             <forename>Jean</forename>
                             <surname>Jaurès</surname>
                         </persName>
                         <note>Homme politique français, dreyfusard</note>
                     </person>
-                    <person n="10" xml:id="VIVIANI" role="dreyf">
+                    <person n="8" xml:id="VIVIANI" role="politique">
                         <persName>
                             <forename>René</forename>
                             <surname>Viviani</surname>
@@ -227,89 +211,65 @@
                             de l'Humanité avec <persName ref="#JAURES">Jaurès</persName>. Par la
                             suite, il est ministre du Travail et président du Conseil.</note>
                     </person>
-                    <person n="11" xml:id="MERCIER" role="antidreyf">
-                        <persName>
-                            <forename>Auguste</forename>
-                            <surname>Mercier</surname>
-                        </persName>
-                        <note>Ministre de la Guerre de 1893 à 1895, premier accusateur public de
-                                <persName ref="#DREYFUS">Dreyfus</persName> et coordinateur des
-                            anti-dreyfusards au procès de Rennes.</note>
-                    </person>
-                    <person n="12" xml:id="AUBRY" role="dreyf">
+                    <person n="9" xml:id="AUBRY" role="intellectuel">
                         <persName>
                             <forename>Jules</forename>
                             <surname>Aubry</surname>
                         </persName>
                         <note>Professeur de droit à la faculté de <placeName ref="#RENNES"
-                                >Rennes</placeName> et premier président de la section rennaise de
+                            >Rennes</placeName> et premier président de la section rennaise de
                             la ligue des Droits de l'Homme à partir de 1899.</note>
                     </person>
-                    <person n="13" xml:id="SEE" role="dreyf">
+                    <person n="10" xml:id="SEE" role="intellectuel">
                         <persName>
                             <forename>Henri</forename>
                             <surname>Sée</surname>
                         </persName>
                         <note> Professeur d'histoire à la faculté de lettres de <placeName
-                                ref="#RENNES">Rennes</placeName>. Il s'intéresse à l'affaire Dreyfus
+                            ref="#RENNES">Rennes</placeName>. Il s'intéresse à l'affaire Dreyfus
                             à partir de 1897 et l'étudie avec ses collègues <persName ref="#BASCH"
                                 >Basch</persName>, <persName ref="#AUBRY">Aubry</persName>,
-                                <persName ref="#DOTTIN">Dottin</persName> et Andrade. Parmi les
+                            <persName ref="#DOTTIN">Dottin</persName> et Andrade. Parmi les
                             fondateurs de la section rennaise de la Ligue des Droits de l'Homme en
                             1899, il en est par la suite président de 1900 à 1914. </note>
                     </person>
-                    <person n="14" xml:id="DOTTIN" role="dreyf">
+                    <person n="11" xml:id="DOTTIN" role="intellectuel">
                         <persName>
                             <forename>Georges</forename>
                             <surname>Dottin</surname>
                         </persName>
                         <note>Linguiste et professeur à la faculté de lettres de Rennes à partir de
                             1892. Il fait parti, avec <persName ref="#BRASCH">Brasch</persName> et
-                                <persName ref="#SEE">Sée</persName> des combattants de
+                            <persName ref="#SEE">Sée</persName> des combattants de
                             l'antisémitisme rennois et demande la révision du procès de <persName
                                 ref="#DREYFUS">Dreyfus</persName>. Il participe à la fondation de la
                             Ligue des Droits de l'Homme rennoise.</note>
                     </person>
-                    <person n="15" xml:id="CAVALIER" role="dreyf">
+                    <person n="12" xml:id="CAVALIER" role="intellectuel">
                         <persName>
                             <forename>Jacques</forename>
                             <surname>Cavalier</surname>
                         </persName>
                         <note> Professeur de chimie à l'Université de Rennes. </note>
                     </person>
-                    <person n="16" xml:id="LABORI" role="dreyf">
+                    <person n="13" xml:id="LABORI" role="juridique">
                         <persName>
                             <forename>Fernand</forename>
                             <surname>Labori</surname>
                         </persName>
                         <note>Avocat et homme politique français. Il défend <persName ref="#DREYFUS"
-                                >Dreyfus</persName> lors du Second procès de Rennes</note>
+                            >Dreyfus</persName> lors du Second procès de Rennes</note>
                     </person>
-                    <person n="17" xml:id="CASIMIR">
-                        <persName>
-                            <forename>Jean</forename>
-                            <surname>Casimir-Perier</surname>
-                        </persName>
-                        <note>Président de la République Française en 1894.</note>
-                    </person>
-                    <person n="18" xml:id="ZOLA" role="dreyf">
-                        <persName>
-                            <forename>Émile</forename>
-                            <surname>Zola</surname>
-                        </persName>
-                        <note>Écrivain et journaliste français, chef de file du naturalisme. Il est
-                            principalement connu pour <hi>Les Rougons-Macquart</hi>, fresque
-                            romanesque dépeignant la vie d'une famille sous le Second Empire.</note>
-                    </person>
-                    <person n="19" xml:id="DELEGORGUE">
-                        <persName>
-                            <forename>Albert</forename>
-                            <surname>Delegorgue</surname>
-                        </persName>
-                        <note>Magistrat, président de la Cour d'assises pendant le second procès de
-                            Dreyfus</note>
-                    </person>
-                    <person n="20" xml:id="FREYSTAETTER" role="dreyf">
+                    <person n="14" xml:id="ZOLA" role="intellectuel">
+                    <persName>
+                        <forename>Émile</forename>
+                        <surname>Zola</surname>
+                    </persName>
+                    <note>Écrivain et journaliste français, chef de file du naturalisme. Il est
+                        principalement connu pour <hi>Les Rougons-Macquart</hi>, fresque
+                        romanesque dépeignant la vie d'une famille sous le Second Empire.</note>
+                        </person>
+                    <person n="15" xml:id="FREYSTAETTER" role="militaire">
                         <persName>
                             <forename>Martin</forename>
                             <surname>Freystaetter</surname>
@@ -320,30 +280,7 @@
                             secret a bien été transmis au conseil de guerre pendant les
                             délibérations.</note>
                     </person>
-                    <person n="21" xml:id="CAVAIGNAC" role="antidreyf">
-                        <persName>
-                            <forename>Godefroy</forename>
-                            <surname>Cavaignac</surname>
-                        </persName>
-                        <note>Homme politique français, plusieurs fois ministre sous la IIIème
-                            République. Nommé ministre de la Guerre pendant l'affaire Dreyfus, il
-                            est opposé à la révision du procès et se positionne comme fervent
-                            anti-dreyfusard. Important figure de la droite nationaliste, de la fin
-                            du XIXème siècle, il est proche d'Action Française et membre de la ligue
-                            de la patrie française et président du groupe parlementaire des
-                            Républicains nationalistes.</note>
-                    </person>
-                    <person n="22" xml:id="AUFFRAY" role="antidreyf">
-                        <persName>
-                            <forename>Jules</forename>
-                            <surname>Auffray</surname>
-                        </persName>
-                        <note>Docteur en droit, Jules Auffray est avocat au barreau de Paris.
-                            Boulangiste et anti-dreyfusard convaincu, il est également conseiller
-                            municipal de Paris, à partir de 1900, puis député de la Seine, faisant
-                            parti du groupe parlementaire des Républicains nationalistes.</note>
-                    </person>
-                    <person n="23" xml:id="HARTMANN" role="dreyf">
+                    <person n="16" xml:id="HARTMANN" role="militaire">
                         <persName>
                             <forename>Gaston-Louis</forename>
                             <surname>Hartmann</surname>
@@ -353,27 +290,7 @@
                             études de métallurgie. Officier dreyfusard, il témoigne au second procès
                             de Rennes.</note>
                     </person>
-                    <person n="24" xml:id="BERTINMOUROT" role="antidreyf">
-                        <persName>
-                            <forename>Albert</forename>
-                            <surname>Bertin-Mourot</surname>
-                        </persName>
-                        <note>Officier topographe, il est chef de bataillon de l'État Major affecté
-                            au 4ème bureau. En cette qualité, il est tuteur de Dreyfus lors de son
-                            stage de 1893 et, antidreyfusard convaincu, devient un de principaux
-                            témoins à charge contre celui-ci à son procès de 1894. </note>
-                    </person>
-                    <person n="25" xml:id="BILLOT" role="antidreyf">
-                        <persName>
-                            <forename>Jean-Baptiste</forename>
-                            <surname>Billot</surname>
-                        </persName>
-                        <note>Militaire, général et homme politique français. Il est ministre de la
-                            Guerre de 1896 à 1898 et, dans le cadre de l'affaire Dreyfus, prend le
-                            parti à cette période de couvrir Esterhazy en attaquant Dreyfus et
-                            Picquart.</note>
-                    </person>
-                    <person n="26" xml:id="SCHEURER" role="dreyf">
+                    <person n="17" xml:id="SCHEURER" role="politique">
                         <persName>
                             <forename>Auguste</forename>
                             <surname>Scheurer-Kester</surname>
@@ -389,7 +306,121 @@
                             16 septembre 1899, quelques jours après la fin du procès de Rennes, d'un
                             cancer. </note>
                     </person>
-                    <person n="27" xml:id="GRIBELIN" role="antidreyf">
+                    <person n="18" xml:id="PAINLEVE" role="intellectuel">
+                        <persName>
+                            <forename>Paul</forename><surname>Painlevé</surname></persName>
+                        <note>Professeur de mécanique à l'X, il lit l'avis de Poincaré devant le
+                            conseil de Guerre du second procès. Ce mathématicien entre en politique
+                            à la suite de l'Affaire Dreyfus, lors de laquelle il est convaincu de
+                            son innocence. Socialiste et membre de la ligue des droits de l'homme,
+                            il est plusieurs fois ministre de l'Air et de la Guerre au cours des
+                            années 1910, 1920 et 1930.</note>
+                    </person>
+                    <person n="19" xml:id="HADAMARD" role="intellectuel">
+                        <persName>
+                            <forename>Jacques</forename><surname>Hadamard</surname></persName>
+                        <note>Mathématicien et oncle de Lucie Hadamard, femme de Dreyfus. Il
+                            s'engage en politique pour la reconnaissance des juifs après
+                            l'affaire.</note>
+                    </person>
+                    <person n="20" xml:id="CORDIER" role="militaire">
+                        <persName><forename>Albert</forename><surname>Cordier</surname></persName>
+                        <note>Colonel et antidreyfusard convaincu, il se range au côté des
+                            dreyfusards à la suite de la révélation des faux en 1898.</note>
+                    </person>
+                    <person n="21" xml:id="BERNHEIM" role="militaire">
+                        <persName><forename>E.</forename><surname>Bernheim</surname></persName>
+                        <note>Lieutenant d'artillerie et témoin au procès de Rennes concernant les
+                            agissements de Estherazy.</note>
+                    </person>
+                    <person n="22" xml:id="CARVALHO" role="militaire">
+                        <persName><forename>Julien</forename><surname>Carvalho</surname></persName>
+                        <note>Capitaine et dreyfusard convaincu, il témoigne au procès de Rennes où
+                            il présente l'absence d'attention accordée à certains éléments du
+                            dossier lors du premier procès.</note>
+                    </person>
+                    <person n="23" xml:id="FORZINETTI" role="militaire">
+                        <persName><forename>Ferdinand</forename><surname>Forzinetti</surname></persName>
+                        <note>Commandant aux prisons de Paris, il reçoit Dreyfus à la prison du
+                            Cherche Midi en 1894. Il témoigne en sa faveur au procès de
+                            Rennes.</note>
+                    </person>
+                    <person n="24" xml:id="DUCROS" role="militaire">
+                        <persName><forename>Joseph-Jules</forename><surname>Ducros</surname></persName>
+                        <note>Commandant d'artillerie et dreyfusard convaincu, il témoigne au second
+                            procès de Rennes. Il dépose également en sa faveur devant la Chambre
+                            Criminelle.</note>
+                    </person>
+                    <person n="25" xml:id="SEBERT" role="militaire">
+                        <persName><forename>Hippolyte</forename><surname>Sébert</surname></persName>
+                        <note>Scientifique, général de l'armée française et espérantiste. Il
+                            témoigne au procès de Rennes et est l'un des acteurs de la
+                            réhabilitation de Dreyfus, en étudiant le bordereau et concluant par son
+                            innocence dans l'écriture de celui-ci.</note>
+                    </person>
+                </listPerson>
+                <listPerson type="antidreyfusard">
+                    <person n="26" xml:id="ESTERHAZY" role="militaire">
+                        <persName>
+                            <forename>Ferdinand</forename>
+                            <surname>Walsin-Esterhazy</surname>
+                        </persName>
+                        <note>Officier français et espion pour le compte de l'Allemagne, il est
+                            l'auteur du bordereau à l'origine de l'affaire Dreyfus.</note>
+                    </person>
+                    <person n="27" xml:id="MERCIER" role="politique">
+                        <persName>
+                            <forename>Auguste</forename>
+                            <surname>Mercier</surname>
+                        </persName>
+                        <note>Ministre de la Guerre de 1893 à 1895, premier accusateur public de
+                            <persName ref="#DREYFUS">Dreyfus</persName> et coordinateur des
+                            anti-dreyfusards au procès de Rennes.</note>
+                    </person>
+                    <person n="28" xml:id="CAVAIGNAC" role="politique">
+                        <persName>
+                            <forename>Godefroy</forename>
+                            <surname>Cavaignac</surname>
+                        </persName>
+                        <note>Homme politique français, plusieurs fois ministre sous la IIIème
+                            République. Nommé ministre de la Guerre pendant l'affaire Dreyfus, il
+                            est opposé à la révision du procès et se positionne comme fervent
+                            anti-dreyfusard. Important figure de la droite nationaliste, de la fin
+                            du XIXème siècle, il est proche d'Action Française et membre de la ligue
+                            de la patrie française et président du groupe parlementaire des
+                            Républicains nationalistes.</note>
+                    </person>
+                    <person n="29" xml:id="AUFFRAY" role="juridique">
+                        <persName>
+                            <forename>Jules</forename>
+                            <surname>Auffray</surname>
+                        </persName>
+                        <note>Docteur en droit, Jules Auffray est avocat au barreau de Paris.
+                            Boulangiste et anti-dreyfusard convaincu, il est également conseiller
+                            municipal de Paris, à partir de 1900, puis député de la Seine, faisant
+                            parti du groupe parlementaire des Républicains nationalistes.</note>
+                    </person>
+                    <person n="30" xml:id="BERTINMOUROT" role="militaire">
+                        <persName>
+                            <forename>Albert</forename>
+                            <surname>Bertin-Mourot</surname>
+                        </persName>
+                        <note>Officier topographe, il est chef de bataillon de l'État Major affecté
+                            au 4ème bureau. En cette qualité, il est tuteur de Dreyfus lors de son
+                            stage de 1893 et, antidreyfusard convaincu, devient un de principaux
+                            témoins à charge contre celui-ci à son procès de 1894. </note>
+                    </person>
+                    <person n="31" xml:id="BILLOT" role="militaire">
+                        <persName>
+                            <forename>Jean-Baptiste</forename>
+                            <surname>Billot</surname>
+                        </persName>
+                        <note>Militaire, général et homme politique français. Il est ministre de la
+                            Guerre de 1896 à 1898 et, dans le cadre de l'affaire Dreyfus, prend le
+                            parti à cette période de couvrir Esterhazy en attaquant Dreyfus et
+                            Picquart.</note>
+                    </person>
+                    <person n="32" xml:id="GRIBELIN" role="militaire">
                         <persName>
                             <forename>Félix</forename>
                             <surname>Gribelin</surname>
@@ -400,7 +431,7 @@
                             second procès de Rennes où il avoue avoir nourri le dossier de preuves
                             contre Dreyfus lors de sa première condamnation.</note>
                     </person>
-                    <person n="28" xml:id="HENRY" role="antidreyf">
+                    <person n="33" xml:id="HENRY" role="militaire">
                         <persName>
                             <forename>Hubert-Joseph</forename>
                             <surname>Henry</surname>
@@ -414,7 +445,7 @@
                             dossier. Démasqué en 1898, il est enfermé à Saint Valérien où il se
                             suicide.</note>
                     </person>
-                    <person n="29" xml:id="DUPATY" role="antidreyf">
+                    <person n="34" xml:id="DUPATY" role="militaire">
                         <persName>
                             <forename>Armand</forename>
                             <surname>Du Paty de Clam</surname>
@@ -428,32 +459,14 @@
                             Picquart. Démasqué en 1898, il est contraint d'interrompre sa carrière
                             militaire.</note>
                     </person>
-                    <person n="30" xml:id="LORIMIER">
-                        <persName>
-                            <forename>Etienne</forename>
-                            <surname>Lorimier</surname>
-                        </persName>
-                        <note>Sergent et ordonnance du commandant Henry. Il est retrouvé mort pendu
-                            dans des circonstances obscures à Saint Quentin, quelques mois après le
-                            suicide de son chef.</note>
-                    </person>
-                    <person n="31" xml:id="LAJOUX">
-                        <persName>
-                            <forename>Edmond</forename>
-                            <surname>Lajoux</surname>
-                        </persName>
-                        <note>Agent du contre-espionnage français remercié en 1895. Il témoigne
-                            avoir vu des liens entre le commandant Henry et Esterhazy au cours du
-                            procès de Rennes.</note>
-                    </person>
-                    <person n="32" xml:id="GONSE" role="antidreyf">
+                    <person n="35" xml:id="GONSE" role="militaire">
                         <persName><forename>Charles-Arthur</forename><surname>Gonse</surname></persName>
                         <note>Général de division et sous-chef de l'État Major, sous la direction du
                             général du Boisdeffre, il refuse de reconnaître l'innocence de Dreyfus
                             et la culpabilité d'Esterhazy et semble être parmi ceux qui conduisent à
                             l'acharnement médiatique de Dreyfus.</note>
                     </person>
-                    <person n="33" xml:id="BOISDEFFRE" role="antidreyf">
+                    <person n="36" xml:id="BOISDEFFRE" role="militaire">
                         <persName>
                             <forename>Raoul</forename>
                             <surname>Le Mouton de Boisdeffre</surname></persName>
@@ -461,7 +474,7 @@
                             l'Affaire Dreyfus, aux côtés de son sous-chef le général Gonse, et
                             obligé de démissionner en 1898.</note>
                     </person>
-                    <person n="34" xml:id="ROGET" role="antidreyf">
+                    <person n="37" xml:id="ROGET" role="militaire">
                         <persName>
                             <forename>Gauderique</forename>
                             <surname>Roget</surname>
@@ -470,7 +483,7 @@
                             moment du second procès, il est persuadé de la culpabilité de Dreyfus et
                             oeuvre en coulisse pour les antidreyfusards.</note>
                     </person>
-                    <person n="35" xml:id="LAUTH" role="antidreyf">
+                    <person n="38" xml:id="LAUTH" role="militaire">
                         <persName>
                             <forename>Jules</forename>
                             <surname>Lauth</surname>
@@ -482,43 +495,14 @@
                             celui-ci et le commandant Henry. À ce titre, il arrête sa carrière et
                             part à la retraite prématurément en 1906. </note>
                     </person>
-                    <person n="36" xml:id="CUIGNET" role="antidreyf">
+                    <person n="39" xml:id="CUIGNET" role="militaire">
                         <persName><forename>Louis</forename><surname>Cuignet</surname></persName>
                         <note>Militaire français et militant d'extrême droite, il est chargé de
                             travailler sur le dossier secret en 1898 et découvre les falsifications
                             de celui-ci. Bien qu'étant anti-dreyfusard convaincu, il est donc à
                             l'origine de la résolution de l'affaire Dreyfus.</note>
                     </person>
-                    <person n="37" xml:id="PAINLEVE" role="dreyf">
-                        <persName>
-                            <forename>Paul</forename><surname>Painlevé</surname></persName>
-                        <note>Professeur de mécanique à l'X, il lit l'avis de Poincaré devant le
-                            conseil de Guerre du second procès. Ce mathématicien entre en politique
-                            à la suite de l'Affaire Dreyfus, lors de laquelle il est convaincu de
-                            son innocence. Socialiste et membre de la ligue des droits de l'homme,
-                            il est plusieurs fois ministre de l'Air et de la Guerre au cours des
-                            années 1910, 1920 et 1930.</note>
-                    </person>
-                    <person n="38" xml:id="HADAMARD" role="dreyf">
-                        <persName>
-                            <forename>Jacques</forename><surname>Hadamard</surname></persName>
-                        <note>Mathématicien et oncle de Lucie Hadamard, femme de Dreyfus. Il
-                            s'engage en politique pour la reconnaissance des juifs après
-                            l'affaire.</note>
-                    </person>
-                    <person n="39" xml:id="HENNION">
-                        <persName><forename>Célestin</forename><surname>Hennion</surname></persName>
-                        <note>Préfet de police français ayant modernisé la police française au début
-                            du XXème siècle, en temps que directeur de la Sécurité Général et avec
-                            l'aval de Clémenceau. Créateur des "Brigades du Tigre", il a enquêté sur
-                            l'affaire Dreyfus et étudié les preuves de son innocence fournies par le
-                            capitaine Picquart</note>
-                    </person>
-                    <person n="40" xml:id="FLEUR">
-                        <persName><forename>Moïse</forename><surname>Blum</surname></persName>
-                        <note>dit Colonel Fleur, témoin au second procès de Rennes.</note>
-                    </person>
-                    <person n="41" xml:id="FREYCINET" role="antidreyf">
+                    <person n="40" xml:id="FREYCINET" role="politique">
                         <persName><forename>Charles</forename><surname>de
                             Freycinet</surname></persName>
                         <note>Homme d'état et ingénieur français, il est plusieurs fois président du
@@ -528,53 +512,74 @@
                             Ardent ati-dreyfusard, il est soucieux de défendre l'honneur de
                             l'armée.</note>
                     </person>
-                    <person n="42" xml:id="CHAMOIN">
+                    <person n="41" xml:id="FLEUR" role="militaire">
+                        <persName><forename>Moïse</forename><surname>Blum</surname></persName>
+                        <note>dit Colonel Fleur, témoin au second procès de Rennes.</note>
+                    </person>
+                    <person n="42" xml:id="CHAMOIN" role="militaire">
                         <persName><forename>Eugène-Victor-Auguste</forename><surname>Chamoin</surname></persName>
                         <note>Officier en charge du dossier secret, témoigne au procès de
                             Rennes.</note>
                     </person>
-                    <person n="43" xml:id="JEANNET">
+                    <person n="43" xml:id="JEANNET" role="militaire">
                         <persName><forename>Maurice</forename><surname>Jeannet</surname></persName>
                         <note>Lieutenant-colonel, témoin au procès de Rennes</note>
                     </person>
-                    <person n="44" xml:id="LEMONNIER">
+                    <person n="44" xml:id="LEMONNIER" role="militaire">
                         <persName><forename>Victor-Auguste</forename><surname>Lemonnier</surname></persName>
                         <note>Militaire, capitaine, témoin au procès de Rennes</note>
                     </person>
-                    <person n="45" xml:id="CORDIER" role="dreyf">
-                        <persName><forename>Albert</forename><surname>Cordier</surname></persName>
-                        <note>Colonel et antidreyfusard convaincu, il se range au côté des
-                            dreyfusards à la suite de la révélation des faux en 1898.</note>
+                </listPerson>
+                <listPerson type="sans mention">
+                    <person n="45" xml:id="CARRIERE" role="militaire">
+                        <persName>
+                            <forename>Louis Nobert</forename>
+                            <surname>Carrière</surname>
+                        </persName>
+                        <note>Officier de justice militaire, il participe au procès en révision de
+                                <persName ref="#DREYFUS">Dreyfus</persName> en qualité de
+                            commissaire du gouvernement.</note>
                     </person>
-                    <person n="46" xml:id="BERNHEIM">
-                        <persName><forename>E.</forename><surname>Bernheim</surname></persName>
-                        <note>Lieutenant d'artillerie et témoin au procès de Rennes concernant les
-                            agissements de Estherazy.</note>
+                    <person n="46" xml:id="CASIMIR" role="politique">
+                        <persName>
+                            <forename>Jean</forename>
+                            <surname>Casimir-Perier</surname>
+                        </persName>
+                        <note>Président de la République Française en 1894.</note>
                     </person>
-                    <person n="47" xml:id="CARVALHO" role="dreyf">
-                        <persName><forename>Julien</forename><surname>Carvalho</surname></persName>
-                        <note>Capitaine et dreyfusard convaincu, il témoigne au procès de Rennes où
-                            il présente l'absence d'attention accordée à certains éléments du
-                            dossier lors du premier procès.</note>
+                    <person n="47" xml:id="DELEGORGUE" role="juridique">
+                        <persName>
+                            <forename>Albert</forename>
+                            <surname>Delegorgue</surname>
+                        </persName>
+                        <note>Magistrat, président de la Cour d'assises pendant le second procès de
+                            Dreyfus</note>
                     </person>
-                    <person n="48" xml:id="FORZINETTI">
-                        <persName><forename>Ferdinand</forename><surname>Forzinetti</surname></persName>
-                        <note>Commandant aux prisons de Paris, il reçoit Dreyfus à la prison du
-                            Cherche Midi en 1894. Il témoigne en sa faveur au procès de
-                            Rennes.</note>
+                    <person n="48" xml:id="LORIMIER" role="militaire">
+                        <persName>
+                            <forename>Etienne</forename>
+                            <surname>Lorimier</surname>
+                        </persName>
+                        <note>Sergent et ordonnance du commandant Henry. Il est retrouvé mort pendu
+                            dans des circonstances obscures à Saint Quentin, quelques mois après le
+                            suicide de son chef.</note>
                     </person>
-                    <person n="49" xml:id="DUCROS" role="dreyf">
-                        <persName><forename>Joseph-Jules</forename><surname>Ducros</surname></persName>
-                        <note>Commandant d'artillerie et dreyfusard convaincu, il témoigne au second
-                            procès de Rennes. Il dépose également en sa faveur devant la Chambre
-                            Criminelle.</note>
+                    <person n="49" xml:id="LAJOUX" role="militaire">
+                        <persName>
+                            <forename>Edmond</forename>
+                            <surname>Lajoux</surname>
+                        </persName>
+                        <note>Agent du contre-espionnage français remercié en 1895. Il témoigne
+                            avoir vu des liens entre le commandant Henry et Esterhazy au cours du
+                            procès de Rennes.</note>
                     </person>
-                    <person n="50" xml:id="SEBERT">
-                        <persName><forename>Hippolyte</forename><surname>Sébert</surname></persName>
-                        <note>Scientifique, général de l'armée française et espérantiste. Il
-                            témoigne au procès de Rennes et est l'un des acteurs de la
-                            réhabilitation de Dreyfus, en étudiant le bordereau et concluant par son
-                            innocence dans l'écriture de celui-ci.</note>
+                    <person n="50" xml:id="HENNION" role="politique">
+                        <persName><forename>Célestin</forename><surname>Hennion</surname></persName>
+                        <note>Préfet de police français ayant modernisé la police française au début
+                            du XXème siècle, en temps que directeur de la Sécurité Général et avec
+                            l'aval de Clémenceau. Créateur des "Brigades du Tigre", il a enquêté sur
+                            l'affaire Dreyfus et étudié les preuves de son innocence fournies par le
+                            capitaine Picquart</note>
                     </person>
                 </listPerson>
             </particDesc>

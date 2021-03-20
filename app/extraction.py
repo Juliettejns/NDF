@@ -18,24 +18,21 @@ def extraction_donnees(document):
     :return: base de données db.sqlite remplie
     :rtype: database
     """
-    # définition du namespaces tei
-    namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
+
 
     # extraction et insertion des éléments concernant la table Article
-
     # récupération de listes contenant les titres, date et numéro de parution pour chaque Article grâce à la méthode
     # xpath
-    element_titre = document.xpath("//tei:titlePart[@type='sub']/text()", namespaces=namespaces)
-    element_date = document.xpath("//tei:docDate/tei:date/text()", namespaces=namespaces)
-    element_numeroJournal = document.xpath("//tei:text/@xml:id", namespaces=namespaces)
+    element_titre = document.xpath("//titlePart[@type='sub']/text()")
+    element_date = document.xpath("//docDate/date/text()")
+    element_numeroJournal = document.xpath("//text/@xml:id")
     n = 0
-    for element in document.xpath("//tei:group/tei:text", namespaces=namespaces):
+    for element in document.xpath("//group/text"):
         # pour chaque article, répètition des actions suivantes:
         n += 1
         # récupération d'une chaîne de caractères contenant le texte de l'article
         element_texte = " ".join(
-            document.xpath("//tei:text[@n=" + str(n) + "]//tei:div/descendant-or-self::*/text()",
-                               namespaces=namespaces))
+            document.xpath("//text[@n=" + str(n) + "]//div/descendant-or-self::*/text()"))
         # insertion de chaque élément correspondant à l'article précis dans la table Article
         note = Article(article_titre=element_titre[int(n) - 1],
                        article_date=element_date[int(n) - 1],
@@ -48,62 +45,41 @@ def extraction_donnees(document):
         db.session.commit()
 
     # extraction et insertion des éléments concernants la table personne
-    # récupération sous forme de liste des éléments nom et prenom pour chaque personne présente dans le listPerson
-    element_nom_personne = document.xpath("//tei:persName/tei:surname/text()", namespaces=namespaces)
-    element_prenom = document.xpath("//tei:persName/tei:forename/text()", namespaces=namespaces)
-    #initialisation de l'élement concernant le role dans l'affaire dreyfus sous la forme d'une liste vide
-    element_dreyf = []
+    # récupération sous forme de liste des éléments nom, prenom et role pour chaque personne présente dans le listPerson
+    element_nom_personne = document.xpath("//persName/surname/text()")
+    element_prenom = document.xpath("//persName/forename/text()")
+    element_role = document.xpath("//person/@role")
     n = 0
-    for element in document.xpath("//tei:listPerson/tei:person", namespaces=namespaces):
+    for element in document.xpath("//particDesc//person"):
         # pour chaque person dans le listPerson, répétition des actions suivantes:
         n += 1
-        # extraction de l'élément dreyf sous la forme de conditions (certains personnes n'ayant pas d'attribut role)
-        if document.xpath("//tei:person[@n=" + str(n) + "and @role='dreyf']", namespaces=namespaces):
-            element_dreyf.append('dreyfusard')
-        elif document.xpath("//tei:person[@n=" + str(n) + "and @role='antidreyf']", namespaces=namespaces):
-            element_dreyf.append('antidreyfusard')
-        else:
-            element_dreyf.append('')
+        #récupération du rôle dans l'affaire dreyfus de la personne (signalé par l'attribut type dans le listPerson)
+        element_role_dreyf=document.xpath("//person[@n=" + str(n) + "]/ancestor::listPerson/@type")
         # récupération d'une chaîne de caractères contenant les notes bibliographiques d'un personnage précis
         element_notes_personne = " ".join(
-            document.xpath("//tei:person[@n=" + str(n) + "]/tei:note/descendant-or-self::*/text()",
-                               namespaces=namespaces))
+            document.xpath("//person[@n=" + str(n) + "]/note/descendant-or-self::*/text()"))
         # insertion dans Personne de tout les éléments correspondants à une personne précise n
         personne = Personne(personne_nom=element_nom_personne[int(n) - 1],
                             personne_prenom=element_prenom[int(n) - 1],
-                            personne_role_dreyf=element_dreyf[int(n) - 1],
+                            personne_dreyf=element_role_dreyf[0],
+                            personne_role=element_role[int(n)-1],
                             personne_notes=element_notes_personne
                             )
         # ajout de Personne dans la base de données
         db.session.add(personne)
         # commit pour enregistrement de la modification
         db.session.commit()
-        # possibilité de récupérer les dates de naissance et de mort d'une personne (élément à supprimer de la base)
-        '''try:
-            personne_bdate = document.xpath("//tei:person[@n=" + str(n) + "]/tei:birth/@when",
-                                                namespaces=namespaces)
-            personne_ddate = document.xpath("//tei:person[@n=" + str(n) + "]/tei:death/@when",
-                                                namespaces=namespaces)
-            dates = Personne(personne_date_naissance= personne_bdate,
-                             personne_date_mort= personne_ddate)
-            db.session.add(dates)
-            db.session.commit()
-        except Exception:
-            db.session.add(personne)
-            db.session.commit()'''
-
     # extraction et insertion des éléments concernant la table Lieu
     # récupération des éléments nom et descriptions sous la forme de listes pour tout les lieux
-    element_nom_lieu = document.xpath("//tei:place/tei:placeName/text()", namespaces=namespaces)
-    element_desc_lieu = document.xpath("//tei:place/tei:desc/text()", namespaces=namespaces)
+    element_nom_lieu = document.xpath("//place/placeName/text()")
+    element_desc_lieu = document.xpath("//place/desc/text()")
     n = 0
-    for element in document.xpath("//tei:listPlace/tei:place", namespaces=namespaces):
+    for element in document.xpath("//listPlace/place"):
         #pour chaque lieu contenu dans le listPlace, réitération de ces actions:
         n += 1
        # récupération d'une chaîne de caractères contenant l'adresse du lieu n
         element_localisation = " ".join(
-            document.xpath("//tei:place[@n=" + str(n) + "]//tei:address/descendant-or-self::*/text()",
-                               namespaces=namespaces))
+            document.xpath("//place[@n=" + str(n) + "]//address/descendant-or-self::*/text()"))
         # création de l'objet lieu un nouveau Lieu ayant pour attributs les éléments suivants
         lieu = Lieu(lieu_nom=element_nom_lieu[int(n) - 1],
                     lieu_notes=element_desc_lieu[int(n) - 1],
@@ -116,23 +92,23 @@ def extraction_donnees(document):
 
     # extraction des éléments des tables d'association articleHasPersonne et articleHasLieu
     # récupération de l'identifiant et du numéro sous forme de listes pour toutes les personnes
-    idPerson = document.xpath("//tei:person/@xml:id", namespaces=namespaces)
-    nPerson = document.xpath("//tei:person/@n", namespaces=namespaces)
+    idPerson = document.xpath("//person/@xml:id")
+    nPerson = document.xpath("//person/@n")
     # réalisation d'un dictionnaire où chaque clé est l'identifiant d'une personne ayant pour valeur son numéro
     dictionnaire_nid_personne = dict(zip(idPerson, nPerson))
 
     # récupération de l'identifiant et du numéro sous forme de listes pour tous les lieux
-    idPlace = document.xpath("//tei:place/@xml:id", namespaces=namespaces)
-    nPlace = document.xpath("//tei:place/@n", namespaces=namespaces)
+    idPlace = document.xpath("//place/@xml:id")
+    nPlace = document.xpath("//place/@n")
     # réalisation d'un dictionnaire où chaque clé est l'identifiant d'un lieu ayant pour valeur son numéro
     dictionnaire_nid_place = dict(zip(idPlace, nPlace))
 
     n = 0
-    for element in document.xpath("//tei:div", namespaces=namespaces):
+    for element in document.xpath("//div"):
         # pour chaque article, reproduction des actions suivantes afin de remplir la table articleHasPersonne:
         n += 1
         # récupération de tout les pointeurs présent dans les balises persNames du texte (sous la forme d'une liste)
-        refPersName = document.xpath("//tei:text[@n=" + str(n) + "]//tei:persName/@ref", namespaces=namespaces)
+        refPersName = document.xpath("//text[@n=" + str(n) + "]//persName/@ref")
         # suppression pour chaque élément de la liste du # du pointeur pour obtenir uniquement l'identifiant
         refPersName = [e.replace('#', '') for e in refPersName]
         for pointeur in refPersName:
@@ -154,7 +130,7 @@ def extraction_donnees(document):
 
         # pour chaque article, reproduction des actions suivantes pour insertion des éléments de la table articleHasLieu
         # récupération de tout les pointeurs présent dans les balises placeName du texte (sous la forme d'une liste)
-        refPlaceName = document.xpath("//tei:text[@n=" + str(n) + "]//tei:placeName/@ref", namespaces=namespaces)
+        refPlaceName = document.xpath("//text[@n=" + str(n) + "]//placeName/@ref")
         # suppression pour chaque élément de la liste du # du pointeur pour obtenir uniquement l'identifiant
         refPlaceName = [e.replace('#', '') for e in refPlaceName]
         for pointeur in refPlaceName:
