@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="fr">
+
     <head>
-        <meta charset="utf-8">
-        <title>Notes d'une frondeuse de Séverine</title>
+        <meta charset="UTF-8">
+        <title>Notes d'une frondeuse {%block titre%}{%endblock%}</title>
+        {% include "partials/metadata.html" %}
+        {% include "partials/css.html"%}
     </head>
+
     <body>
-            <a href="{{url_for('corpus')}}">Corpus</a> <a href="{{url_for('lieux')}}">Index de lieux</a> <a href="{{url_for('personnes')}}">Index de personnes</a>         <form class="form-inline" action="{{url_for("recherche")}}" method="GET">
-          <input class="form-control" name="keyword" type="search" placeholder="Recherche rapide" aria-label="Recherche">
-          <button class="btn btn-outline-info" type="submit">Rechercher</button>
-        </form>
+		<nav class="navbar navbar-expand-lg navbar-light" style='background-color:#e14d2c'>
+			<a class="navbar-brand" href="{{ url_for('accueil') }}">Accueil</a>
+			<div class="collapse navbar-collapse" id="navbarNav">
+        		<ul class="navbar-nav">
+					<li class="nav-item">
+            			<a class="nav-link" href="{{ url_for('corpus') }}">Articles</a>
+          			</li>
+					<li class="nav-item">
+            			<a class="nav-link" href="{{ url_for('lieux') }}">Index de lieux</a>
+          			</li>
+          			<li class="nav-item">
+            			<a class="nav-link" href="{{ url_for('personnes') }}">Index de personnes</a>
+          			</li>
+				</ul>
+                <form class="nav-form text-right" action="{{url_for('recherche')}}">
+                    <div class="form-home">
+                        <input name="keyword" type="search" placeholder="Rechercher dans les articles" aria-label="Recherche" id="nav-searchbar">
+                        <div>
+                            <button type="submit">Rechercher</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
         {% block corps %}{% endblock %}
     </body>
 </html>
