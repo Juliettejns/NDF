@@ -4,9 +4,7 @@ Author:Juliette Janes
 Date: 03/03/2021
 """
 # import de la classe db issue du module app situé dans le dossier parent
-# lorsque je veux écrire from ..app import db ou from app.app import db on me signale que ce n'est pas possible,
-# mais comme ça, ça fonctionne, à revoir donc.
-from app import db
+from .. app import db
 
 # création de la table d'association articleHasPersonne qui lie article et personne
 articleHasPersonne = db.Table('articleHasPersonne',

@@ -9,11 +9,14 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 
 # définition des chemins
-courant = os.path.join(os.path.abspath(__file__))
-templates = os.path.join(courant, "templates")
-
+chemin_actuel = os.path.dirname(os.path.abspath(__file__))
+templates = os.path.join(chemin_actuel, "templates")
+statics = os.path.join(chemin_actuel, "static")
 # création de l'application Flask
-app = Flask("Application")
+app = Flask("Application",
+            template_folder=templates,
+            static_folder=statics
+            )
 
 # configuration de la base de donnée
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./db.sqlite'
@@ -24,8 +27,5 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db=SQLAlchemy(app)
 
 # association des routes à l'application
-from routes import *
+from .routes import *
 
-# démarrage de l'application (avec un paramètre debug permettant de se mettre en mode développement)
-if __name__ == "__main__":
-    app.run(debug=True)

@@ -17,11 +17,11 @@ from flask import render_template, request
 from itertools import groupby
 
 # import des classes app et db depuis le module app
-from app import app,db
+from .app import app,db
 # import de toutes les classes du module donnees situé dans le dossier modeles
-from modeles.donnees import *
+from .modeles.donnees import *
 # import des classes document_xml et xslt_transformation depuis le module constantes
-from constantes import document_xml, xslt_transformation
+from .constantes import document_xml, xslt_transformation
 
 
 @app.route("/")
