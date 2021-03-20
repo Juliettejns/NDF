@@ -53,12 +53,15 @@ def extraction_donnees(document):
     for element in document.xpath("//particDesc//person"):
         # pour chaque person dans le listPerson, répétition des actions suivantes:
         n += 1
+        #récupération du rôle dans l'affaire dreyfus de la personne (signalé par l'attribut type dans le listPerson)
+        element_role_dreyf=document.xpath("//person[@n=" + str(n) + "]/ancestor::listPerson/@type")
         # récupération d'une chaîne de caractères contenant les notes bibliographiques d'un personnage précis
         element_notes_personne = " ".join(
             document.xpath("//person[@n=" + str(n) + "]/note/descendant-or-self::*/text()"))
         # insertion dans Personne de tout les éléments correspondants à une personne précise n
         personne = Personne(personne_nom=element_nom_personne[int(n) - 1],
                             personne_prenom=element_prenom[int(n) - 1],
+                            personne_dreyf=element_role_dreyf[0],
                             personne_role=element_role[int(n)-1],
                             personne_notes=element_notes_personne
                             )
