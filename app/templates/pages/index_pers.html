@@ -1,12 +1,32 @@
 {% extends "conteneur.html" %}
 {% block corps %}
 <div>
-    <h1>Liste des personnes mentionnés dans le corpus</h1>
-     <ul>
-            {% for key, value in index.items() %}
-                <li>{{key.personne_nom}} {{key.personne_prenom}} : <ul>{%for el in value %}<li><a href="{{url_for('note', article_id=el.article_id)}}">{{el.article_date}}</a></li>{% endfor %}</ul></li>
-                <span>{{key.personne_notes}}</span>
-            {% endfor %}
-        </ul>
-    </div>
+   	<div>
+		<h1>Index de personnes</h1>
+	</div>
+	<div>
+                <table>
+                <thead>
+                    <tr>
+                        <th>Personne</th>
+                        <th>Occurences</th>
+                        <th>Roles</th>
+						<th>Description</th>
+                    </tr>
+                </thead>
+                    {% for dict in list %}
+                        <tbody>
+							{% for key, value in dict.items() %}
+                            <tr>								
+                                <td>{{key.personne_nom}}</td>
+                                <td><ul>{%for el in value %}<li><a href="{{url_for('note', article_id=el.article_id)}}">{{el.article_date}}</a></li>{% endfor %}</ul></td>
+                                <td>{{key.personne_dreyf}} et {{key.personne_role}}</td>
+								<td>{{key.personne_notes}}</td>								
+                            </tr>
+							{% endfor %}
+                        </tbody>
+                    {% endfor %}
+                </table>
+		{{ pagination.links }}
+	</div>
 {% endblock %}

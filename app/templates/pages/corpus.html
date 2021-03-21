@@ -1,16 +1,33 @@
 {% extends "conteneur.html" %}
 {% block corps %}
-    <div>
-        <h1>Corpus</h1>
-        <div>
-            <h2>Liste des "notes d'une frondeuse" encodées</h2>
-            {% if notes %}
-            <p>{{notes|length}} derniers articles enregistrés :</p>
-        <ul>
-            {% for note in notes %}
-                <li><a href="{{url_for('note', article_id=note.article_id)}}">{{note.article_titre}}</a></li>
-            {% endfor %}
-        </ul>
-            {% endif %}
+  <div>
+    	<h1>Corpus des articles "Notes d'une frondeuse"</h1>
+	  {% if notes %}
+	        <div>				
+            <h2>Liste des {{notes.total}} articles disponibles</h2>
+	  		</div>
+            <div>
+                <table>
+                <thead>
+                    <tr>
+                        <th>Parution</th>
+                        <th>Date</th>
+                        <th>Titre</th>
+                    </tr>
+                </thead>
+                    {% for note in notes %}
+                        <tbody>
+                            <tr>
+                                <td>{{note.article_numJournal}}</td>
+                                <td>{{note.article_date}}</td>
+                                <td><a href="{{url_for('note', article_id=note.article_id)}}">{{note.article_titre}}.</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+	  {{ pagination.links }}
+	  {% endif %}	  
     </div>
 {% endblock %}

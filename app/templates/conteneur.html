@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="fr">
+
     <head>
-        <meta charset="utf-8">
-        <title>Notes d'une frondeuse de Séverine</title>
+        <meta charset="UTF-8">
+        <title>Notes d'une frondeuse {%block titre%}{%endblock%}</title>
+        {% include "partials/metadata.html" %}
+        {% include "partials/css.html"%}
     </head>
+
     <body>
-            <a href="{{url_for('corpus')}}">Corpus</a> <a href="{{url_for('lieux')}}">Index de lieux</a> <a href="{{url_for('personnes')}}">Index de personnes</a>         <form class="form-inline" action="{{url_for("recherche")}}" method="GET">
-          <input class="form-control" name="keyword" type="search" placeholder="Recherche rapide" aria-label="Recherche">
-          <button class="btn btn-outline-info" type="submit">Rechercher</button>
-        </form>
-        {% block corps %}{% endblock %}
+		<nav>
+			<a href="{{ url_for('accueil') }}">Accueil</a>
+			<div>
+        		<ul>
+					<li>
+            			<a href="{{ url_for('corpus') }}">Articles</a>
+          			</li>
+					<li>
+            			<a href="{{ url_for('lieux') }}">Index de lieux</a>
+          			</li>
+          			<li>
+            			<a href="{{ url_for('personnes') }}">Index de personnes</a>
+          			</li>
+				</ul>
+                <form action="{{url_for('recherche')}}">
+                    <div>
+                        <input name="keyword" type="search" placeholder="Rechercher dans les articles" aria-label="Recherche">
+                        <div>
+                            <button type="submit">Rechercher</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+		<div>
+            <div>
+                {% block corps%}{%endblock%}
+            </div>
+        </div>
     </body>
 </html>
     

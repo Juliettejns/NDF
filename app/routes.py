@@ -15,6 +15,7 @@ dans l'ordre:
 # import des classes render_templates, request et groupby depuis les modules flask et itertools
 from flask import render_template, request
 from itertools import groupby
+from flask_paginate import Pagination, get_page_parameter, get_page_args
 
 # import des classes app et db depuis le module app
 from .app import app,db
@@ -22,6 +23,7 @@ from .app import app,db
 from .modeles.donnees import *
 # import des classes document_xml et xslt_transformation depuis le module constantes
 from .constantes import document_xml, xslt_transformation
+from .extraction import get_index
 
 
 @app.route("/")
@@ -43,7 +45,14 @@ def corpus():
     """
     # récupération de tout les éléments de la table article triés chronologiquement par leur numéro de parution
     notes = Article.query.order_by(Article.article_numJournal.asc()).all()
-    return render_template("pages/corpus.html", notes=notes)
+    # création de la pagination
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    # récupération de la portion de la liste concernant la page à afficher
+    pagination_notes = get_index(notes, offset=offset, per_page=per_page)
+    # définition de la pagination
+    pagination = Pagination(page=page, per_page=per_page, total=len(notes))
+    return render_template("pages/corpus.html", notes=notes, page=page, per_page=per_page, pagination=pagination)
 
 
 @app.route("/corpus/<int:article_id>")
@@ -76,7 +85,17 @@ def lieux():
     # pour valeurs tous les articles correspondants
     index_lieu_article = {key: [v[2] for v in val] for key, val in
              groupby(sorted(association_Article_Lieu, key=lambda ele: ele[1]), key=lambda ele: ele[3])}
-    return render_template("pages/index_lieu.html", index=index_lieu_article)
+    # transformation du dictionnaire en liste de dictionnaire
+    index_lieu_article = [{k: v} for (k, v) in index_lieu_article.items()]
+    # création de la pagination
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    # récupération de la portion de la liste concernant la page à afficher
+    pagination_index = get_index(index_lieu_article, offset=offset, per_page=per_page)
+    # définition de la pagination
+    pagination = Pagination(page=page, per_page=per_page, total=len(index_lieu_article))
+    return render_template("pages/index_lieu.html", list=index_lieu_article, page=page, per_page=per_page,
+                           pagination=pagination)
 
 
 @app.route("/personnes")
@@ -92,10 +111,21 @@ def personnes():
         Personne).all()
     # comme pour la fonction lieux, on obtient une liste de tuple que l'on restructure sous la forme d'une liste ayant
     # pour clé une personne et pour valeurs les articles correspondants
-    index_personne_article = {key: [v[2] for v in val] for key, val in
+    index_personne_article ={key: [v[2] for v in val] for key, val in
                               groupby(sorted(association_Article_Personne, key=lambda ele: ele[1]),
-                                      key=lambda ele: ele[3])}
-    return render_template("pages/index_pers.html", index=index_personne_article)
+         key=lambda ele: ele[3])}
+    # transformation du dictionnaire obtenu en liste de petits dictionnaires pour pouvoir le découper (assez long et
+    # lourd, à corriger)
+    index_personne_article = [{k: v} for (k, v) in index_personne_article.items()]
+    # création de la pagination
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    # récupération de la portion de la liste concernant la page à afficher
+    pagination_index= get_index(index_personne_article, offset=offset, per_page=per_page)
+    # définition de la pagination
+    pagination = Pagination(page=page, per_page=per_page, total=len(index_personne_article))
+    return render_template("pages/index_pers.html", list=pagination_index, page=page, per_page=per_page,
+                           pagination=pagination)
 
 
 @app.route("/recherche")
@@ -115,4 +145,11 @@ def recherche():
         # l'attribut texte, trié par date de parution
         resultats= Article.query.filter(Article.article_texte.like("%{}%".format(motclef))).order_by(
             Article.article_numJournal.asc()).all()
-    return render_template("pages/recherche.html", resultats=resultats)
+
+    #création de la pagination
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    pagination_resultats = get_index(resultats, offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=len(resultats))
+    return render_template("pages/recherche.html", resultats=pagination_resultats, page=page, per_page=per_page,
+                           pagination=pagination)
