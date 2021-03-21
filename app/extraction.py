@@ -148,6 +148,19 @@ def extraction_donnees(document):
                 except IntegrityError:
                     pass
 
+def get_index(index, offset=0, per_page=10):
+    """
+    Fonction, qui prennant en entrée une liste, un décalage (offset) et un nombre d'items à garder, permet de récupérer
+    un morceau de cette liste.
+    :param index: liste d'éléments
+    :type index: list
+    :param offset: entier signalant la page sur laquelle se trouve l'utilisateur (décalage)
+    :type offset: int
+    :param per_page: entier signalant le nombre d'items devant se trouvant sur la page
+    :return: partie de la liste de per_page items et commençant à l'item offset*per_page
+    :rtype: list
+    """
+    return index[offset: offset + per_page]
 
 # suppression des données existantes dans la base au chargement de l'application
 db.drop_all()
