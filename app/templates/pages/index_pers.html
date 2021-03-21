@@ -8,22 +8,25 @@
                 <table>
                 <thead>
                     <tr>
-                        <th>Lieu</th>
+                        <th>Personne</th>
                         <th>Occurences</th>
                         <th>Roles</th>
 						<th>Description</th>
                     </tr>
                 </thead>
-                    {% for key,value in index.items() %}
+                    {% for dict in list %}
                         <tbody>
-                            <tr>
+							{% for key, value in dict.items() %}
+                            <tr>								
                                 <td>{{key.personne_nom}}</td>
                                 <td><ul>{%for el in value %}<li><a href="{{url_for('note', article_id=el.article_id)}}">{{el.article_date}}</a></li>{% endfor %}</ul></td>
                                 <td>{{key.personne_dreyf}} et {{key.personne_role}}</td>
-								<td>{{key.personne_notes}}</td>
+								<td>{{key.personne_notes}}</td>								
                             </tr>
+							{% endfor %}
                         </tbody>
                     {% endfor %}
                 </table>
+		{{ pagination.links }}
 	</div>
 {% endblock %}
