@@ -23,9 +23,8 @@ from .app import app,db
 from .modeles.donnees import *
 # import des classes document_xml et xslt_transformation depuis le module constantes
 from .constantes import document_xml, xslt_transformation
+from .extraction import get_index
 
-def get_index(index, offset=0, per_page=10):
-    return index[offset: offset + per_page]
 
 @app.route("/")
 def accueil():
