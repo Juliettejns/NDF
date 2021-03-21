@@ -10,23 +10,23 @@
     </head>
 
     <body>
-		<nav class="navbar navbar-expand-lg navbar-light" style='background-color:#e14d2c'>
-			<a class="navbar-brand" href="{{ url_for('accueil') }}">Accueil</a>
-			<div class="collapse navbar-collapse" id="navbarNav">
-        		<ul class="navbar-nav">
-					<li class="nav-item">
-            			<a class="nav-link" href="{{ url_for('corpus') }}">Articles</a>
+		<nav>
+			<a href="{{ url_for('accueil') }}">Accueil</a>
+			<div>
+        		<ul>
+					<li>
+            			<a href="{{ url_for('corpus') }}">Articles</a>
           			</li>
-					<li class="nav-item">
-            			<a class="nav-link" href="{{ url_for('lieux') }}">Index de lieux</a>
+					<li>
+            			<a href="{{ url_for('lieux') }}">Index de lieux</a>
           			</li>
-          			<li class="nav-item">
-            			<a class="nav-link" href="{{ url_for('personnes') }}">Index de personnes</a>
+          			<li>
+            			<a href="{{ url_for('personnes') }}">Index de personnes</a>
           			</li>
 				</ul>
-                <form class="nav-form text-right" action="{{url_for('recherche')}}">
-                    <div class="form-home">
-                        <input name="keyword" type="search" placeholder="Rechercher dans les articles" aria-label="Recherche" id="nav-searchbar">
+                <form action="{{url_for('recherche')}}">
+                    <div>
+                        <input name="keyword" type="search" placeholder="Rechercher dans les articles" aria-label="Recherche">
                         <div>
                             <button type="submit">Rechercher</button>
                         </div>
@@ -34,7 +34,11 @@
                 </form>
             </div>
         </nav>
-        {% block corps %}{% endblock %}
+		<div>
+            <div>
+                {% block corps%}{%endblock%}
+            </div>
+        </div>
     </body>
 </html>
     

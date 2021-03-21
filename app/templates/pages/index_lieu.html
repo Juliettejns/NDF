@@ -1,13 +1,29 @@
 {% extends "conteneur.html" %}
 {% block corps %}
 <div>
-    <h1>Liste des lieux mentionnés dans le corpus</h1>
-     <ul>
-            {% for key, value in index.items() %}
-                <li>{{key.lieu_nom}} : <ul>{%for el in value %}<li><a href="{{url_for('note', article_id=el.article_id)}}">{{el.article_date}}</a></li>{% endfor %}</ul></li>
-                <span>{{key.lieu_emplacement}}</span>
-                <span>{{key.lieu_notes}}</span>
-            {% endfor %}
-        </ul>
-    </div>
+	<div>
+		<h1>Index de lieux</h1>
+	</div>
+	 <div>
+                <table>
+                <thead>
+                    <tr>
+                        <th>Lieu</th>
+                        <th>Occurences</th>
+                        <th>Emplacement</th>
+						<th>Description</th>
+                    </tr>
+                </thead>
+                    {% for key,value in index.items() %}
+                        <tbody>
+                            <tr>
+                                <td>{{key.lieu_nom}}</td>
+                                <td><ul>{%for el in value %}<li><a href="{{url_for('note', article_id=el.article_id)}}">{{el.article_date}}</a></li>{% endfor %}</ul></td>
+                                <td>{{key.lieu_emplacement}}</td>
+								<td>{{key.lieu_notes}}</td>
+                            </tr>
+                        </tbody>
+                    {% endfor %}
+                </table>
+      </div>
 {% endblock %}
