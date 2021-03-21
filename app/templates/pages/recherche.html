@@ -3,13 +3,13 @@
 {% if resultats  %}
 
         <p>Il y a {{resultats | length}} article(s) qui correspond(ent) à votre requête :</p>
-        
+        {{ pagination.info }}
+		{{ pagination.links }}
         <ul>
            
             {% endif %}
             
             {% for note in resultats %}
-            
             <li><a href="{{ url_for('note', article_id=note.article_id) }}">{{note.article_titre}}</a></li>
             
             {% else %}
@@ -19,6 +19,5 @@
             <h5>Désolé, votre recherche n'a pas abouti</h5>
             
             {% endfor %}
-            
         </ul>
 {% endblock %}
