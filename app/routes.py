@@ -15,6 +15,7 @@ dans l'ordre:
 # import des classes render_templates, request et groupby depuis les modules flask et itertools
 from flask import render_template, request
 from itertools import groupby
+from flask_paginate import Pagination, get_page_parameter, get_page_args
 
 # import des classes app et db depuis le module app
 from .app import app,db
@@ -23,6 +24,8 @@ from .modeles.donnees import *
 # import des classes document_xml et xslt_transformation depuis le module constantes
 from .constantes import document_xml, xslt_transformation
 
+def get_index(index, offset=0, per_page=10):
+    return index[offset: offset + per_page]
 
 @app.route("/")
 def accueil():
@@ -92,10 +95,17 @@ def personnes():
         Personne).all()
     # comme pour la fonction lieux, on obtient une liste de tuple que l'on restructure sous la forme d'une liste ayant
     # pour clé une personne et pour valeurs les articles correspondants
-    index_personne_article = {key: [v[2] for v in val] for key, val in
+    index_personne_article ={key: [v[2] for v in val] for key, val in
                               groupby(sorted(association_Article_Personne, key=lambda ele: ele[1]),
-                                      key=lambda ele: ele[3])}
-    return render_template("pages/index_pers.html", index=index_personne_article)
+         key=lambda ele: ele[3])}
+    #transformation du dictionnaire obtenu en liste de petits dictionnaires pour pouvoir le découper (assez long et lourd, à corriger)
+    index_personne_article = [{k: v} for (k, v) in index_personne_article.items()]
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+
+    pagination_index= get_index(index_personne_article, offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=len(index_personne_article))
+    return render_template("pages/index_pers.html", list=pagination_index, page=page, per_page=per_page, pagination=pagination)
 
 
 @app.route("/recherche")
