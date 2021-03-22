@@ -153,3 +153,16 @@ def recherche():
     pagination = Pagination(page=page, per_page=per_page, total=len(resultats))
     return render_template("pages/recherche.html", resultats=pagination_resultats, page=page, per_page=per_page,
                            pagination=pagination)
+
+
+# routes pour les pages d'erreurs
+# errorhandler permet de retourner une page erreur lorsque le code de la réponse http renvoyé est 404 ou 500.
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("errors/error404.html"), 404
+
+
+@app.errorhandler(500)
+def server_error(error):
+    return render_template("errors/error500.html"), 500
