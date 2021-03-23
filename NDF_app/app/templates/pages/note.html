@@ -1,14 +1,18 @@
 {% extends "conteneur.html" %}
 {% block corps %}
-    <div>
-        <h1>Notes d'une frondeuse</h1>
+<br/>
+<br/>
+    <div class="container">
+        <h3>Notes d'une frondeuse</h3>
        {% if note %}
-        <h1>{{note.article_titre}}</h1>
+        <h4>{{note.article_titre}}</h4>
         <dl>
             <dt>Date</dt><dd>{{note.article_date}}</dd>
         </dl>
-        <div>
+        <div style="text-align: justify;">
+			<br/>
             {{texte|safe}}
+			<br/>
         </div>
        {% endif %}
     </div>  

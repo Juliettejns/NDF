@@ -8,12 +8,16 @@
     <br />
     <br />
 
-        <div>
+        <div style="text-align: justify;">
             <br />
             <h3>Description de l'application</h3>
             <br />
-            <p>Notes d'une Frondeuse est une application web visant à rendre accessible les articles du même nom écrits quotidiennement dans le journal La Fronde par Caroline Rémy, dite Séverine, entre 1897 et 1899. Cette application est développée dans le cadre du Master 2 Technologies numériques appliquées à l'Histoire de l'École nationale des Chartes.</p>
-            <p>Les articles proviennent des versions numérisés du journal, disponibles sur Gallica, qui ont été océrisés puis encodés en XML-TEI. RECUPERATION DU XML pour chaque note/pour toutes les notes à des fins d'études textuelles possible. DETAIL DU PROJET SUR LA PAGE A PROPOS.</p>
+            <p>Cette application web vise à présenter un groupe d'articles écrits par <a href="{{url_for('contexte')}}#Severine" title="Severine">Séverine</a> et parus dans <a href="{{url_for('contexte')}}#Fronde" title="La Fronde">La
+                     Fronde</a>, journal féministe français de la Belle Époque, comme une
+                  chronique, Notes d'une frondeuse. Ils ont été choisis, rassemblés et
+                  édités par les soins de Juliette Janes depuis les versions numérisées et océsirées
+                  des journaux, disponibles et libres de droits sur Gallica.</p>
+			<p>Le détail de l'encodage réalisé est disponible sur la page <a href="{{url_for('about')}}">à propos</a>.</p>
 			<p>Fonctionnalités de l'application:</p>
 			<ul>
 				<li>Une édition numérique d'un échantillon d'articles choisis, listé sur la page <a href="{{url_for('corpus')}}">Corpus</a>.</li>
@@ -23,5 +27,6 @@
             <br />
             <br />
             <br />
+			
         </div>     
 {% endblock %}
