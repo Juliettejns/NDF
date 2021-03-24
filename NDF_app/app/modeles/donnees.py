@@ -51,6 +51,7 @@ class Personne(db.Model):
     personne_dreyf = db.Column(db.String(45))
     personne_role = db.Column(db.String(45))
     personne_notes = db.Column(db.Text)
+    personne_pointeur=db.Column(db.String(45))
 
 
 # définition de la classe Lieu sur le même modèle que les classes précédentes
@@ -62,4 +63,5 @@ class Lieu(db.Model):
     lieu_nom = db.Column(db.String(45), nullable=False)
     lieu_emplacement = db.Column(db.String(63))
     lieu_notes = db.Column(db.Text)
+    lieu_pointeur = db.Column(db.String(45))
 

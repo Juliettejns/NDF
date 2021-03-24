@@ -45,10 +45,11 @@ def extraction_donnees(document):
         db.session.commit()
 
     # extraction et insertion des éléments concernants la table personne
-    # récupération sous forme de liste des éléments nom, prenom et role pour chaque personne présente dans le listPerson
+    # récupération sous forme de liste des éléments nom, prenom, role et pointeur pour chaque personne présente dans le listPerson
     element_nom_personne = document.xpath("//persName/surname/text()")
     element_prenom = document.xpath("//persName/forename/text()")
     element_role = document.xpath("//person/@role")
+    element_pointeur_pers = document.xpath("//person/@xml:id")
     n = 0
     for element in document.xpath("//particDesc//person"):
         # pour chaque person dans le listPerson, répétition des actions suivantes:
@@ -63,16 +64,18 @@ def extraction_donnees(document):
                             personne_prenom=element_prenom[int(n) - 1],
                             personne_dreyf=element_role_dreyf[0],
                             personne_role=element_role[int(n)-1],
-                            personne_notes=element_notes_personne
+                            personne_notes=element_notes_personne,
+                            personne_pointeur=element_pointeur_pers[int(n)-1]
                             )
         # ajout de Personne dans la base de données
         db.session.add(personne)
         # commit pour enregistrement de la modification
         db.session.commit()
     # extraction et insertion des éléments concernant la table Lieu
-    # récupération des éléments nom et descriptions sous la forme de listes pour tout les lieux
+    # récupération des éléments nom, pointeur et description sous la forme de listes pour tout les lieux
     element_nom_lieu = document.xpath("//place/placeName/text()")
     element_desc_lieu = document.xpath("//place/desc/text()")
+    element_pointeur_lieu = document.xpath("//place/@xml:id")
     n = 0
     for element in document.xpath("//listPlace/place"):
         #pour chaque lieu contenu dans le listPlace, réitération de ces actions:
@@ -83,7 +86,8 @@ def extraction_donnees(document):
         # création de l'objet lieu un nouveau Lieu ayant pour attributs les éléments suivants
         lieu = Lieu(lieu_nom=element_nom_lieu[int(n) - 1],
                     lieu_notes=element_desc_lieu[int(n) - 1],
-                    lieu_emplacement=element_localisation
+                    lieu_emplacement=element_localisation,
+                    lieu_pointeur=element_pointeur_lieu[int(n)-1]
                     )
         # ajout de l'objet lieu dans la base de données
         db.session.add(lieu)
