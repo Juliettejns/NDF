@@ -11,18 +11,18 @@
     </head>
 
     <body>
-		<nav>
+		<nav class="navbar navbar-expand-lg" role="navigation">
 			<a href="{{ url_for('accueil') }}">Accueil</a>
-			<div>
-        		<ul>
-					<li>
-            			<a href="{{ url_for('corpus') }}">Articles</a>
+			<div class="container-fluid">
+        		<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+            			<a class="nav-link" href="{{ url_for('corpus') }}">Articles</a>
           			</li>
-					<li>
-            			<a href="{{ url_for('lieux') }}">Index de lieux</a>
+					<li class="nav-item">
+            			<a class="nav-link" href="{{ url_for('lieux') }}">Index de lieux</a>
           			</li>
-          			<li>
-            			<a href="{{ url_for('personnes') }}">Index de personnes</a>
+          			<li class="nav-item">
+            			<a class="nav-link" href="{{ url_for('personnes') }}">Index de personnes</a>
           			</li>
 				</ul>
                 <form action="{{url_for('recherche')}}">
@@ -36,9 +36,7 @@
             </div>
         </nav>
 		<div>
-            <div>
                 {% block corps%}{%endblock%}
-            </div>
         </div>
     </body>
 </html>

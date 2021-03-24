@@ -6,7 +6,7 @@
     <xsl:strip-space elements="*"/> <!-- pour éviter les espaces non voulus -->
        
     <xsl:param name="num"/>
-    <xsl:variable name="note" select="descendant::text[@n=$num]"/>
+    <xsl:variable name="note" select="descendant::text[@n=2]"/>
      
     <xsl:template match="TEI">
         <xsl:element name="span">
@@ -25,7 +25,7 @@
     <xsl:template match="opener">
         <xsl:element name="div">
             <xsl:attribute name="align">
-                <xsl:text>left</xsl:text>
+                <xsl:text>right</xsl:text>
             </xsl:attribute>
             <xsl:value-of select="dateline|quote"/>
         </xsl:element>
@@ -33,7 +33,7 @@
     <xsl:template match="closer">
         <xsl:element name="div">
             <xsl:attribute name="align">
-                <xsl:text>right</xsl:text>
+                <xsl:text>center</xsl:text>
             </xsl:attribute>
             <xsl:value-of select="."/>
         </xsl:element>
@@ -62,7 +62,8 @@
     </xsl:template>
      <xsl:template match="div//p">
          <xsl:element name="p">
-            <xsl:value-of select="."/>
+            <xsl:text>&#160; &#160;</xsl:text>
+             <xsl:value-of select="."/>
          </xsl:element>
      </xsl:template>
     <xsl:template match="div//dateline">
@@ -75,5 +76,4 @@
             <xsl:apply-templates select="p"/>
         </xsl:element>
     </xsl:template>
- 
 </xsl:stylesheet>

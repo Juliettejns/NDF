@@ -123,7 +123,8 @@ def personnes():
     # récupération de la portion de la liste concernant la page à afficher
     pagination_index= get_index(index_personne_article, offset=offset, per_page=per_page)
     # définition de la pagination
-    pagination = Pagination(page=page, per_page=per_page, total=len(index_personne_article))
+    pagination = Pagination(page=page, per_page=per_page, total=len(index_personne_article),
+                            css_framework='bootstrap4')
     return render_template("pages/index_pers.html", list=pagination_index, page=page, per_page=per_page,
                            pagination=pagination)
 
@@ -153,3 +154,25 @@ def recherche():
     pagination = Pagination(page=page, per_page=per_page, total=len(resultats))
     return render_template("pages/recherche.html", resultats=pagination_resultats, page=page, per_page=per_page,
                            pagination=pagination)
+
+# routes pour les pages annexes décrivant le projet
+@app.route("/about")
+def about():
+    return render_template("pages/a_propos.html")
+
+
+@app.route("/contexte")
+def contexte():
+    return render_template("pages/contexte.html")
+
+# routes pour les pages d'erreurs
+# errorhandler permet de retourner une page erreur lorsque le code de la réponse http renvoyé est 404 ou 500.
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("errors/error404.html"), 404
+
+
+@app.errorhandler(500)
+def server_error(error):
+    return render_template("errors/error500.html"), 500
