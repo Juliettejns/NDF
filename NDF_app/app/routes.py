@@ -16,6 +16,7 @@ dans l'ordre:
 from flask import render_template, request
 from itertools import groupby
 from flask_paginate import Pagination, get_page_parameter, get_page_args
+from lxml import etree
 
 # import des classes app et db depuis le module app
 from .app import app,db
@@ -68,6 +69,25 @@ def note(article_id):
     unique_note=Article.query.get(article_id)
     # application de la feuille de transformation xslt_transformation au document xml uniquement pour l'article choisi
     affichage_texte = xslt_transformation(document_xml, num=str(article_id))
+    return render_template("pages/note.html", note=unique_note, texte=str(affichage_texte))
+
+
+@app.route("/corpus/<article_id>/<pointeur>")
+def surlignage(article_id, pointeur):
+    """
+        Route permettant l'affichage d'un article demandé depuis un des index (de lieux ou de personnes) avec l'élément cherché surligné.
+        :param article_id: identifiant unique représentant un article en particulier
+        :type article_id: int
+        :param pointeur: chaine de caractères représentant un personnage ou lieu précis
+        :type pointeur: str
+        :return: template note.html
+        :rtype: template
+        """
+    # récupération de l'article ayant pour identifiant l'entier article_id
+    unique_note = Article.query.get(article_id)
+    # application de la feuille de transformation xslt_transformation au document xml uniquement pour l'article
+    # choisi et pour le pointeur (lieu ou personnage) choisi.
+    affichage_texte = xslt_transformation(document_xml, num=etree.XSLT.strparam(article_id), pointeur=etree.XSLT.strparam(pointeur))
     return render_template("pages/note.html", note=unique_note, texte=str(affichage_texte))
 
 
