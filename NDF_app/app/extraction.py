@@ -34,7 +34,8 @@ def extraction_donnees(document):
         element_texte = " ".join(
             document.xpath("//text[@n=" + str(n) + "]//div/descendant-or-self::*/text()"))
         # insertion de chaque élément correspondant à l'article précis dans la table Article
-        note = Article(article_titre=element_titre[int(n) - 1],
+        note = Article(article_id=n,
+                       article_titre=element_titre[int(n) - 1],
                        article_date=element_date[int(n) - 1],
                        article_numJournal=element_numeroJournal[int(n) - 1],
                        article_texte=element_texte
@@ -60,7 +61,8 @@ def extraction_donnees(document):
         element_notes_personne = " ".join(
             document.xpath("//person[@n=" + str(n) + "]/note/descendant-or-self::*/text()"))
         # insertion dans Personne de tout les éléments correspondants à une personne précise n
-        personne = Personne(personne_nom=element_nom_personne[int(n) - 1],
+        personne = Personne(personne_id=n,
+                            personne_nom=element_nom_personne[int(n) - 1],
                             personne_prenom=element_prenom[int(n) - 1],
                             personne_dreyf=element_role_dreyf[0],
                             personne_role=element_role[int(n)-1],
@@ -84,7 +86,8 @@ def extraction_donnees(document):
         element_localisation = " ".join(
             document.xpath("//place[@n=" + str(n) + "]//address/descendant-or-self::*/text()"))
         # création de l'objet lieu un nouveau Lieu ayant pour attributs les éléments suivants
-        lieu = Lieu(lieu_nom=element_nom_lieu[int(n) - 1],
+        lieu = Lieu(lieu_id=n,
+                    lieu_nom=element_nom_lieu[int(n) - 1],
                     lieu_notes=element_desc_lieu[int(n) - 1],
                     lieu_emplacement=element_localisation,
                     lieu_pointeur=element_pointeur_lieu[int(n)-1]
