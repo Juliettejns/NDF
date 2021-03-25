@@ -31,7 +31,7 @@ class Article(db.Model):
     article_id = db.Column(db.Integer, unique=True, nullable=False, primary_key=True, autoincrement=True)
     article_titre = db.Column(db.String(45), nullable=False)
     article_date = db.Column(db.String(45), nullable=False)
-    article_numJournal = db.Column(db.Integer, nullable=False)
+    article_numJournal = db.Column(db.String(45), nullable=False)
     article_texte = db.Column(db.Text, nullable=False)
     # jointures avec les tables de relation
     personnes = db.relationship("Personne", secondary=articleHasPersonne)
@@ -42,7 +42,7 @@ class Article(db.Model):
         self.article_id = article_id
         self.article_titre = article_titre
         self.article_date = article_date
-        self.articl_numJournal = article_numJournal
+        self.article_numJournal = article_numJournal
         self.article_texte = article_texte
 
 
