@@ -22,7 +22,7 @@
                 <bibl>
                     <title type="main">La Fronde</title>
                     <title type="sub">Notes d'une frondeuse</title>
-                    <author>
+                    <author xml:id="SEVERINE">
                         <forename>Caroline</forename>
                         <surname>Rémy</surname>
                         <roleName>Severine</roleName>
@@ -636,8 +636,8 @@
                             plane, assourdit les tons, raidit les maintiens. Cependant, les propos
                             échangés sont de hautes importance. On discute le communiqué du
                                 <hi>Moniteur de l'Empire</hi>; la reproduction dans la partie
-                            officielle, du démenti que formulèrent <persName>M.de Bulow</persName> à
-                            la tribune du Reischtag, <persName>M.de Munster</persName>, ambassadeur,
+                            officielle, du démenti que formulèrent M.de Bulow à
+                            la tribune du Reischtag, M.de Munster, ambassadeur,
                             ici. C'est la réponse indirecte et cependant formelle du souverain au
                             défenseur qui rendit cette hommage mérité de penser qu'un monarque était
                             aussi un homme selon Térence, à qui rien d'humain ne pouvait demeurer
@@ -772,7 +772,7 @@
                             harmonieuse de <persName ref="#RECLUS">Reclus</persName>; les prestes
                             répliques allant et venant de <persName ref="#GAST">Gast</persName> à
                                 <persName ref="#VIVIANI">Viviani</persName> - et le rire gazouillant
-                            de la petite <persName>Mme Parsoons</persName>, si brune et si
+                            de la petite Mme Parsoons, si brune et si
                             jolie!</p>
                         <p>Mais, il faut l'avouer, je songe bien moins à ceux qui s'en furent, se
                             dispersèrent! - libérés de <placeName ref="#RENNES">Rennes</placeName>
@@ -800,16 +800,16 @@
                                 >Basch</persName>, les <persName ref="#AUBRY">Aubry</persName>, les
                                 <persName ref="#SEE">Sée</persName>, les <persName ref="#DOTTIN"
                                 >Dottin</persName>, les <persName ref="#CAVALIER"
-                                >Cavalier</persName>, les <persName>Blondel</persName>, etc, tous
+                                >Cavalier</persName>, les Blondel, etc, tous
                             ces professeurs de lettre, de droits, de sciences, ont accepté
                             vaillamment de vivre dans une ambiance d'animosité perpétuelle; en
-                            quarantaine, comme l'Ennemi du Peuple, d'<persName ref="#IBSEN"
-                                >Ibsen</persName>, parce qu'ils ont voulu plus de justice et toute
+                            quarantaine, comme l'Ennemi du Peuple, d'
+                                Ibsen, parce qu'ils ont voulu plus de justice et toute
                             la vérité. </p>
                         <p>Mais si rien ne saurait atteindre leur sérénité, quelque alarme nous est
                             permise à leur endroit en lisant, par exemple, dans l'Évènement du 11
-                            septembre, les lignes suivantes, sous la signature de <persName>M. Henri
-                                Chabrier</persName>. </p>
+                            septembre, les lignes suivantes, sous la signature de M. Henri
+                                Chabrier. </p>
                         <quote type="journal">Diverses personnes de la ville remplissant des
                             fonctions publiques ou commerçants, avec qui j'ai pu causer dans la
                             journée, m'ont laissé entendre que des représailles seraient exercées
@@ -1162,7 +1162,7 @@
                             d'ambulance qui devait l'emmener vers un logis plus aéré, plus rustique.
                             Sur la blancheur des draps, son visage de bonté et de force se
                             détachait, dominant l'expression de la douleur pour sourire à tous. Sa
-                            voix, encore, nous encourageait. "Bonjour <persName>Séverine</persName>!
+                            voix, encore, nous encourageait. "Bonjour <persName ref="#SEVERINE">Séverine</persName>!
                             Ils ne m'ont pas tué, vous voyez! On vivra, pour combattre... et pour
                             vaincre!" Des larmes d'émotion et d'enthousiasme, devant cette belle
                             vaillance, nous montaient aux yeux. Celui-là est vraiment un "professeur
@@ -1331,7 +1331,7 @@
                             mis en mesure de présenter ledit dossier à première requeête des membres
                             du Conseil - au cas où le pétard éclaterait.</p>
                         <p>Il a éclaté: c'est <persName ref="#LABORI">Labori</persName> qui y a mis
-                            le feu en questionnant le <persName>général Gonse</persName>... et ce
+                            le feu en questionnant le <persName ref="#GONSE">général Gonse</persName>... et ce
                             pétard-là me fit tout l'effet d'une dernière cartouche! Si l'effet en
                             rate, c'est fini: il ne restera plus que la honte de la manoeuvre, de
                             cette série de manoeuvres diverses d'aspect mais aux mêmes fins si
@@ -1403,7 +1403,7 @@
                                 <persName ref="#FREYSTAETTER">Freystaetter</persName>, <persName
                                 ref="#CORDIER">Cordier</persName>, <persName ref="#BERNHEIM"
                                 >Berheim</persName>, <persName ref="#CARVALHO">Carvalho</persName>,
-                                <persName>Forzinetti</persName>, <persName ref="#HARTMANN"
+                                <persName ref="#FORZINETTI">Forzinetti</persName>, <persName ref="#HARTMANN"
                                 >Hartmann</persName>, <persName ref="#DUCROS">Ducros</persName>, et
                             cet admirable <persName ref="#SEBERT">général Sébert</persName> qui ce
                             matin, proclamant sa conviction face à l'innocence de l'accusé, a
