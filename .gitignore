@@ -1,5 +1,7 @@
-xml_tei/NDF_pas_dreyfus.txt
-xml_tei/transcription_notes_dune_frondeuse
 README.md
 __pycache__/
 /app/modeles/__pycache__/
+/app/__pycache__/
+db.sqlite
+venv/
+test/__pycache__/
