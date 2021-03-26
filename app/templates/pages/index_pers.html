@@ -1,0 +1,43 @@
+{% extends "conteneur.html" %}
+{% block corps %}
+<br/>
+<br/>
+<div class="container">
+   	<div>
+		<h1>Index de personnes</h1>
+	</div>
+	<br/>
+	{% if list %}
+	<div>	
+            <h4>Liste des {{list.total}} personnes mentionnées dans le corpus</h4>
+	 </div>
+	<br/>
+	  	  {{ pagination.links }}
+	<div>
+                <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Personne</th>
+                        <th scope="col">Occurences</th>
+                        <th scope="col">Roles</th>
+						<th scope="col">Description</th>
+                    </tr>
+                </thead>
+                    {% for dict in list %}
+                        <tbody>
+							{% for key, value in dict.items() %}
+                            <tr scope="row">								
+                                <td>{{key.personne_nom}}</td>
+                                <td><ul>{%for el in value %}<li><a href="{{url_for('surlignage', article_id=el.article_id, pointeur=key.personne_pointeur)}}">{{el.article_date}}</a></li>{% endfor %}</ul></td>
+                                <td>{{key.personne_dreyf}} et {{key.personne_role}}</td>
+								<td>{{key.personne_notes}}</td>								
+                            </tr>
+							{% endfor %}
+                        </tbody>
+                    {% endfor %}
+                </table>
+		{{ pagination.links }}
+	</div>
+	{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "conteneur.html" %}
+{% block corps %}
+<br/>
+<br/>
+<br/>
+<div class="container">
+	<h3>Résultats de la recherche pour {{motclef}}</h3>
+	<div>
+{% if resultats  %}
+
+        <p>Il y a {{resultats | length}} article(s) qui correspond(ent) à votre requête :</p>
+<br/>
+        {{ pagination.info }}
+		{{ pagination.links }}
+<br/>
+        <ul class="text-center">
+           
+            {% endif %}
+            
+            {% for note in resultats %}
+            <li><a href="{{ url_for('note', article_id=note.article_id) }}">{{note.article_titre}}</a></li>
+            <br>
+            {% else %}
+            
+            <br>
+            <br>
+            <h5>Désolé, votre recherche n'a pas abouti</h5>
+            
+            {% endfor %}
+        </ul>
+		<br/>
+	</div>
+</div>
+{% endblock %}

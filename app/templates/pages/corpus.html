@@ -1,0 +1,39 @@
+{% extends "conteneur.html" %}
+{% block corps %}
+<br/>
+<br/>
+  <div class="container">
+    	<h3>Corpus des articles "Notes d'une frondeuse"</h3>
+	  <br/>
+	  {% if notes %}
+	        <div>				
+            <h4>Liste des {{notes.total}} articles disponibles</h4>
+	  		</div>
+	  <br/>
+	  	  {{ pagination.links }}
+            <div>
+                <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Parution</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Titre</th>
+                    </tr>
+                </thead>
+                    {% for note in notes %}
+                        <tbody>
+                            <tr scope="row">
+                                <td>{{note.article_numJournal}}</td>
+                                <td>{{note.article_date}}</td>
+                                <td><a href="{{url_for('note', article_id=note.article_id)}}">{{note.article_titre}}.</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+	 <br/>
+
+	  {% endif %}	  
+    </div>
+{% endblock %}
