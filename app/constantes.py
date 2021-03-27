@@ -8,9 +8,9 @@ Date: 03/03/2021
 from lxml import etree
 
 # parsage du document TEI contenant les articles avec la mathode .parse() d'etree
-document_xml = etree.parse("../NDF_app/app/xml_tei/NDF_TEI.xml")
+document_xml = etree.parse("app/xml_tei/NDF_TEI.xml")
 
 # parsage  de la feuille de transformation XSLT permettant la transformation du texte d'un article xml en html
-affichage_texte = etree.parse("../NDF_app/app/xml_tei/xslt_affichage_note.xsl")
+affichage_texte = etree.parse("app/xml_tei/xslt_affichage_note.xsl")
 # transformation du document xslt en objet xslt permettant de l'utiliser comme une fonction en python
 xslt_transformation = etree.XSLT(affichage_texte)
