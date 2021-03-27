@@ -149,13 +149,13 @@
                </div3>
                <div3>
                   <head>Index de personnes</head>
-                  <p>Le <gi>particDesc</gi> se compose d'une <gi>listPerson</gi> qui est une liste
-                     des différents personnages mentionnés dans le texte sur le même principe que le
-                        <gi>listPlace</gi>, avec un développement plus important pour certains
-                     personnages, notamment en y ajoutant quelques informations afin de mieux
-                     comprendre le texte. </p>
+                  <p>Le <gi>particDesc</gi> se compose de plusieurs <gi>listPerson</gi>, listes des
+                     différents personnages mentionnés dans le texte, structurés en fonction de leur
+                     rôle dans l'affaire Dreyfus, sur le même principe que le <gi>listPlace</gi>,
+                     avec un développement plus important pour certains personnages, notamment en y
+                     ajoutant quelques informations afin de mieux comprendre le texte. </p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <person n="6" xml:id="BASCH" role="dreyf">
+                     <person n="6" xml:id="BASCH" role="intellectuel">
                         <persName>
                            <forename>Victor</forename>
                            <surname>Basch</surname>
@@ -172,11 +172,8 @@
                      pour les dates de vie. Il est obligatoire, comme pour <gi>place</gi>, d'ajouter
                      les attributs <att>n</att>, qui numérote les personnages et <gi>xml:id</gi>,
                      pour créer le pointeur référant à ce personnage. Un dernier attribut
-                        <gi>role</gi>, non obligatoire, permet de signaler si le personnage est
-                     dreyfusard, <val>dreyf</val> ou anti-dreyfusard, <val>antidreyf</val>. </p>
-                  <p> L'élément <gi>personGrp</gi> permettant d'encadrer les mentions de groupes de
-                     personnes, à l'exemple de l'armée française ou les dreyfusards, et fonctionne
-                     de la même façon que l'élément <gi>person</gi></p>
+                        <att>role</att>, permet de signaler le rôle social de la personne et peut actuellement prendre les valeurs 
+                  <val>intellectuel</val>, <val>juridique</val>, <val>militaire</val> et <val>politique</val>.</p>
                </div3>
             </div2>
          </div1>
@@ -369,7 +366,13 @@
                   <attList>
                      <attDef ident="facs" mode="delete"/>
                      <attDef ident="resp" mode="delete"/>
-                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="type" mode="change" usage="req">
+                        <valList mode="add" type="closed">
+                           <valItem ident="dreyfusard"/>
+                           <valItem ident="antidreyfusard"/>
+                           <valItem ident="sans mention"/>
+                        </valList>
+                     </attDef>
                      <attDef ident="default" mode="change">
                         <valList mode="add" type="closed">
                            <valItem ident="false"/>
@@ -415,10 +418,12 @@
                      </alternate>
                   </content>
                   <attList>
-                     <attDef ident="role" mode="change">
+                     <attDef ident="role" mode="change" usage="req">
                         <valList mode="add" type="closed">
-                           <valItem ident="antidreyf"/>
-                           <valItem ident="dreyf"/>
+                           <valItem ident="intellectuel"/>
+                           <valItem ident="militaire"/>
+                           <valItem ident="politique"/>
+                           <valItem ident="juridique"/>
                         </valList>
                      </attDef>
                      <attDef ident="xml:id" mode="change" usage="req"/>
