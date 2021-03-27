@@ -7,9 +7,12 @@ dans l'ordre:
 /
 /corpus
 /corpus/<int:article_id>
+/corpus/<int:article_id>/<pointeur>
 /lieux
 /personnes
 /recherche
+/about
+/contexte
 """
 
 # import des classes render_templates, request et groupby depuis les modules flask et itertools
@@ -56,39 +59,28 @@ def corpus():
     return render_template("pages/corpus.html", notes=notes, page=page, per_page=per_page, pagination=pagination)
 
 
+@app.route("/corpus/<article_id>/<pointeur>")
 @app.route("/corpus/<int:article_id>")
-def note(article_id):
+def note(article_id, pointeur=''):
     """
     Route permettant l'affichage d'un article demandé.
     :param article_id: identifiant unique représentant un article en particulier
     :type article_id: int
+    :param pointeur: chaine de caractères représentant un personnage ou lieu précis
+    :type pointeur: str
     :return: template note.html
     :rtype: template
     """
     # récupération de l'article ayant pour identifiant l'entier article_id
     unique_note=Article.query.get(article_id)
     # application de la feuille de transformation xslt_transformation au document xml uniquement pour l'article choisi
-    affichage_texte = xslt_transformation(document_xml, num=str(article_id))
+    if pointeur =='':
+        affichage_texte = xslt_transformation(document_xml, num=str(article_id))
+    else:
+        affichage_texte = xslt_transformation(document_xml, num=etree.XSLT.strparam(article_id),
+                                              pointeur=etree.XSLT.strparam(pointeur))
     return render_template("pages/note.html", note=unique_note, texte=str(affichage_texte))
 
-
-@app.route("/corpus/<article_id>/<pointeur>")
-def surlignage(article_id, pointeur):
-    """
-        Route permettant l'affichage d'un article demandé depuis un des index (de lieux ou de personnes) avec l'élément cherché surligné.
-        :param article_id: identifiant unique représentant un article en particulier
-        :type article_id: int
-        :param pointeur: chaine de caractères représentant un personnage ou lieu précis
-        :type pointeur: str
-        :return: template note.html
-        :rtype: template
-        """
-    # récupération de l'article ayant pour identifiant l'entier article_id
-    unique_note = Article.query.get(article_id)
-    # application de la feuille de transformation xslt_transformation au document xml uniquement pour l'article
-    # choisi et pour le pointeur (lieu ou personnage) choisi.
-    affichage_texte = xslt_transformation(document_xml, num=etree.XSLT.strparam(article_id), pointeur=etree.XSLT.strparam(pointeur))
-    return render_template("pages/note.html", note=unique_note, texte=str(affichage_texte))
 
 
 @app.route("/lieux")
@@ -118,8 +110,8 @@ def lieux():
                            pagination=pagination)
 
 
-@app.route("/personnes")
-def personnes():
+@app.route("/personnes", methods=['POST', 'GET'])
+def personnes(role_social='', role_dreyfus=''):
     """
     Route permettant l'affichage d'un index de personnes présentant toutes les personnes mentionnées, leurs occurences
     et un lien vers chacun de ces articles.
@@ -127,8 +119,15 @@ def personnes():
     :rtype: template
     """
     # récupération de la table d'association articleHasPersonne ainsi que les articles et personnes qui lui sont associé
-    association_Article_Personne = db.session.query(articleHasPersonne, Article, Personne).join(Article).join(
-        Personne).all()
+    if request.method=="POST":
+        role_social = request.form['role_social']
+        role_dreyfus = request.form['role_dreyfus']
+        association_Article_Personne = db.session.query(
+                articleHasPersonne, Article, Personne).join(Article).join(Personne).filter_by(
+                personne_dreyf=role_dreyfus, personne_role=role_social).all()
+    else:
+        association_Article_Personne = db.session.query(articleHasPersonne, Article, Personne).join(Article).join(
+            Personne).all()
     # comme pour la fonction lieux, on obtient une liste de tuple que l'on restructure sous la forme d'une liste ayant
     # pour clé une personne et pour valeurs les articles correspondants
     index_personne_article ={key: [v[2] for v in val] for key, val in
@@ -145,8 +144,15 @@ def personnes():
     # définition de la pagination
     pagination = Pagination(page=page, per_page=per_page, total=len(index_personne_article),
                             css_framework='bootstrap4')
+
+    role_distinct = ['']
+    for role in db.session.query(Personne.personne_role).distinct():
+        role_distinct.append(role.personne_role)
+    role_dreyf_distinct = ['']
+    for dreyf in db.session.query(Personne.personne_dreyf).distinct():
+        role_dreyf_distinct.append(dreyf.personne_dreyf)
     return render_template("pages/index_pers.html", list=pagination_index, page=page, per_page=per_page,
-                           pagination=pagination)
+                           pagination=pagination, roles=role_distinct, role_dreyf=role_dreyf_distinct)
 
 
 @app.route("/recherche")
