@@ -28,7 +28,7 @@
 							{% for key, value in dict.items() %}
                             <tr scope="row">
                                 <td>{{key.lieu_nom}}</td>
-                                <td><ul>{%for el in value %}<li><a href="{{url_for('surlignage', article_id=el.article_id, pointeur=key.lieu_pointeur)}}">{{el.article_date}}</a></li>{% endfor %}</ul></td>
+                                <td><ul>{%for el in value %}<li><a href="{{url_for('note', article_id=el.article_id, pointeur=key.lieu_pointeur)}}">{{el.article_date}}</a></li>{% endfor %}</ul></td>
                                 <td>{{key.lieu_emplacement}}</td>
 								<td>{{key.lieu_notes}}</td>
                             </tr>
