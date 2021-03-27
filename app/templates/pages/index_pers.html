@@ -11,24 +11,31 @@
 	<div>
 
             <h4>Liste des personnes mentionnées dans le corpus</h4>
-	 </div>
-	<br/>
-	  	  {{ pagination.links }}
-	<div>
+             </div>
+    <div>
         <br/>
-        <form name="roles_choix" method="post">
-            <select name="role_social" method="post">
+
+   <div class="float-end">
+            <h6>Filtrer le résultat:</h6>
+        <form name="roles_choix" method="get" action="{{url_for('personnes')}}">
+            <select name="role_social">
         {% for role in roles %}
         <option value= "{{role}}">{{role}}</option>"
         {% endfor %}
     </select>
-     <select name="role_dreyfus" method="post">
+     <select name="role_dreyfus">
         {% for dreyf in role_dreyf %}
         <option value= "{{dreyf}}">{{dreyf}}</option>"
         {% endfor %}
     </select>
-            <input class="success button" type="submit" value="test">
+            <input class="success button" type="submit" value="filtrer">
         </form>
+    <p>critères de recherche: {% if role_social and role_dreyfus %} {{role_social}} et {{role_dreyfus}} {% elif role_social %}{{role_social}}{% elif role_dreyfus %} {{role_dreyfus}}{% else %} aucun {% endif %}
+	</p>
+        </div>
+
+	<br/>
+	  	  {{ pagination.links }}
                 <table class="table text-center">
                 <thead>
                     <tr>

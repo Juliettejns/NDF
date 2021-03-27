@@ -111,23 +111,38 @@ def lieux():
 
 
 @app.route("/personnes", methods=['POST', 'GET'])
-def personnes(role_social='', role_dreyfus=''):
+def personnes():
     """
     Route permettant l'affichage d'un index de personnes présentant toutes les personnes mentionnées, leurs occurences
     et un lien vers chacun de ces articles.
     :return: template index_personne.html
     :rtype: template
     """
-    # récupération de la table d'association articleHasPersonne ainsi que les articles et personnes qui lui sont associé
-    if request.method=="POST":
-        role_social = request.form['role_social']
-        role_dreyfus = request.form['role_dreyfus']
+    # récupération de la table d'association articleHasPersonne:
+    # Dans un premier temps, on essaie de récupérer rôle social et rôle dreyfus, les éléments qui permettent de filtrer
+    # les personnes.
+    role_social = request.args.get('role_social')
+    role_dreyfus = request.args.get('role_dreyfus')
+    if role_dreyfus and role_social:
+        # si l'utilisateur a demandé de filtrer les deux termes, on réalise une query dans la base de données qui filtre
+        # tout les roles dreyfus et role social correspondants
         association_Article_Personne = db.session.query(
-                articleHasPersonne, Article, Personne).join(Article).join(Personne).filter_by(
-                personne_dreyf=role_dreyfus, personne_role=role_social).all()
+            articleHasPersonne, Article, Personne).join(Article).join(Personne).filter_by(
+            personne_dreyf=role_dreyfus, personne_role=role_social).all()
+        # sinon, on fait cela soit pour role_social soit pour role_dreyfus
+    elif role_dreyfus:
+        association_Article_Personne = db.session.query(
+            articleHasPersonne, Article, Personne).join(Article).join(Personne).filter_by(
+            personne_dreyf=role_dreyfus).all()
+    elif role_social:
+        association_Article_Personne = db.session.query(
+            articleHasPersonne, Article, Personne).join(Article).join(Personne).filter_by(
+            personne_role=role_social).all()
     else:
+        # si role_dreyfus et role_social sont tout les deux vides, alors on récupère toutes les personnes de la base
         association_Article_Personne = db.session.query(articleHasPersonne, Article, Personne).join(Article).join(
             Personne).all()
+
     # comme pour la fonction lieux, on obtient une liste de tuple que l'on restructure sous la forme d'une liste ayant
     # pour clé une personne et pour valeurs les articles correspondants
     index_personne_article ={key: [v[2] for v in val] for key, val in
@@ -145,14 +160,18 @@ def personnes(role_social='', role_dreyfus=''):
     pagination = Pagination(page=page, per_page=per_page, total=len(index_personne_article),
                             css_framework='bootstrap4')
 
-    role_distinct = ['']
+    # on récupère toutes les valeurs pouvant être prises par role_social et role_dreyfus afin de les afficher
+    # dans deux listes déroulantes dans le but de permettre à l'utilisateur de filtrer les personnes.
+    role_liste= ['']
     for role in db.session.query(Personne.personne_role).distinct():
-        role_distinct.append(role.personne_role)
-    role_dreyf_distinct = ['']
+        role_liste.append(role.personne_role)
+    role_dreyf_liste = ['']
     for dreyf in db.session.query(Personne.personne_dreyf).distinct():
-        role_dreyf_distinct.append(dreyf.personne_dreyf)
+        role_dreyf_liste.append(dreyf.personne_dreyf)
+
     return render_template("pages/index_pers.html", list=pagination_index, page=page, per_page=per_page,
-                           pagination=pagination, roles=role_distinct, role_dreyf=role_dreyf_distinct)
+                           pagination=pagination, roles=role_liste, role_dreyf=role_dreyf_liste,
+                           role_social=role_social, role_dreyfus=role_dreyfus)
 
 
 @app.route("/recherche")
