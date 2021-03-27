@@ -38,21 +38,21 @@
 	  	  {{ pagination.links }}
                 <table class="table text-center">
                 <thead>
-                    <tr>
-                        <th scope="col">Personne</th>
-                        <th scope="col">Occurences</th>
-                        <th scope="col">Roles</th>
-						<th scope="col">Description</th>
+                    <tr class="d-flex">
+                        <th class="col-2" scope="col">Personne</th>
+                        <th class="col-2" scope="col">Occurences</th>
+                        <th class="col-2" scope="col">Roles</th>
+						<th class="col-6" scope="col">Description</th>
                     </tr>
                 </thead>
                     {% for dict in list %}
                         <tbody>
 							{% for key, value in dict.items() %}
-                            <tr scope="row">								
-                                <td>{{key.personne_prenom}} {{key.personne_nom}}</td>
-                                <td><ul>{%for el in value %}<li><a href="{{url_for('note', article_id=el.article_id, pointeur=key.personne_pointeur)}}">{{el.article_date}}</a></li>{% endfor %}</ul></td>
-                                <td>{{key.personne_dreyf}} et {{key.personne_role}}</td>
-								<td>{{key.personne_notes}}</td>								
+                            <tr class="d-flex" scope="row">
+                                <td class="col-2">{{key.personne_prenom}} {{key.personne_nom}}</td>
+                                <td class="col-2"><ul>{%for el in value %}<li><a href="{{url_for('note', article_id=el.article_id, pointeur=key.personne_pointeur)}}">{{el.article_date}}</a></li>{% endfor %}</ul></td>
+                                <td class="col-2">{{key.personne_dreyf}} et {{key.personne_role}}</td>
+								<td class="col-6">{{key.personne_notes}}</td>
                             </tr>
 							{% endfor %}
                         </tbody>
