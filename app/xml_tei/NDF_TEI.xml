@@ -127,7 +127,7 @@
             </settingDesc>
             <particDesc>
 
-<listPerson type="dreyfusard">
+                <listPerson type="dreyfusard">
                     <person n="1" xml:id="DREYFUS" role="militaire">
                         <persName>
                             <forename>Alfred</forename>
@@ -151,9 +151,12 @@
                             <settlement>Versailles</settlement></birth>
                         <death when="1925-02-11">11 février 1925
                             <settlement>Paris</settlement></death>
-                        <note>Juriste français. Avocat de <persName ref="#DREYFUS"
-                            >Dreyfus</persName> lors de son procès devant le conseil de guerre
-                            en 1894 puis pendant sa révision en 1899</note>
+                        <note>Juriste français. Fils d'officier et d'origine catholique, il est
+                            choisi comme avocat de <persName ref="#DREYFUS">Dreyfus</persName> par
+                            sa femme, Lucie Dreyfus et son frère, Matthieu Dreyfus, lors de son
+                            procès devant le conseil de guerre en 1894. Il témoigne lors du procès
+                            de Zola en 1898 et plaide pour les Dreyfus jusqu'en 1911, faisant donc
+                            parti du procès de Rennes en 1899.</note>
                     </person>
                     <person n="3" xml:id="PICQUART" role="militaire">
                         <persName>
@@ -161,13 +164,13 @@
                             <surname>Picquart</surname>
                         </persName>
                         <birth when="1854-09-06">6 septembre 1854
-                            <settlement>Strasbourg</settlement></birth>
+                                <settlement>Strasbourg</settlement></birth>
                         <death when="1914-01-19">19 janvier 1914
                             <settlement>Amiens</settlement></death>
                         <note>Officier au service du renseignement militaire et acteur majeur de
                             l'affaire Dreyfus. Convaincu de l'innocence de <persName ref="#DREYFUS"
                                 >Dreyfus</persName>, il découvre l'indice concernant la culpabilité
-                            d'<persName ref="#ESTERHAZY">Esterhazy</persName> et participe au
+                                d'<persName ref="#ESTERHAZY">Esterhazy</persName> et participe au
                             procès en révision où il est inculpé. Il est gracié en 1906 et devient
                             par la suite Ministre de la Guerre du gouvernement Clémenceau.</note>
                     </person>
@@ -185,7 +188,7 @@
                             <forename>Paul</forename>
                             <surname>Reclus</surname>
                         </persName>
-                        <note>Chirurgien et intellectuel engagé dans l'Affaire Dreyfus</note>
+                        <note>Chirurgien et intellectuel engagé dans l'Affaire Dreyfus.</note>
                     </person>
                     <person n="6" xml:id="GAST" role="politique">
                         <persName>
@@ -193,14 +196,20 @@
                             <surname>Gast</surname>
                         </persName>
                         <note>Homme politique, maire de Ville-d'Avray et cousin de <persName
-                            ref="#PICQUART">Picquart</persName>.</note>
+                                ref="#PICQUART">Picquart</persName>.</note>
                     </person>
                     <person n="7" xml:id="JAURES" role="politique">
                         <persName>
                             <forename>Jean</forename>
                             <surname>Jaurès</surname>
                         </persName>
-                        <note>Homme politique français, dreyfusard</note>
+                        <note>Issu d'une famille bourgeoise, il s'engage en politique en 1885, après
+                            des études à l'ENS, en tant que républicain. Socialiste à partir de
+                            1890, il est élu député en 1893. Tout d'abord persuadé de la culpabilité
+                            de Dreyfus, il change d'avis fin août 1898 et devient alors un des
+                            principaux défenseurs de sa cause. Grâce à cet engagement, Jaurès
+                            devient un des principaux chefs de file du parti socialiste
+                            français.</note>
                     </person>
                     <person n="8" xml:id="VIVIANI" role="politique">
                         <persName>
@@ -217,7 +226,7 @@
                             <surname>Aubry</surname>
                         </persName>
                         <note>Professeur de droit à la faculté de <placeName ref="#RENNES"
-                            >Rennes</placeName> et premier président de la section rennaise de
+                                >Rennes</placeName> et premier président de la section rennaise de
                             la ligue des Droits de l'Homme à partir de 1899.</note>
                     </person>
                     <person n="10" xml:id="SEE" role="intellectuel">
@@ -226,10 +235,10 @@
                             <surname>Sée</surname>
                         </persName>
                         <note> Professeur d'histoire à la faculté de lettres de <placeName
-                            ref="#RENNES">Rennes</placeName>. Il s'intéresse à l'affaire Dreyfus
+                                ref="#RENNES">Rennes</placeName>. Il s'intéresse à l'affaire Dreyfus
                             à partir de 1897 et l'étudie avec ses collègues <persName ref="#BASCH"
                                 >Basch</persName>, <persName ref="#AUBRY">Aubry</persName>,
-                            <persName ref="#DOTTIN">Dottin</persName> et Andrade. Parmi les
+                                <persName ref="#DOTTIN">Dottin</persName> et Andrade. Parmi les
                             fondateurs de la section rennaise de la Ligue des Droits de l'Homme en
                             1899, il en est par la suite président de 1900 à 1914. </note>
                     </person>
@@ -240,7 +249,7 @@
                         </persName>
                         <note>Linguiste et professeur à la faculté de lettres de Rennes à partir de
                             1892. Il fait parti, avec <persName ref="#BRASCH">Brasch</persName> et
-                            <persName ref="#SEE">Sée</persName> des combattants de
+                                <persName ref="#SEE">Sée</persName> des combattants de
                             l'antisémitisme rennois et demande la révision du procès de <persName
                                 ref="#DREYFUS">Dreyfus</persName>. Il participe à la fondation de la
                             Ligue des Droits de l'Homme rennoise.</note>
@@ -258,17 +267,17 @@
                             <surname>Labori</surname>
                         </persName>
                         <note>Avocat et homme politique français. Il défend <persName ref="#DREYFUS"
-                            >Dreyfus</persName> lors du Second procès de Rennes</note>
+                                >Dreyfus</persName> lors du Second procès de Rennes</note>
                     </person>
                     <person n="14" xml:id="ZOLA" role="intellectuel">
-                    <persName>
-                        <forename>Émile</forename>
-                        <surname>Zola</surname>
-                    </persName>
-                    <note>Écrivain et journaliste français, chef de file du naturalisme. Il est
-                        principalement connu pour <hi>Les Rougons-Macquart</hi>, fresque
-                        romanesque dépeignant la vie d'une famille sous le Second Empire.</note>
-                        </person>
+                        <persName>
+                            <forename>Émile</forename>
+                            <surname>Zola</surname>
+                        </persName>
+                        <note>Écrivain et journaliste français, chef de file du naturalisme. Il est
+                            principalement connu pour <hi>Les Rougons-Macquart</hi>, fresque
+                            romanesque dépeignant la vie d'une famille sous le Second Empire.</note>
+                    </person>
                     <person n="15" xml:id="FREYSTAETTER" role="militaire">
                         <persName>
                             <forename>Martin</forename>
@@ -308,7 +317,9 @@
                     </person>
                     <person n="18" xml:id="PAINLEVE" role="intellectuel">
                         <persName>
-                            <forename>Paul</forename><surname>Painlevé</surname></persName>
+                            <forename>Paul</forename>
+                            <surname>Painlevé</surname>
+                        </persName>
                         <note>Professeur de mécanique à l'X, il lit l'avis de Poincaré devant le
                             conseil de Guerre du second procès. Ce mathématicien entre en politique
                             à la suite de l'Affaire Dreyfus, lors de laquelle il est convaincu de
@@ -318,41 +329,61 @@
                     </person>
                     <person n="19" xml:id="HADAMARD" role="intellectuel">
                         <persName>
-                            <forename>Jacques</forename><surname>Hadamard</surname></persName>
+                            <forename>Jacques</forename>
+                            <surname>Hadamard</surname>
+                        </persName>
                         <note>Mathématicien et oncle de Lucie Hadamard, femme de Dreyfus. Il
                             s'engage en politique pour la reconnaissance des juifs après
                             l'affaire.</note>
                     </person>
                     <person n="20" xml:id="CORDIER" role="militaire">
-                        <persName><forename>Albert</forename><surname>Cordier</surname></persName>
+                        <persName>
+                            <forename>Albert</forename>
+                            <surname>Cordier</surname>
+                        </persName>
                         <note>Colonel et antidreyfusard convaincu, il se range au côté des
                             dreyfusards à la suite de la révélation des faux en 1898.</note>
                     </person>
                     <person n="21" xml:id="BERNHEIM" role="militaire">
-                        <persName><forename>E.</forename><surname>Bernheim</surname></persName>
+                        <persName>
+                            <forename>E.</forename>
+                            <surname>Bernheim</surname>
+                        </persName>
                         <note>Lieutenant d'artillerie et témoin au procès de Rennes concernant les
                             agissements de Estherazy.</note>
                     </person>
                     <person n="22" xml:id="CARVALHO" role="militaire">
-                        <persName><forename>Julien</forename><surname>Carvalho</surname></persName>
+                        <persName>
+                            <forename>Julien</forename>
+                            <surname>Carvalho</surname>
+                        </persName>
                         <note>Capitaine et dreyfusard convaincu, il témoigne au procès de Rennes où
                             il présente l'absence d'attention accordée à certains éléments du
                             dossier lors du premier procès.</note>
                     </person>
                     <person n="23" xml:id="FORZINETTI" role="militaire">
-                        <persName><forename>Ferdinand</forename><surname>Forzinetti</surname></persName>
+                        <persName>
+                            <forename>Ferdinand</forename>
+                            <surname>Forzinetti</surname>
+                        </persName>
                         <note>Commandant aux prisons de Paris, il reçoit Dreyfus à la prison du
                             Cherche Midi en 1894. Il témoigne en sa faveur au procès de
                             Rennes.</note>
                     </person>
                     <person n="24" xml:id="DUCROS" role="militaire">
-                        <persName><forename>Joseph-Jules</forename><surname>Ducros</surname></persName>
+                        <persName>
+                            <forename>Joseph-Jules</forename>
+                            <surname>Ducros</surname>
+                        </persName>
                         <note>Commandant d'artillerie et dreyfusard convaincu, il témoigne au second
                             procès de Rennes. Il dépose également en sa faveur devant la Chambre
                             Criminelle.</note>
                     </person>
                     <person n="25" xml:id="SEBERT" role="militaire">
-                        <persName><forename>Hippolyte</forename><surname>Sébert</surname></persName>
+                        <persName>
+                            <forename>Hippolyte</forename>
+                            <surname>Sébert</surname>
+                        </persName>
                         <note>Scientifique, général de l'armée française et espérantiste. Il
                             témoigne au procès de Rennes et est l'un des acteurs de la
                             réhabilitation de Dreyfus, en étudiant le bordereau et concluant par son
@@ -365,7 +396,7 @@
                             <forename>Ferdinand</forename>
                             <surname>Walsin-Esterhazy</surname>
                         </persName>
-                        <note>Officier français et espion pour le compte de l'Allemagne, il est
+                        <note>Officier français et espion pour le compte de l'Allemagne à partir de 1894, il est
                             l'auteur du bordereau à l'origine de l'affaire Dreyfus.</note>
                     </person>
                     <person n="27" xml:id="MERCIER" role="politique">
@@ -374,7 +405,7 @@
                             <surname>Mercier</surname>
                         </persName>
                         <note>Ministre de la Guerre de 1893 à 1895, premier accusateur public de
-                            <persName ref="#DREYFUS">Dreyfus</persName> et coordinateur des
+                                <persName ref="#DREYFUS">Dreyfus</persName> et coordinateur des
                             anti-dreyfusards au procès de Rennes.</note>
                     </person>
                     <person n="28" xml:id="CAVAIGNAC" role="politique">
@@ -460,7 +491,10 @@
                             militaire.</note>
                     </person>
                     <person n="35" xml:id="GONSE" role="militaire">
-                        <persName><forename>Charles-Arthur</forename><surname>Gonse</surname></persName>
+                        <persName>
+                            <forename>Charles-Arthur</forename>
+                            <surname>Gonse</surname>
+                        </persName>
                         <note>Général de division et sous-chef de l'État Major, sous la direction du
                             général du Boisdeffre, il refuse de reconnaître l'innocence de Dreyfus
                             et la culpabilité d'Esterhazy et semble être parmi ceux qui conduisent à
@@ -469,7 +503,8 @@
                     <person n="36" xml:id="BOISDEFFRE" role="militaire">
                         <persName>
                             <forename>Raoul</forename>
-                            <surname>Le Mouton de Boisdeffre</surname></persName>
+                            <surname>Le Mouton de Boisdeffre</surname>
+                        </persName>
                         <note>Chef d'Etat Major de l'Armée de 1893 à 1898, il est donc impliqué dans
                             l'Affaire Dreyfus, aux côtés de son sous-chef le général Gonse, et
                             obligé de démissionner en 1898.</note>
@@ -496,15 +531,20 @@
                             part à la retraite prématurément en 1906. </note>
                     </person>
                     <person n="39" xml:id="CUIGNET" role="militaire">
-                        <persName><forename>Louis</forename><surname>Cuignet</surname></persName>
+                        <persName>
+                            <forename>Louis</forename>
+                            <surname>Cuignet</surname>
+                        </persName>
                         <note>Militaire français et militant d'extrême droite, il est chargé de
                             travailler sur le dossier secret en 1898 et découvre les falsifications
                             de celui-ci. Bien qu'étant anti-dreyfusard convaincu, il est donc à
                             l'origine de la résolution de l'affaire Dreyfus.</note>
                     </person>
                     <person n="40" xml:id="FREYCINET" role="politique">
-                        <persName><forename>Charles</forename><surname>de
-                            Freycinet</surname></persName>
+                        <persName>
+                            <forename>Charles</forename>
+                            <surname>de Freycinet</surname>
+                        </persName>
                         <note>Homme d'état et ingénieur français, il est plusieurs fois président du
                             conseil et ministre de la IIIème République. Accusé d'avoir étouffé le
                             scandale de Panama, il quitte la politique un moment et la retrouve au
@@ -513,20 +553,32 @@
                             l'armée.</note>
                     </person>
                     <person n="41" xml:id="FLEUR" role="militaire">
-                        <persName><forename>Moïse</forename><surname>Blum</surname></persName>
+                        <persName>
+                            <forename>Moïse</forename>
+                            <surname>Blum</surname>
+                        </persName>
                         <note>dit Colonel Fleur, témoin au second procès de Rennes.</note>
                     </person>
                     <person n="42" xml:id="CHAMOIN" role="militaire">
-                        <persName><forename>Eugène-Victor-Auguste</forename><surname>Chamoin</surname></persName>
+                        <persName>
+                            <forename>Eugène-Victor-Auguste</forename>
+                            <surname>Chamoin</surname>
+                        </persName>
                         <note>Officier en charge du dossier secret, témoigne au procès de
                             Rennes.</note>
                     </person>
                     <person n="43" xml:id="JEANNET" role="militaire">
-                        <persName><forename>Maurice</forename><surname>Jeannet</surname></persName>
+                        <persName>
+                            <forename>Maurice</forename>
+                            <surname>Jeannet</surname>
+                        </persName>
                         <note>Lieutenant-colonel, témoin au procès de Rennes</note>
                     </person>
                     <person n="44" xml:id="LEMONNIER" role="militaire">
-                        <persName><forename>Victor-Auguste</forename><surname>Lemonnier</surname></persName>
+                        <persName>
+                            <forename>Victor-Auguste</forename>
+                            <surname>Lemonnier</surname>
+                        </persName>
                         <note>Militaire, capitaine, témoin au procès de Rennes</note>
                     </person>
                 </listPerson>
@@ -553,7 +605,7 @@
                             <surname>Delegorgue</surname>
                         </persName>
                         <note>Magistrat, président de la Cour d'assises pendant le second procès de
-                            Dreyfus</note>
+                            Dreyfus.</note>
                     </person>
                     <person n="48" xml:id="LORIMIER" role="militaire">
                         <persName>
@@ -574,7 +626,10 @@
                             procès de Rennes.</note>
                     </person>
                     <person n="50" xml:id="HENNION" role="politique">
-                        <persName><forename>Célestin</forename><surname>Hennion</surname></persName>
+                        <persName>
+                            <forename>Célestin</forename>
+                            <surname>Hennion</surname>
+                        </persName>
                         <note>Préfet de police français ayant modernisé la police française au début
                             du XXème siècle, en temps que directeur de la Sécurité Général et avec
                             l'aval de Clémenceau. Créateur des "Brigades du Tigre", il a enquêté sur
@@ -636,12 +691,11 @@
                             plane, assourdit les tons, raidit les maintiens. Cependant, les propos
                             échangés sont de hautes importance. On discute le communiqué du
                                 <hi>Moniteur de l'Empire</hi>; la reproduction dans la partie
-                            officielle, du démenti que formulèrent M.de Bulow à
-                            la tribune du Reischtag, M.de Munster, ambassadeur,
-                            ici. C'est la réponse indirecte et cependant formelle du souverain au
-                            défenseur qui rendit cette hommage mérité de penser qu'un monarque était
-                            aussi un homme selon Térence, à qui rien d'humain ne pouvait demeurer
-                            étranger. </p>
+                            officielle, du démenti que formulèrent M.de Bulow à la tribune du
+                            Reischtag, M.de Munster, ambassadeur, ici. C'est la réponse indirecte et
+                            cependant formelle du souverain au défenseur qui rendit cette hommage
+                            mérité de penser qu'un monarque était aussi un homme selon Térence, à
+                            qui rien d'humain ne pouvait demeurer étranger. </p>
                         <p>En ressentons-nous de la joie?... Oui, si cela peut influer sur le sort
                             du pauvre être, après qui s'acharnent tous les carnassiers de la haine.
                             Mais, en même temps, une tristesse humiliée nous poigne le coeur. Il
@@ -772,8 +826,7 @@
                             harmonieuse de <persName ref="#RECLUS">Reclus</persName>; les prestes
                             répliques allant et venant de <persName ref="#GAST">Gast</persName> à
                                 <persName ref="#VIVIANI">Viviani</persName> - et le rire gazouillant
-                            de la petite Mme Parsoons, si brune et si
-                            jolie!</p>
+                            de la petite Mme Parsoons, si brune et si jolie!</p>
                         <p>Mais, il faut l'avouer, je songe bien moins à ceux qui s'en furent, se
                             dispersèrent! - libérés de <placeName ref="#RENNES">Rennes</placeName>
                             par l'atroce verdict - qu'à ceux qui durent demeurer là-bas, à
@@ -800,16 +853,14 @@
                                 >Basch</persName>, les <persName ref="#AUBRY">Aubry</persName>, les
                                 <persName ref="#SEE">Sée</persName>, les <persName ref="#DOTTIN"
                                 >Dottin</persName>, les <persName ref="#CAVALIER"
-                                >Cavalier</persName>, les Blondel, etc, tous
-                            ces professeurs de lettre, de droits, de sciences, ont accepté
-                            vaillamment de vivre dans une ambiance d'animosité perpétuelle; en
-                            quarantaine, comme l'Ennemi du Peuple, d'
-                                Ibsen, parce qu'ils ont voulu plus de justice et toute
-                            la vérité. </p>
+                                >Cavalier</persName>, les Blondel, etc, tous ces professeurs de
+                            lettre, de droits, de sciences, ont accepté vaillamment de vivre dans
+                            une ambiance d'animosité perpétuelle; en quarantaine, comme l'Ennemi du
+                            Peuple, d' Ibsen, parce qu'ils ont voulu plus de justice et toute la
+                            vérité. </p>
                         <p>Mais si rien ne saurait atteindre leur sérénité, quelque alarme nous est
                             permise à leur endroit en lisant, par exemple, dans l'Évènement du 11
-                            septembre, les lignes suivantes, sous la signature de M. Henri
-                                Chabrier. </p>
+                            septembre, les lignes suivantes, sous la signature de M. Henri Chabrier. </p>
                         <quote type="journal">Diverses personnes de la ville remplissant des
                             fonctions publiques ou commerçants, avec qui j'ai pu causer dans la
                             journée, m'ont laissé entendre que des représailles seraient exercées
@@ -853,8 +904,10 @@
                     <div>
 
                         <cit>
-                            <quote><p>"J'accuse, enfin, le premier Conseil de guerre d'avoir violé le
-                                droit en condamnant un accusé sur une pièce restée secrète"</p></quote>
+                            <quote>
+                                <p>"J'accuse, enfin, le premier Conseil de guerre d'avoir violé le
+                                    droit en condamnant un accusé sur une pièce restée secrète"</p>
+                            </quote>
                             <ref>Aurore, 13 janvier 1898. <persName ref="#ZOLA"> Emile
                                     Zola</persName></ref>
                         </cit>
@@ -984,11 +1037,11 @@
                             plus écoutés du comte de Paris" jadis veillant à la sécurité juridique
                             de l'entreprise, fréquentant à toute heure chez l'<persName
                                 ref="#MERCIER
-                                ">ex-général Mercier</persName>...
-                            et le va-et-vient éperdu entre tous ces nids de réaction! Comme
-                            intermède, le coup de révolver sur <persName ref="#LABORI"
-                                >Labori</persName>, le coup de couteau ou la bombe que nous
-                            attendons pour demain!</p>
+                                ">ex-général
+                                Mercier</persName>... et le va-et-vient éperdu entre tous ces nids
+                            de réaction! Comme intermède, le coup de révolver sur <persName
+                                ref="#LABORI">Labori</persName>, le coup de couteau ou la bombe que
+                            nous attendons pour demain!</p>
                         <p> Est-ce à dire que tels actes proviennent directement d'ici? Aucunement.
                             Ils ne sont qu'une résultante, un ricochet, le fait d'alliés remplis de
                             zèle. L'esprit prétorien procède autrement: par masse - le
@@ -1162,11 +1215,11 @@
                             d'ambulance qui devait l'emmener vers un logis plus aéré, plus rustique.
                             Sur la blancheur des draps, son visage de bonté et de force se
                             détachait, dominant l'expression de la douleur pour sourire à tous. Sa
-                            voix, encore, nous encourageait. "Bonjour <persName ref="#SEVERINE">Séverine</persName>!
-                            Ils ne m'ont pas tué, vous voyez! On vivra, pour combattre... et pour
-                            vaincre!" Des larmes d'émotion et d'enthousiasme, devant cette belle
-                            vaillance, nous montaient aux yeux. Celui-là est vraiment un "professeur
-                            d'énergie". </p>
+                            voix, encore, nous encourageait. "Bonjour <persName ref="#SEVERINE"
+                                >Séverine</persName>! Ils ne m'ont pas tué, vous voyez! On vivra,
+                            pour combattre... et pour vaincre!" Des larmes d'émotion et
+                            d'enthousiasme, devant cette belle vaillance, nous montaient aux yeux.
+                            Celui-là est vraiment un "professeur d'énergie". </p>
                         <p>Et maintenant, que tous se défendent d'avoir versé -inconsciemment,
                             involontairement, c'est entendu, pour les uns, je le crois, pour les
                             autres, je veux le croire -l'enivrement du meurtre dans le verre de
@@ -1197,63 +1250,60 @@
                                 je demande, sur ce point, à donner trois minutes d'explication d'un
                                 ordre purement matériel. </p>
                             <p>(M.le Président fait un signe d'assentiment).</p>
-                                <p>Messieurs les jurés, la <hi>Libre Parole</hi> publie ce matin
-                                    l'entrefilet suivant: "Un de nos lecteurs nous demande si nous
-                                    connaissons le barreau de <placeName ref="#PARIS"
-                                        >Paris</placeName>..." Et le filet est sous la rubrique:"Le
-                                    défenseur de <persName ref="#ZOLA">Zola</persName>", il est donc
-                                    impossibile de se mépendre sur la portée de l'article: "...Un
-                                    avocat d'origine germanique, naturalisé Français, qui a épousé
-                                    une jeune Anglais et dont le père, resté Allemand, est
-                                    présentement inspecteur dans une Compagnie de chemins de fer
-                                    d'outre Rhin". Et la <hi>Libre Parole</hi> continue: "Cette
-                                    question vise-t-elle <persName ref="#LABORI"
-                                    >M.Labori</persName>, le théâtral défenseur de <persName
-                                        ref="#ZOLA">Zola</persName>? Ce qui est certain, c'est que,
-                                    comme tous ceux qui, de près ou de loin, ont trempé dans le
-                                    complot anti-français, <persName ref="#LABORI"
-                                        >M.Labori</persName> a des attaches étrangères. Il a en
-                                    effet épousé une demoiselle Ockey, protestante anglaise, après
-                                    son divorce d'avec M.Pachmann, un Allemand, si je ne me trompe,
-                                    dont elle a deux enfants que leur père vient visiter dans leur
-                                    nouvelle famille. Je ne donne ce renseignement qu'afin d'établir
-                                    que M.Labori a pu subir des influences qui ne sont pas
-                                    précisemment nationalistes, nous gardant bien de l'imiter en
-                                    faisant intervenir des femmes qui n'ont rien à faire dans le
-                                    débat." Je ne me livrerai, messieurs les jurés, à aucun
-                                    commentaire. Je répondrai par des gaits. D'autre part, comme je
-                                    suis décidé à ne me laisser arrêter par rien dans la tâche que
-                                    j'ai entreprise, et je m'attends à d'autres attques, je déclare
-                                    que je réponds pour l'unique et dernière fois. </p>
-                                <p>Voici ma réponse: Je ne suis pas naturalisé Français; je suis né
-                                    à <placeName ref="#REIMS">Reims</placeName>, d'un père français.
-                                    Ma femme n'est pas israélite. M.de Pachmann vient si peu faire
-                                    de visites chez moi que je n'ai pas l'honneur de le connaitre
-                                    personnellement. Il n'est pas Allemand, il est Russe; il est né
-                                    à Odessa; son père était professeur à l'Université d'Odessa; son
-                                    frère est actuellement conseiller privé et sénateur russe à
-                                    Saint-Pétersbourg. Mon père est Alsacien; il est depuis
-                                    quarante-cinq ans au service de la Compagnie des Chemins de fer
-                                    de l'Est; il a fait comme tel la campagne de 1870, pendant
-                                    laquelle il a été chargé, au camp de Châlons, de l'embarquement
-                                    de toutes les troupes françaises. En 1871, il a été délégué pour
-                                    reprendre à la gare de <placeName ref="#REIMS"
-                                    >Reims</placeName>, des mains des Prussiens, le service des
-                                    chemins de fer français, et c'est peutêtre la période de sa vie
-                                    où il a dû donner la plus grande preuve de patriotisme. Depuis,
-                                    en sa qualité d'inspecteur principal, il est chargé, d'accord
-                                    avec les commissions militaires, d'organiser, pour le cas de
-                                    guerre, la défense nationale sur sa section en ce qui concerne
-                                    le service des chemins de fer. Enfin, il y a sept ans, au mois
-                                    de janvier 1801, mon père a été décoré de la Légion d'honneur,
-                                    sur la demande et par l'intermédiaire du 4ème bureau de
-                                    l'Etat-Major de la Guerre et c'est <persName ref="#BOISDEFFRE"
-                                        >M.le Général de Boisdeffre</persName> qui lui a annoncé sa
-                                    décoration avec les félicitations qu'il a cru devoir y joindre. </p>
-                                <p>Voilà, messieurs les jurés, ma réponse! Je n'ai rien à ajouter:
-                                    je vous demande seulement d'apprécier, par cet indicent, ce que
-                                    valent certaines attaques et certaines affirmations. </p>
-                            
+                            <p>Messieurs les jurés, la <hi>Libre Parole</hi> publie ce matin
+                                l'entrefilet suivant: "Un de nos lecteurs nous demande si nous
+                                connaissons le barreau de <placeName ref="#PARIS"
+                                >Paris</placeName>..." Et le filet est sous la rubrique:"Le
+                                défenseur de <persName ref="#ZOLA">Zola</persName>", il est donc
+                                impossibile de se mépendre sur la portée de l'article: "...Un avocat
+                                d'origine germanique, naturalisé Français, qui a épousé une jeune
+                                Anglais et dont le père, resté Allemand, est présentement inspecteur
+                                dans une Compagnie de chemins de fer d'outre Rhin". Et la <hi>Libre
+                                    Parole</hi> continue: "Cette question vise-t-elle <persName
+                                    ref="#LABORI">M.Labori</persName>, le théâtral défenseur de
+                                    <persName ref="#ZOLA">Zola</persName>? Ce qui est certain, c'est
+                                que, comme tous ceux qui, de près ou de loin, ont trempé dans le
+                                complot anti-français, <persName ref="#LABORI">M.Labori</persName> a
+                                des attaches étrangères. Il a en effet épousé une demoiselle Ockey,
+                                protestante anglaise, après son divorce d'avec M.Pachmann, un
+                                Allemand, si je ne me trompe, dont elle a deux enfants que leur père
+                                vient visiter dans leur nouvelle famille. Je ne donne ce
+                                renseignement qu'afin d'établir que M.Labori a pu subir des
+                                influences qui ne sont pas précisemment nationalistes, nous gardant
+                                bien de l'imiter en faisant intervenir des femmes qui n'ont rien à
+                                faire dans le débat." Je ne me livrerai, messieurs les jurés, à
+                                aucun commentaire. Je répondrai par des gaits. D'autre part, comme
+                                je suis décidé à ne me laisser arrêter par rien dans la tâche que
+                                j'ai entreprise, et je m'attends à d'autres attques, je déclare que
+                                je réponds pour l'unique et dernière fois. </p>
+                            <p>Voici ma réponse: Je ne suis pas naturalisé Français; je suis né à
+                                    <placeName ref="#REIMS">Reims</placeName>, d'un père français.
+                                Ma femme n'est pas israélite. M.de Pachmann vient si peu faire de
+                                visites chez moi que je n'ai pas l'honneur de le connaitre
+                                personnellement. Il n'est pas Allemand, il est Russe; il est né à
+                                Odessa; son père était professeur à l'Université d'Odessa; son frère
+                                est actuellement conseiller privé et sénateur russe à
+                                Saint-Pétersbourg. Mon père est Alsacien; il est depuis
+                                quarante-cinq ans au service de la Compagnie des Chemins de fer de
+                                l'Est; il a fait comme tel la campagne de 1870, pendant laquelle il
+                                a été chargé, au camp de Châlons, de l'embarquement de toutes les
+                                troupes françaises. En 1871, il a été délégué pour reprendre à la
+                                gare de <placeName ref="#REIMS">Reims</placeName>, des mains des
+                                Prussiens, le service des chemins de fer français, et c'est peutêtre
+                                la période de sa vie où il a dû donner la plus grande preuve de
+                                patriotisme. Depuis, en sa qualité d'inspecteur principal, il est
+                                chargé, d'accord avec les commissions militaires, d'organiser, pour
+                                le cas de guerre, la défense nationale sur sa section en ce qui
+                                concerne le service des chemins de fer. Enfin, il y a sept ans, au
+                                mois de janvier 1801, mon père a été décoré de la Légion d'honneur,
+                                sur la demande et par l'intermédiaire du 4ème bureau de l'Etat-Major
+                                de la Guerre et c'est <persName ref="#BOISDEFFRE">M.le Général de
+                                    Boisdeffre</persName> qui lui a annoncé sa décoration avec les
+                                félicitations qu'il a cru devoir y joindre. </p>
+                            <p>Voilà, messieurs les jurés, ma réponse! Je n'ai rien à ajouter: je
+                                vous demande seulement d'apprécier, par cet indicent, ce que valent
+                                certaines attaques et certaines affirmations. </p>
+
                         </quote>
                         <p>Je n'ajouterai pas de commentaires. Mais l'on peut, sans trop
                             d'invraisemblance, supposer que le scrupule était mince, pour un
@@ -1331,12 +1381,12 @@
                             mis en mesure de présenter ledit dossier à première requeête des membres
                             du Conseil - au cas où le pétard éclaterait.</p>
                         <p>Il a éclaté: c'est <persName ref="#LABORI">Labori</persName> qui y a mis
-                            le feu en questionnant le <persName ref="#GONSE">général Gonse</persName>... et ce
-                            pétard-là me fit tout l'effet d'une dernière cartouche! Si l'effet en
-                            rate, c'est fini: il ne restera plus que la honte de la manoeuvre, de
-                            cette série de manoeuvres diverses d'aspect mais aux mêmes fins si
-                            pareilles, si peu conformes à ce qu'on s'imagine de la franchise
-                            militaire, à ce qui est le génie français!</p>
+                            le feu en questionnant le <persName ref="#GONSE">général
+                                Gonse</persName>... et ce pétard-là me fit tout l'effet d'une
+                            dernière cartouche! Si l'effet en rate, c'est fini: il ne restera plus
+                            que la honte de la manoeuvre, de cette série de manoeuvres diverses
+                            d'aspect mais aux mêmes fins si pareilles, si peu conformes à ce qu'on
+                            s'imagine de la franchise militaire, à ce qui est le génie français!</p>
                         <closer>
                             <signed>Séverine.</signed>
                         </closer>
@@ -1403,11 +1453,11 @@
                                 <persName ref="#FREYSTAETTER">Freystaetter</persName>, <persName
                                 ref="#CORDIER">Cordier</persName>, <persName ref="#BERNHEIM"
                                 >Berheim</persName>, <persName ref="#CARVALHO">Carvalho</persName>,
-                                <persName ref="#FORZINETTI">Forzinetti</persName>, <persName ref="#HARTMANN"
-                                >Hartmann</persName>, <persName ref="#DUCROS">Ducros</persName>, et
-                            cet admirable <persName ref="#SEBERT">général Sébert</persName> qui ce
-                            matin, proclamant sa conviction face à l'innocence de l'accusé, a
-                            provoqué un beau mouvement d'émotion.</p>
+                                <persName ref="#FORZINETTI">Forzinetti</persName>, <persName
+                                ref="#HARTMANN">Hartmann</persName>, <persName ref="#DUCROS"
+                                >Ducros</persName>, et cet admirable <persName ref="#SEBERT">général
+                                Sébert</persName> qui ce matin, proclamant sa conviction face à
+                            l'innocence de l'accusé, a provoqué un beau mouvement d'émotion.</p>
                         <p>Ils ne sont pas tous jolis, jolis. Mais ils parlent franc, regardent
                             droit, vont sans biaiser. Ce sont des hommes: ils font honneur à
                             l'humanité!</p>
