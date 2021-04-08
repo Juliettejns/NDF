@@ -1,4 +1,4 @@
-# Notes d'une frondeuse de Séverine
+# Notes d'une frondeuse
 Notes d'une frondeuse est une application Flask présentant des textes écrits par la journaliste Séverine et publiés dans le journal féministe "La Fronde", disponible sur [Gallica](https://gallica.bnf.fr/ark:/12148/cb327788531/date). Cette application est développée par [Juliette Janes](http://github.com/Juliettejns) dans le cadre des enseignements de [Master 2](http://www.chartes.psl.eu/fr/cursus/master-technologies-numeriques-appliquees-histoire) Technologies numériques appliquées à l'Histoire de l'École nationale des Chartes (XML-TEI, XSLT, HTML, CSS, Python, SQL).
 
 ## Fonctionnalités
