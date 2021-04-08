@@ -5,3 +5,4 @@ __pycache__/
 db.sqlite
 venv/
 test/__pycache__/
+/test/xml_test.xml
