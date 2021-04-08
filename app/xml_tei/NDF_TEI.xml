@@ -43,7 +43,11 @@
         </fileDesc>
         <encodingDesc>
             <projectDesc>
-                <p>A compléter après</p>
+                <p>Encodage, en XML-TEI par Juliette Janes dans le cadre de l'application Flask NDF
+                    développé dans le cadre de l'évaluation du module d'application web du Master 2
+                    Technologies numériques appliquées à l'Histoire de l'École nationale des Chartes
+                    (promotion 2021), d'articles de Séverine provenant du journal féministe<hi>La
+                        Fronde</hi>.</p>
             </projectDesc>
             <samplingDecl>
                 <p>Morceaux choisis parmi les chroniques <hi>Notes d'une frondeuse</hi>rédigées par
