@@ -33,9 +33,7 @@ class Article(db.Model):
     article_date = db.Column(db.String(45), nullable=False)
     article_numJournal = db.Column(db.String(45), nullable=False)
     article_texte = db.Column(db.Text, nullable=False)
-    # jointures avec les tables de relation
-    personnes = db.relationship("Personne", secondary=articleHasPersonne)
-    lieux = db.relationship("Lieu", secondary=articleHasLieu)
+
 
     # initialisation des constructeurs de classe
     def __init__(self, article_id, article_titre, article_date, article_numJournal, article_texte):
