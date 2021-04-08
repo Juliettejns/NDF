@@ -1,5 +1,5 @@
 # Notes d'une frondeuse de Séverine
-Notes d'une frondeuse est une application Flask présentant des textes écrits par la journaliste Séverine et publiés dans le journal féministe "La Fronde", disponible sur [Gallica](https://gallica.bnf.fr/ark:/12148/cb327788531/date). Cette application est développée par [Juliette Janes](http://github.com/Juliettejns) dans le cadre des enseignements de [Master 2 Technologies numériques appliquées à l'Histoire](http://www.chartes.psl.eu/fr/cursus/master-technologies-numeriques-appliquees-histoire) de l'École nationale des Chartes (XML-TEI, XSLT, HTML, CSS, Python, SQL).
+Notes d'une frondeuse est une application Flask présentant des textes écrits par la journaliste Séverine et publiés dans le journal féministe "La Fronde", disponible sur [Gallica](https://gallica.bnf.fr/ark:/12148/cb327788531/date). Cette application est développée par [Juliette Janes](http://github.com/Juliettejns) dans le cadre des enseignements de [Master 2](http://www.chartes.psl.eu/fr/cursus/master-technologies-numeriques-appliquees-histoire) Technologies numériques appliquées à l'Histoire de l'École nationale des Chartes (XML-TEI, XSLT, HTML, CSS, Python, SQL).
 
 ## Fonctionnalités
   - Une édition numérique d'un échantillon d'articles choisis, publiés entre 1897 et 1899 par Caroline Rémy dite Séverine dans La Fronde sous le nom "Notes d'une frondeuse". Les notes sont exploitées sous la forme d'un encodage XML-TEI, disponible dans le dépôt. Son guide d'encodage est également accessible dans le fichier ODD.
@@ -7,7 +7,6 @@ Notes d'une frondeuse est une application Flask présentant des textes écrits p
   - Une recherche plein texte permettant de récupérer tout les articles où un mot clef choisi par l'utilisateur est présent.
 
 ## Installation
-  - Installer python3
   - Cloner le dépôt sur sa machine: ```git clone https://github.com/Juliettejns/NDF.git``` et rentrer dans le dossier créé
   - Créer l'environnement: ```virtualenv -p python3 env```
   - Lancer l'environnement: ```source env/bin/activate```
@@ -20,4 +19,3 @@ Notes d'une frondeuse est une application Flask présentant des textes écrits p
   - Aller sur ```http://127.0.0.1:5000/``` dans le navigateur
   - Arrêter l'application: ```CRTL + C```
   - Arrêter l'environnement: ```source env/bin/deactivate```
-
