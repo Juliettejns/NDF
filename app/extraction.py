@@ -1,6 +1,7 @@
 """
-extraction des données présentes dans le fichier xml
-association de ces données à la bd
+Extraction des données présentes dans le fichier xml et insertion de ces données dans la base de données
+Author: Juliette Janes
+Date: 03/03/2021
 """
 
 from .constantes import document_xml
