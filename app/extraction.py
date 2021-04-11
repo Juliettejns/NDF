@@ -158,9 +158,3 @@ def extraction_donnees(document):
 
 
 
-# suppression des données existantes dans la base au chargement de l'application
-db.drop_all()
-# création des tables
-db.create_all()
-# appel de la fonction extraction_donnees avec pour entrée le fichier tei NDF
-extraction_donnees(document_xml)
