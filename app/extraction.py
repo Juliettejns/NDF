@@ -1,5 +1,6 @@
 """
-Extraction des données présentes dans le fichier xml et insertion de ces données dans la base de données
+Fonction permettant l'extraction des données présentes dans le fichier xml et insertion de ces données dans la base de
+données
 Author: Juliette Janes
 Date: 03/03/2021
 """
@@ -157,10 +158,3 @@ def extraction_donnees(document):
                     pass
 
 
-
-# suppression des données existantes dans la base au chargement de l'application
-db.drop_all()
-# création des tables
-db.create_all()
-# appel de la fonction extraction_donnees avec pour entrée le fichier tei NDF
-extraction_donnees(document_xml)

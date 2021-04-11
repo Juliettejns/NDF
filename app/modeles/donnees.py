@@ -1,10 +1,16 @@
 """
 Instanciation du modèle de base de données
+Insertion des données dans la base de données suite à l'appel de la fonction extraction_donnees située dans le fichier
+extraction.
 Author:Juliette Janes
 Date: 03/03/2021
 """
 # import de la classe db issue du module app situé dans le dossier parent
 from .. app import db
+# import de la fonction extraction_donnees et de la variable contenant le fichier xml parsé depuis deux modules situé
+# un dossier plus haut
+from .. extraction import extraction_donnees
+from .. constantes import document_xml
 
 # création de la table d'association articleHasPersonne qui lie article et personne
 articleHasPersonne = db.Table('articleHasPersonne',
@@ -84,3 +90,13 @@ class Lieu(db.Model):
         self.lieu_emplacement = lieu_emplacement
         self.lieu_notes = lieu_notes
         self.lieu_pointeur = lieu_pointeur
+
+
+# Après avoir instancié la base de données, on la remplie:
+# suppression des données existantes dans la base au chargement de l'application
+db.drop_all()
+# création des tables
+db.create_all()
+# appel de la fonction extraction_donnees avec pour entrée le fichier tei NDF, permettant ainsi de extraire chaque don-
+# née directement du document tei et de l'insérer dans la base de données
+extraction_donnees(document_xml)
