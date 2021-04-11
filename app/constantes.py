@@ -7,7 +7,7 @@ Date: 03/03/2021
 # import de etree permettant de traiter les fichiers xml en python
 from lxml import etree
 
-# parsage du document TEI contenant les articles avec la mathode .parse() d'etree
+# parsage du document TEI contenant les articles avec la méthode .parse() d'etree
 document_xml = etree.parse("app/xml_tei/NDF_TEI.xml")
 
 # parsage  de la feuille de transformation XSLT permettant la transformation du texte d'un article xml en html
