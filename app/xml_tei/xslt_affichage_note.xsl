@@ -72,7 +72,7 @@
     </xsl:template>
     <xsl:template match="quote">
         <xsl:element name="blockquote">
-            <xsl:apply-templates select="p"/>
+            <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
 
