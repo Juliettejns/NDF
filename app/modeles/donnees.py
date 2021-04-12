@@ -84,3 +84,14 @@ class Lieu(db.Model):
         self.lieu_emplacement = lieu_emplacement
         self.lieu_notes = lieu_notes
         self.lieu_pointeur = lieu_pointeur
+
+from ..extraction import extraction_donnees
+from ..constantes import document_xml
+# Après avoir instancié la base, on la remplie:
+# suppression des données existantes dans la base au chargement de l'application
+db.drop_all()
+# création des tables
+db.create_all()
+# appel de la fonction extraction_donnees avec pour entrée le fichier tei NDF, permettant ainsi de extraire chaque don-
+# # née directement du document tei et de l'insérer dans la base de données
+extraction_donnees(document_xml)
